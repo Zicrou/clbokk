@@ -1,0 +1,159 @@
+{
+	"validators" : [
+	  {
+		"Function": "Directeur de la planification et de la reforme de l'education",
+		"Structure": "DPRE",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur de l'enseignement elementaire",
+		"Structure": "DEE",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur de l'enseignement Moyen secondaire general",
+		"Structure": "DEMSG",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur de l'ADministration Generale et de l'Equipement",
+		"Structure": "DAGE",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur des ressources humaines",
+		"Structure": "DRH",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur des examens et concours",
+		"Structure": "DEXCO",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur de l'education prescolaire",
+		"Structure": "DEPS",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur de la formation et de la communication",
+		"Structure": "DFC",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur des constructions scolaires",
+		"Structure": "DCS",
+		"Validator": "SG"
+	  },
+	  {
+		"Function": "Directeur des equipements scolaires",
+		"Structure": "DEQS",
+		"Validator": "SG"
+  	  },
+	  {
+	    "Function": "Le Directeur de l'Institut national d’Etude et d’Action pour le Développement de l’Education (INEADE)",
+	    "Structure": "IENADE",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Le Secrétaire général permanent de la Commission nationale pour l’UNESCO",
+	    "Structure": "",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Les Directeurs de CRFPE",
+	    "Structure": "",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Le Directeur de l'INEFJA",
+	    "Structure": "INEFJA",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Les Chefs de  Cellule",
+	    "Structure": "Cellules",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Le Chef du Bureau de la Communication et de la Documentation ;",
+	    "Structure": "",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Le Directeur de l’Alphabétisation et des Langues nationales ;",
+	    "Structure": "",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Le personnel du SG",
+	    "Structure": "SG",
+	    "Validator": "SG"
+	  },
+	  {
+	    "Function": "Doyen de l'Inspection générale de l’Education nationale ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Les Inspecteurs d’Académie",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "L'IAAF (Inspection interne)",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "L'Inspecteur des Daaras modernes ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Directeur du Centre national d’Orientation scolaire et professionnelle ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Directeur Centre national de Documentation scientifique et technique ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Chef de la Division des Affaires juridiques, des Liaisons et de la Documentation ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Chef de la Division de l’Enseignement privé ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Chef de la Division de l’Enseignement arabe ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Chef de la Division des Sports et des Activités de jeunesse ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Chef de la Division du Contrôle médical scolaire ;",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le Chef de la Division de la Radio - Télévision scolaire.",
+	    "Structure": "",
+	    "Validator": "DC"
+	  },
+	  {
+	    "Function": "Le personnel du Cabinet",
+	    "Structure": "",
+	    "Validator": "DC"
+	  }
+	]
+}

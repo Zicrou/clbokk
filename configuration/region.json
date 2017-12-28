@@ -1,0 +1,75 @@
+{
+	"regions" : [
+		{
+			"code_region" : 10001,
+			"value_region" : "Dakar",
+			"value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10002,
+			"value_region" : "Diourbel",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10003,
+			"value_region" : "Fatick",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10004,
+			"value_region" : "Kaffrine",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10005,
+			"value_region" : "Kaolack",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10006,
+			"value_region" : "Kedougou",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10007,
+			"value_region" : "Kolda",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10008,
+			"value_region" : "Louga",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10009,
+			"value_region" : "Matam",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10010,
+			"value_region" : "Saint-Louis",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10011,
+			"value_region" : "Sedhiou",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10012,
+			"value_region" : "Tambacounda",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10013,
+			"value_region" : "Thies",
+		  "value_country_short" : "SN"
+		},
+		{
+			"code_region" : 10015,
+			"value_region" : "Ziguinchor",
+		  "value_country_short" : "SN"
+		}
+		
+	]
+}

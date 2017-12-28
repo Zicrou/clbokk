@@ -1,0 +1,2884 @@
+{
+	"towns" : [
+		{
+			"code_town" : 50001,
+			"value_town" : "Goree",
+			"code_district" : 40001
+		},
+		{
+			"code_town" : 50002,
+			"value_town" : "Dakar-Plateau",
+			"code_district" : 40001
+		},
+		{
+			"code_town" : 50003,
+			"value_town" : "Gueule Tapee-Fass-Colobane",
+			"code_district" : 40001
+		},
+		{
+			"code_town" : 50004,
+			"value_town" : "Fann - Point E - Amitie",
+			"code_district" : 40001
+		},
+		{
+			"code_town" : 50005,
+			"value_town" : "Medina",
+			"code_district" : 40001
+		},
+		{
+			"code_town" : 50006,
+			"value_town" : "Grand Dakar",
+			"code_district" : 40002
+		},
+		{
+			"code_town" : 50007,
+			"value_town" : "Biscuiterie",
+			"code_district" : 40002
+		},
+		{
+			"code_town" : 50008,
+			"value_town" : "Dieuppeul - Derkle",
+			"code_district" : 40002
+		},
+		{
+			"code_town" : 50009,
+			"value_town" : "Hann - Bel Air",
+			"code_district" : 40002
+		},
+		{
+			"code_town" : 50010,
+			"value_town" : "Sicap - Liberte",
+			"code_district" : 40002
+		},
+		{
+			"code_town" : 50011,
+			"value_town" : "H.L.M.",
+			"code_district" : 40002
+		},
+		{
+			"code_town" : 50012,
+			"value_town" : "Mermoz - Sacre Coeur",
+			"code_district" : 40003
+		},
+		{
+			"code_town" : 50013,
+			"value_town" : "Ouakam",
+			"code_district" : 40003
+		},
+		{
+			"code_town" : 50014,
+			"value_town" : "Ngor",
+			"code_district" : 40003
+		},
+		{
+			"code_town" : 50015,
+			"value_town" : "Yoff",
+			"code_district" : 40003
+		},
+		{
+			"code_town" : 50016,
+			"value_town" : "Grand Yoff",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50017,
+			"value_town" : "Patte d'Oie'",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50018,
+			"value_town" : "Parcelles assainies",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50019,
+			"value_town" : "Camberene",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50020,
+			"value_town" : "Dakar (ville)",
+			"code_district" : 40005
+		},
+		{
+			"code_town" : 50021,
+			"value_town" : "Grand Yoff",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50022,
+			"value_town" : "Patte d'Oie",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50023,
+			"value_town" : "Parcelles assainies",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50024,
+			"value_town" : "Camberene",
+			"code_district" : 40004
+		},
+		{
+			"code_town" : 50025,
+			"value_town" : "Dakar (ville)",
+			"code_district" : 40005
+		},
+		{
+			"code_town" : 50026,
+			"value_town" : "Golf Sud",
+			"code_district" : 40006
+		},
+		{
+			"code_town" : 50027,
+			"value_town" : "Sam Notaire",
+			"code_district" : 40006
+		},
+		{
+			"code_town" : 50028,
+			"value_town" : "Ndiareme Limamoulaye",
+			"code_district" : 40006
+		},
+		{
+			"code_town" : 50029,
+			"value_town" : "Medina Gounass",
+			"code_district" : 40006
+		},
+		{
+			"code_town" : 50030,
+			"value_town" : "Wakhinane Nimzath",
+			"code_district" : 40006
+		},
+		{
+			"code_town" : 50031,
+			"value_town" : "Guediawaye (Ville)",
+			"code_district" : 40007
+		},
+		{
+			"code_town" : 50032,
+			"value_town" : "Thiaroye Gare",
+			"code_district" : 40008
+		},
+		{
+			"code_town" : 50033,
+			"value_town" : "Mbao",
+			"code_district" : 40008
+		},
+		{
+			"code_town" : 50034,
+			"value_town" : "Thiaroye Sur Mer",
+			"code_district" : 40008
+		},
+		{
+			"code_town" : 50035,
+			"value_town" : "Tivaouane - Diack Sao",
+			"code_district" : 40008
+		},
+		{
+			"code_town" : 50036,
+			"value_town" : "Diamaguene Sicap Mbao",
+			"code_district" : 40008
+		},
+		{
+			"code_town" : 50037,
+			"value_town" : "Keur Massar",
+			"code_district" : 40009
+		},
+		{
+			"code_town" : 50038,
+			"value_town" : "Malika",
+			"code_district" : 40009
+		},
+		{
+			"code_town" : 50039,
+			"value_town" : "Yeumbeul Nord",
+			"code_district" : 40009
+		},
+		{
+			"code_town" : 50040,
+			"value_town" : "Yeumbeul Sud",
+			"code_district" : 40009
+		},
+		{
+			"code_town" : 50041,
+			"value_town" : "Pikine Ouest",
+			"code_district" : 40010
+		},
+		{
+			"code_town" : 50042,
+			"value_town" : "Pikine Est",
+			"code_district" : 40010
+		},
+		{
+			"code_town" : 50043,
+			"value_town" : "Pikine Nord",
+			"code_district" : 40010
+		},
+		{
+			"code_town" : 50044,
+			"value_town" : "Dalifort",
+			"code_district" : 40010
+		},
+		{
+			"code_town" : 50045,
+			"value_town" : "Djidah Thiaroye Kao",
+			"code_district" : 40010
+		},
+		{
+			"code_town" : 50046,
+			"value_town" : "Guinaw Rail Nord",
+			"code_district" : 40010
+		},
+		{
+			"code_town" : 50047,
+			"value_town" : "Guinaw Raild Sud",
+			"code_district" : 40010
+		},
+		{
+			"code_town" : 50048,
+			"value_town" : "Pikine (Ville)",
+			"code_district" : 40011
+		},
+		{
+			"code_town" : 50049,
+			"value_town" : "Rufisque Est",
+			"code_district" : 40012
+		},
+		{
+			"code_town" : 50050,
+			"value_town" : "Rufisque Nord",
+			"code_district" : 40012
+		},
+		{
+			"code_town" : 50051,
+			"value_town" : "Rufisque Ouest",
+			"code_district" : 40012
+		},
+		{
+			"code_town" : 50052,
+			"value_town" : "Bambylor",
+			"code_district" : 40013
+		},
+		{
+			"code_town" : 50050,
+			"value_town" : "Yenne",
+			"code_district" : 40013
+		},
+		{
+			"code_town" : 50051,
+			"value_town" : "Tivaouane Peulh - Niaga",
+			"code_district" : 40013
+		},
+		{
+			"code_town" : 50052,
+			"value_town" : "Diamniadio",
+			"code_district" : 40013
+		},
+		{
+			"code_town" : 50053,
+			"value_town" : "Sangalkam",
+			"code_district" : 40013
+		},
+		{
+			"code_town" : 50054,
+			"value_town" : "Jaxaay-Parcelles-Niakoul",
+			"code_district" : 40013
+		},
+		{
+			"code_town" : 50055,
+			"value_town" : "Rab",
+			"code_district" : 40013
+		},
+		{
+			"code_town" : 50056,
+			"value_town" : "Rufisque (Ville)",
+			"code_district" : 40014
+		},
+		{
+			"code_town" : 50057,
+			"value_town" : "Bargny",
+			"code_district" : 40014
+		},
+		{
+			"code_town" : 50058,
+			"value_town" : "Sebikotane",
+			"code_district" : 40014
+		},
+		{
+			"code_town" : 50059,
+			"value_town" : "Sendou",
+			"code_district" : 40014
+		},
+		{
+			"code_town" : 50060,
+			"value_town" : "Dinguiraye",
+			"code_district" : 40015
+		},
+		{
+			"code_town" : 50061,
+			"value_town" : "Baba Garage",
+			"code_district" : 40015
+		},
+		{
+			"code_town" : 50062,
+			"value_town" : "Keur Samba Kane",
+			"code_district" : 40015
+		},
+		{
+			"code_town" : 50063,
+			"value_town" : "Ngoye",
+			"code_district" : 40016
+		},
+		{
+			"code_town" : 50064,
+			"value_town" : "Thiakhar",
+			"code_district" : 40016
+		},
+		{
+			"code_town" : 50065,
+			"value_town" : "Ndondol",
+			"code_district" : 40016
+		},
+		{
+			"code_town" : 50066,
+			"value_town" : "Ndangalma",
+			"code_district" : 40016
+		},
+		{
+			"code_town" : 50067,
+			"value_town" : "Lambaye",
+			"code_district" : 40017
+		},
+		{
+			"code_town" : 50068,
+			"value_town" : "Refane",
+			"code_district" : 40017
+		},
+		{
+			"code_town" : 50069,
+			"value_town" : "Gawane",
+			"code_district" : 40017
+		},
+		{
+			"code_town" : 50070,
+			"value_town" : "Ngogom",
+			"code_district" : 40017
+		},
+		{
+			"code_town" : 50071,
+			"value_town" : "Bambey",
+			"code_district" : 40018
+		},
+		{
+			"code_town" : 50072,
+			"value_town" : "Ndoulo",
+			"code_district" : 40019
+		},
+		{
+			"code_town" : 50073,
+			"value_town" : "Ngohe",
+			"code_district" : 40019
+		},
+		{
+			"code_town" : 50074,
+			"value_town" : "Pattar",
+			"code_district" : 40019
+		},
+		{
+			"code_town" : 50075,
+			"value_town" : "Tocky Gare",
+			"code_district" : 40019
+		},
+		{
+			"code_town" : 50076,
+			"value_town" : "Toure Mbonde",
+			"code_district" : 40019
+		},
+		{
+			"code_town" : 50077,
+			"value_town" : "Ndankh Sene",
+			"code_district" : 40020
+		},
+		{
+			"code_town" : 50078,
+			"value_town" : "Gade Escale",
+			"code_district" : 40020
+		},
+		{
+			"code_town" : 50079,
+			"value_town" : "Touba Lappe",
+			"code_district" : 40020
+		},
+		{
+			"code_town" : 50080,
+			"value_town" : "Keur Ngalgou",
+			"code_district" : 40020
+		},
+		{
+			"code_town" : 50081,
+			"value_town" : "Ndindy",
+			"code_district" : 40020
+		},
+		{
+			"code_town" : 50082,
+			"value_town" : "Taiba Moutoupha",
+			"code_district" : 40020
+		},
+		{
+			"code_town" : 50083,
+			"value_town" : "Diourbel",
+			"code_district" : 40021
+		},
+		{
+			"code_town" : 50084,
+			"value_town" : "Touba Mosquee",
+			"code_district" : 40022
+		},
+		{
+			"code_town" : 50085,
+			"value_town" : "Dalla Ngabou",
+			"code_district" : 40022
+		},
+		{
+			"code_town" : 50086,
+			"value_town" : "Missirah",
+			"code_district" : 40022
+		},
+		{
+			"code_town" : 50087,
+			"value_town" : "Nghaye",
+			"code_district" : 40022
+		},
+		{
+			"code_town" : 50088,
+			"value_town" : "Touba Fall",
+			"code_district" : 40022
+		},
+		{
+			"code_town" : 50089,
+			"value_town" : "Darou Salam Typ",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50090,
+			"value_town" : "Darou Nahim",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50091,
+			"value_town" : "Kael",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50092,
+			"value_town" : "Madina",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50093,
+			"value_town" : "Touba Mboul",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50094,
+			"value_town" : "Taiba Thiekene",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50095,
+			"value_town" : "Dendeye Gouy Gui",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50096,
+			"value_town" : "Ndioumane",
+			"code_district" : 40023
+		},
+		{
+			"code_town" : 50097,
+			"value_town" : "Taif",
+			"code_district" : 40024
+		},
+		{
+			"code_town" : 50098,
+			"value_town" : "Sadio",
+			"code_district" : 40024
+		},
+		{
+			"code_town" : 50099,
+			"value_town" : "Mbacke",
+			"code_district" : 40025
+		},
+		{
+			"code_town" : 50100,
+			"value_town" : "Thiare Ndialgui",
+			"code_district" : 40026
+		},
+		{
+			"code_town" : 50101,
+			"value_town" : "Diaoule",
+			"code_district" : 40026
+		},
+		{
+			"code_town" : 50102,
+			"value_town" : "Mbellacadiao",
+			"code_district" : 40026
+		},
+		{
+			"code_town" : 50103,
+			"value_town" : "Ndiop",
+			"code_district" : 40026
+		},
+		{
+			"code_town" : 50104,
+			"value_town" : "Diakhao",
+			"code_district" : 40026
+		},
+		{
+			"code_town" : 50105,
+			"value_town" : "Djilasse",
+			"code_district" : 40027
+		},
+		{
+			"code_town" : 50106,
+			"value_town" : "Fimela",
+			"code_district" : 40027
+		},
+		{
+			"code_town" : 50107,
+			"value_town" : "Loul Sessene",
+			"code_district" : 40027
+		},
+		{
+			"code_town" : 50108,
+			"value_town" : "Palmarin Facao",
+			"code_district" : 40027
+		},
+		{
+			"code_town" : 50109,
+			"value_town" : "Niakhar",
+			"code_district" : 40028
+		},
+		{
+			"code_town" : 50110,
+			"value_town" : "Ngayokhene",
+			"code_district" : 40028
+		},
+		{
+			"code_town" : 50111,
+			"value_town" : "Patar",
+			"code_district" : 40028
+		},
+		{
+			"code_town" : 50112,
+			"value_town" : "Diarrere",
+			"code_district" : 40029
+		},
+		{
+			"code_town" : 50113,
+			"value_town" : "Diouroup",
+			"code_district" : 40029
+		},
+		{
+			"code_town" : 50114,
+			"value_town" : "Tattaguine",
+			"code_district" : 40029
+		},
+		{
+			"code_town" : 50115,
+			"value_town" : "Fatick",
+			"code_district" : 40030
+		},
+		{
+			"code_town" : 50116,
+			"value_town" : "Dioffior",
+			"code_district" : 40030
+		},
+		{
+			"code_town" : 50117,
+			"value_town" : "Keur Saloum Diane",
+			"code_district" : 40031
+		},
+		{
+			"code_town" : 50118,
+			"value_town" : "Keur Samba Gueye",
+			"code_district" : 40031
+		},
+		{
+			"code_town" : 50119,
+			"value_town" : "Toubacouta",
+			"code_district" : 40031
+		},
+		{
+			"code_town" : 50120,
+			"value_town" : "Nioro Alassane Tall",
+			"code_district" : 40031
+		},
+		{
+			"code_town" : 50120,
+			"value_town" : "Karang Poste",
+			"code_district" : 40031
+		},
+		{
+			"code_town" : 50121,
+			"value_town" : "Diossong",
+			"code_district" : 40032
+		},
+		{
+			"code_town" : 50122,
+			"value_town" : "Djilor",
+			"code_district" : 40032
+		},
+		{
+			"code_town" : 50123,
+			"value_town" : "Soum",
+			"code_district" : 40032
+		},
+		{
+			"code_town" : 50124,
+			"value_town" : "Niassene",
+			"code_district" : 40032
+		},
+		{
+			"code_town" : 50125,
+			"value_town" : "Diagane Barka",
+			"code_district" : 40032
+		},
+		{
+			"code_town" : 50126,
+			"value_town" : "Mbam",
+			"code_district" : 40032
+		},
+		{
+			"code_town" : 50127,
+			"value_town" : "Passy",
+			"code_district" : 40032
+		},
+		{
+			"code_town" : 50128,
+			"value_town" : "Bassoul",
+			"code_district" : 40033
+		},
+		{
+			"code_town" : 50129,
+			"value_town" : "Dionewar",
+			"code_district" : 40033
+		},
+		{
+			"code_town" : 50130,
+			"value_town" : "Djirnda",
+			"code_district" : 40033
+		},
+		{
+			"code_town" : 50131,
+			"value_town" : "Foundiougne",
+			"code_district" : 40034
+		},
+		{
+			"code_town" : 50132,
+			"value_town" : "Sokone",
+			"code_district" : 40034
+		},
+		{
+			"code_town" : 50133,
+			"value_town" : "Colobane",
+			"code_district" : 40035
+		},
+		{
+			"code_town" : 50134,
+			"value_town" : "Mbar",
+			"code_district" : 40035
+		},
+		{
+			"code_town" : 50135,
+			"value_town" : "Ndiene agane",
+			"code_district" : 40036
+		},
+		{
+			"code_town" : 50136,
+			"value_town" : "Ouadiour",
+			"code_district" : 40036
+		},
+		{
+			"code_town" : 50137,
+			"value_town" : "Patar Lia",
+			"code_district" : 40036
+		},
+		{
+			"code_town" : 50138,
+			"value_town" : "Gossas",
+			"code_district" : 40037
+		},
+		{
+			"code_town" : 50139,
+			"value_town" : "Keur Mboucki",
+			"code_district" : 40038
+		},
+		{
+			"code_town" : 50140,
+			"value_town" : "Touba Mbella",
+			"code_district" : 40038
+		},
+		{
+			"code_town" : 50141,
+			"value_town" : "Diamal",
+			"code_district" : 40038
+		},
+		{
+			"code_town" : 50142,
+			"value_town" : "Mabo",
+			"code_district" : 40039
+		},
+		{
+			"code_town" : 50143,
+			"value_town" : "Ndiognick",
+			"code_district" : 40039
+		},
+		{
+			"code_town" : 50144,
+			"value_town" : "Segre-gatta",
+			"code_district" : 40039
+		},
+		{
+			"code_town" : 50145,
+			"value_town" : "Mbeuleup",
+			"code_district" : 40039
+		},
+		{
+			"code_town" : 50146,
+			"value_town" : "Birkelane",
+			"code_district" : 40040
+		},
+		{
+			"code_town" : 50147,
+			"value_town" : "Diamagadio",
+			"code_district" : 40041
+		},
+		{
+			"code_town" : 50148,
+			"value_town" : "Diokoul Belbouck",
+			"code_district" : 40041
+		},
+		{
+			"code_town" : 50149,
+			"value_town" : "Kathiotte",
+			"code_district" : 40041
+		},
+		{
+			"code_town" : 50150,
+			"value_town" : "Medinatourl Salam 2",
+			"code_district" : 40041
+		},
+		{
+			"code_town" : 50151,
+			"value_town" : "Nganda",
+			"code_district" : 40041
+		},
+		{
+			"code_town" : 50152,
+			"value_town" : "Gniby",
+			"code_district" : 40042
+		},
+		{
+			"code_town" : 50153,
+			"value_town" : "Boulel",
+			"code_district" : 40042
+		},
+		{
+			"code_town" : 50154,
+			"value_town" : "Kahi",
+			"code_district" : 40042
+		},
+		{
+			"code_town" : 50155,
+			"value_town" : "Kaffrine",
+			"code_district" : 40043
+		},
+		{
+			"code_town" : 50156,
+			"value_town" : "Missirah Wadene",
+			"code_district" : 40044
+		},
+		{
+			"code_town" : 50157,
+			"value_town" : "Maka Yop",
+			"code_district" : 40044
+		},
+		{
+			"code_town" : 50158,
+			"value_town" : "Ngainthe Pathe",
+			"code_district" : 40044
+		},
+		{
+			"code_town" : 50159,
+			"value_town" : "Fass Thiekene",
+			"code_district" : 40045
+		},
+		{
+			"code_town" : 50160,
+			"value_town" : "Saly Escale",
+			"code_district" : 40045
+		},
+		{
+			"code_town" : 50161,
+			"value_town" : "Ida Mouride",
+			"code_district" : 40045
+		},
+		{
+			"code_town" : 50162,
+			"value_town" : "Ribot Escale",
+			"code_district" : 40046
+		},
+		{
+			"code_town" : 50163,
+			"value_town" : "Lour Escale",
+			"code_district" : 40046
+		},
+		{
+			"code_town" : 50164,
+			"value_town" : "Koungheul",
+			"code_district" : 40047
+		},
+		{
+			"code_town" : 50165,
+			"value_town" : "Darou Miname",
+			"code_district" : 40048
+		},
+		{
+			"code_town" : 50166,
+			"value_town" : "Khelcom",
+			"code_district" : 40048
+		},
+		{
+			"code_town" : 50167,
+			"value_town" : "Ndioum Ngainth",
+			"code_district" : 40048
+		},
+		{
+			"code_town" : 50168,
+			"value_town" : "Ndiobene Samba",
+			"code_district" : 40048
+		},
+		{
+			"code_town" : 50169,
+			"value_town" : "Lamo",
+			"code_district" : 40048
+		},
+		{
+			"code_town" : 50170,
+			"value_town" : "Sagna",
+			"code_district" : 40049
+		},
+		{
+			"code_town" : 50171,
+			"value_town" : "Dianke Souf",
+			"code_district" : 40049
+		},
+		{
+			"code_town" : 50172,
+			"value_town" : "Malem Hodar",
+			"code_district" : 40050
+		},
+		{
+			"code_town" : 50173,
+			"value_town" : "Khelcom - Birane",
+			"code_district" : 40051
+		},
+		{
+			"code_town" : 50174,
+			"value_town" : "Mbadakhoune",
+			"code_district" : 40051
+		},
+		{
+			"code_town" : 50175,
+			"value_town" : "Ndiago",
+			"code_district" : 40051
+		},
+		{
+			"code_town" : 50176,
+			"value_town" : "Ngathie Naoude",
+			"code_district" : 40051
+		},
+		{
+			"code_town" : 50177,
+			"value_town" : "Fass",
+			"code_district" : 40051
+		},
+		{
+			"code_town" : 50178,
+			"value_town" : "Gagnick",
+			"code_district" : 40052
+		},
+		{
+			"code_town" : 50179,
+			"value_town" : "Dara Mboss",
+			"code_district" : 40052
+		},
+		{
+			"code_town" : 50180,
+			"value_town" : "Nguelou",
+			"code_district" : 40052
+		},
+		{
+			"code_town" : 50181,
+			"value_town" : "Ourour",
+			"code_district" : 40052
+		},
+		{
+			"code_town" : 50182,
+			"value_town" : "Panal Ouolof",
+			"code_district" : 40052
+		},
+		{
+			"code_town" : 50183,
+			"value_town" : "Mboss",
+			"code_district" : 40052
+		},
+		{
+			"code_town" : 50184,
+			"value_town" : "Guinguineo",
+			"code_district" : 40053
+		},
+		{
+			"code_town" : 50185,
+			"value_town" : "Keur Baka",
+			"code_district" : 40054
+		},
+		{
+			"code_town" : 50186,
+			"value_town" : "Latmingue",
+			"code_district" : 40054
+		},
+		{
+			"code_town" : 50183,
+			"value_town" : "Thiare",
+			"code_district" : 40054
+		},
+		{
+			"code_town" : 50184,
+			"value_town" : "Ndoffane",
+			"code_district" : 40054
+		},
+		{
+			"code_town" : 50187,
+			"value_town" : "Keur Soce",
+			"code_district" : 40055
+		},
+		{
+			"code_town" : 50188,
+			"value_town" : "Ndiaffate",
+			"code_district" : 40055
+		},
+		{
+			"code_town" : 50189,
+			"value_town" : "Ndiedieng",
+			"code_district" : 40055
+		},
+		{
+			"code_town" : 50190,
+			"value_town" : "Dya",
+			"code_district" : 40056
+		},
+		{
+			"code_town" : 50191,
+			"value_town" : "Ndiebel",
+			"code_district" : 40056
+		},
+		{
+			"code_town" : 50192,
+			"value_town" : "Thiomby",
+			"code_district" : 40056
+		},
+		{
+			"code_town" : 50193,
+			"value_town" : "Gandiaye",
+			"code_district" : 40056
+		},
+		{
+			"code_town" : 50194,
+			"value_town" : "Sibassor",
+			"code_district" : 40056
+		},
+		{
+			"code_town" : 50195,
+			"value_town" : "Kaolack",
+			"code_district" : 40057
+		},
+		{
+			"code_town" : 50196,
+			"value_town" : "Kahone",
+			"code_district" : 40057
+		},
+		{
+			"code_town" : 50197,
+			"value_town" : "Kayemor",
+			"code_district" : 40058
+		},
+		{
+			"code_town" : 50198,
+			"value_town" : "Medina Sabakh",
+			"code_district" : 40058
+		},
+		{
+			"code_town" : 50199,
+			"value_town" : "Ngayene",
+			"code_district" : 40058
+		},
+		{
+			"code_town" : 50200,
+			"value_town" : "Gainthe Kaye",
+			"code_district" : 40059
+		},
+		{
+			"code_town" : 50201,
+			"value_town" : "Dabaly",
+			"code_district" : 40059
+		},
+		{
+			"code_town" : 50202,
+			"value_town" : "Darou Salam",
+			"code_district" : 40059
+		},
+		{
+			"code_town" : 50203,
+			"value_town" : "Paos Koto",
+			"code_district" : 40059
+		},
+		{
+			"code_town" : 50204,
+			"value_town" : "Porokhane",
+			"code_district" : 40059
+		},
+		{
+			"code_town" : 50205,
+			"value_town" : "Taiba Niassene",
+			"code_district" : 40059
+		},
+		{
+			"code_town" : 50206,
+			"value_town" : "Keur Maba",
+			"code_district" : 40060
+		},
+		{
+			"code_town" : 50207,
+			"value_town" : "Diakhou",
+			"code_district" : 40060
+		},
+		{
+			"code_town" : 50208,
+			"value_town" : "Keur Madongo",
+			"code_district" : 40060
+		},
+		{
+			"code_town" : 50209,
+			"value_town" : "Ndrame Escale",
+			"code_district" : 40060
+		},
+		{
+			"code_town" : 50210,
+			"value_town" : "Wack Ngouna",
+			"code_district" : 40060
+		},
+		{
+			"code_town" : 50211,
+			"value_town" : "Keur Madiabel",
+			"code_district" : 40060
+		},
+		{
+			"code_town" : 50212,
+			"value_town" : "Nioro",
+			"code_district" : 40061
+		},
+		{
+			"code_town" : 50213,
+			"value_town" : "Ninfecha",
+			"code_district" : 40062
+		},
+		{
+			"code_town" : 50214,
+			"value_town" : "Bandafassi",
+			"code_district" : 40062
+		},
+		{
+			"code_town" : 50215,
+			"value_town" : "Tomboroncoto",
+			"code_district" : 40062
+		},
+		{
+			"code_town" : 50216,
+			"value_town" : "Dindefelo",
+			"code_district" : 40062
+		},
+		{
+			"code_town" : 50217,
+			"value_town" : "Fongolimbi",
+			"code_district" : 40063
+		},
+		{
+			"code_town" : 50218,
+			"value_town" : "Dimboli",
+			"code_district" : 40063
+		},
+		{
+			"code_town" : 50219,
+			"value_town" : "Kedougou",
+			"code_district" : 40064
+		},
+		{
+			"code_town" : 50220,
+			"value_town" : "Kevoye",
+			"code_district" : 40065
+		},
+		{
+			"code_town" : 50221,
+			"value_town" : "Dakateli",
+			"code_district" : 40065
+		},
+		{
+			"code_town" : 50222,
+			"value_town" : "Ethiolo",
+			"code_district" : 40066
+		},
+		{
+			"code_town" : 50223,
+			"value_town" : "Oubadji",
+			"code_district" : 40066
+		},
+		{
+			"code_town" : 50224,
+			"value_town" : "Dar Salam",
+			"code_district" : 40066
+		},
+		{
+			"code_town" : 50225,
+			"value_town" : "Salemata",
+			"code_district" : 40067
+		},
+		{
+			"code_town" : 50226,
+			"value_town" : "Dar Salam",
+			"code_district" : 40066
+		},
+		{
+			"code_town" : 50227,
+			"value_town" : "Salemata",
+			"code_district" : 40067
+		},
+		{
+			"code_town" : 50228,
+			"value_town" : "Bembou",
+			"code_district" : 40068
+		},
+		{
+			"code_town" : 50229,
+			"value_town" : "Medina Baffe",
+			"code_district" : 40068
+		},
+		{
+			"code_town" : 50230,
+			"value_town" : "Sabodala",
+			"code_district" : 40069
+		},
+		{
+			"code_town" : 50231,
+			"value_town" : "Khossanto",
+			"code_district" : 40069
+		},
+		{
+			"code_town" : 50232,
+			"value_town" : "Missirah Sirimana",
+			"code_district" : 40069
+		},
+		{
+			"code_town" : 50233,
+			"value_town" : "Saraya",
+			"code_district" : 40070
+		},
+		{
+			"code_town" : 50234,
+			"value_town" : "Dialambere",
+			"code_district" : 40071
+		},
+		{
+			"code_town" : 50235,
+			"value_town" : "Medina Cherif",
+			"code_district" : 40071
+		},
+		{
+			"code_town" : 50236,
+			"value_town" : "Mampatim",
+			"code_district" : 40072
+		},
+		{
+			"code_town" : 50237,
+			"value_town" : "Bagadadji",
+			"code_district" : 40072
+		},
+		{
+			"code_town" : 50238,
+			"value_town" : "Coumbacara",
+			"code_district" : 40072
+		},
+		{
+			"code_town" : 50239,
+			"value_town" : "Dabo",
+			"code_district" : 40072
+		},
+		{
+			"code_town" : 50240,
+			"value_town" : "Thietty",
+			"code_district" : 40073
+		},
+		{
+			"code_town" : 50241,
+			"value_town" : "Sare Bidji",
+			"code_district" : 40073
+		},
+		{
+			"code_town" : 50242,
+			"value_town" : "Guiro Yero Bocar",
+			"code_district" : 40074
+		},
+		{
+			"code_town" : 50243,
+			"value_town" : "Dioulacolon",
+			"code_district" : 40074
+		},
+		{
+			"code_town" : 50244,
+			"value_town" : "Tankanto Escale",
+			"code_district" : 40074
+		},
+		{
+			"code_town" : 50245,
+			"value_town" : "Medina El hadj",
+			"code_district" : 40074
+		},
+		{
+			"code_town" : 50246,
+			"value_town" : "Salikegne",
+			"code_district" : 40074
+		},
+		{
+			"code_town" : 50247,
+			"value_town" : "Sare Yoba Diega",
+			"code_district" : 40074
+		},
+		{
+			"code_town" : 50248,
+			"value_town" : "Kolda",
+			"code_district" : 40075
+		},
+		{
+			"code_town" : 50249,
+			"value_town" : "Badion",
+			"code_district" : 40076
+		},
+		{
+			"code_town" : 50250,
+			"value_town" : "Fafacourou",
+			"code_district" : 40076
+		},
+		{
+			"code_town" : 50251,
+			"value_town" : "Bourouco",
+			"code_district" : 40077
+		},
+		{
+			"code_town" : 50252,
+			"value_town" : "Bignarabe",
+			"code_district" : 40077
+		},
+		{
+			"code_town" : 50253,
+			"value_town" : "Ndorna",
+			"code_district" : 40077
+		},
+		{
+			"code_town" : 50254,
+			"value_town" : "Koulinto",
+			"code_district" : 40077
+		},
+		{
+			"code_town" : 50255,
+			"value_town" : "Niaming",
+			"code_district" : 40078
+		},
+		{
+			"code_town" : 50256,
+			"value_town" : "Dinguiraye",
+			"code_district" : 40078
+		},
+		{
+			"code_town" : 50257,
+			"value_town" : "Pata",
+			"code_district" : 40078
+		},
+		{
+			"code_town" : 50258,
+			"value_town" : "Kerewane",
+			"code_district" : 40078
+		},
+		{
+			"code_town" : 50259,
+			"value_town" : "Medina Yora Foulah",
+			"code_district" : 40079
+		},
+		{
+			"code_town" : 50260,
+			"value_town" : "Kandiaye",
+			"code_district" : 40080
+		},
+		{
+			"code_town" : 50261,
+			"value_town" : "Sare Coly Salle",
+			"code_district" : 40080
+		},
+		{
+			"code_town" : 50262,
+			"value_town" : "Kandia",
+			"code_district" : 40080
+		},
+		{
+			"code_town" : 50263,
+			"value_town" : "Nemataba",
+			"code_district" : 40080
+		},
+		{
+			"code_town" : 50264,
+			"value_town" : "Kounkane",
+			"code_district" : 40080
+		},
+		{
+			"code_town" : 50265,
+			"value_town" : "Diaobe-Kabendou",
+			"code_district" : 40080
+		},
+		{
+			"code_town" : 50266,
+			"value_town" : "Pakour",
+			"code_district" : 40081
+		},
+		{
+			"code_town" : 50267,
+			"value_town" : "Paroumba",
+			"code_district" : 40081
+		},
+		{
+			"code_town" : 50268,
+			"value_town" : "Ouassadou",
+			"code_district" : 40081
+		},
+		{
+			"code_town" : 50269,
+			"value_town" : "Bonconto",
+			"code_district" : 40082
+		},
+		{
+			"code_town" : 50270,
+			"value_town" : "Linkering",
+			"code_district" : 40082
+		},
+		{
+			"code_town" : 50271,
+			"value_town" : "Medina Gounass",
+			"code_district" : 40082
+		},
+		{
+			"code_town" : 50272,
+			"value_town" : "Sinthiang",
+			"code_district" : 40082
+		},
+		{
+			"code_town" : 50273,
+			"value_town" : "Koundara",
+			"code_district" : 40082
+		},
+		{
+			"code_town" : 50274,
+			"value_town" : "Velingara",
+			"code_district" : 40083
+		},
+		{
+			"code_town" : 50275,
+			"value_town" : "Bandegne Ouolof",
+			"code_district" : 40084
+		},
+		{
+			"code_town" : 50276,
+			"value_town" : "Diokoul Diawrigne",
+			"code_district" : 40084
+		},
+		{
+			"code_town" : 50277,
+			"value_town" : "Kab Gaye",
+			"code_district" : 40084
+		},
+		{
+			"code_town" : 50278,
+			"value_town" : "Ndane",
+			"code_district" : 40084
+		},
+		{
+			"code_town" : 50279,
+			"value_town" : "Thieppe",
+			"code_district" : 40084
+		},
+		{
+			"code_town" : 50280,
+			"value_town" : "Gueoul",
+			"code_district" : 40084
+		},
+		{
+			"code_town" : 50281,
+			"value_town" : "Mbacke Cajor",
+			"code_district" : 40085
+		},
+		{
+			"code_town" : 50282,
+			"value_town" : "Darou Marnane",
+			"code_district" : 40085
+		},
+		{
+			"code_town" : 50283,
+			"value_town" : "Darou Mousty",
+			"code_district" : 40085
+		},
+		{
+			"code_town" : 50284,
+			"value_town" : "Mbadiane",
+			"code_district" : 40085
+		},
+		{
+			"code_town" : 50285,
+			"value_town" : "Ndoyene",
+			"code_district" : 40085
+		},
+		{
+			"code_town" : 50286,
+			"value_town" : "Sam Yabal",
+			"code_district" : 40085
+		},
+		{
+			"code_town" : 50287,
+			"value_town" : "Touba Merina",
+			"code_district" : 40085
+		},
+		{
+			"code_town" : 50288,
+			"value_town" : "Ngourane Ouolof",
+			"code_district" : 40086
+		},
+		{
+			"code_town" : 50289,
+			"value_town" : "Thiolom Fall",
+			"code_district" : 40086
+		},
+		{
+			"code_town" : 50290,
+			"value_town" : "Sagatta Gueth",
+			"code_district" : 40086
+		},
+		{
+			"code_town" : 50291,
+			"value_town" : "Kanene Ndiob",
+			"code_district" : 40086
+		},
+		{
+			"code_town" : 50292,
+			"value_town" : "Loro",
+			"code_district" : 40086
+		},
+		{
+			"code_town" : 50293,
+			"value_town" : "Kebemer",
+			"code_district" : 40087
+		},
+		{
+			"code_town" : 50294,
+			"value_town" : "Barkedji",
+			"code_district" : 40088
+		},
+		{
+			"code_town" : 50295,
+			"value_town" : "Gassane",
+			"code_district" : 40088
+		},
+		{
+			"code_town" : 50296,
+			"value_town" : "Thiarny",
+			"code_district" : 40088
+		},
+		{
+			"code_town" : 50297,
+			"value_town" : "Thiel",
+			"code_district" : 40088
+		},
+		{
+			"code_town" : 50298,
+			"value_town" : "Boulal",
+			"code_district" : 40089
+		},
+		{
+			"code_town" : 50299,
+			"value_town" : "Dealy",
+			"code_district" : 40089
+		},
+		{
+			"code_town" : 50300,
+			"value_town" : "Thiamene Passe",
+			"code_district" : 40089
+		},
+		{
+			"code_town" : 50301,
+			"value_town" : "Sagatta Djolof",
+			"code_district" : 40089
+		},
+		{
+			"code_town" : 50302,
+			"value_town" : "Affe Djolof",
+			"code_district" : 40089
+		},
+		{
+			"code_town" : 50303,
+			"value_town" : "Dodji",
+			"code_district" : 40090
+		},
+		{
+			"code_town" : 50304,
+			"value_town" : "Labgar",
+			"code_district" : 40090
+		},
+		{
+			"code_town" : 50305,
+			"value_town" : "Ouarkhokh",
+			"code_district" : 40091
+		},
+		{
+			"code_town" : 50306,
+			"value_town" : "Kamb",
+			"code_district" : 40092
+		},
+		{
+			"code_town" : 50307,
+			"value_town" : "Mboula",
+			"code_district" : 40092
+		},
+		{
+			"code_town" : 50308,
+			"value_town" : "Tessekere Forage",
+			"code_district" : 40092
+		},
+		{
+			"code_town" : 50309,
+			"value_town" : "Yang-Yang",
+			"code_district" : 40092
+		},
+		{
+			"code_town" : 50310,
+			"value_town" : "Mbeuleukhe",
+			"code_district" : 40092
+		},
+		{
+			"code_town" : 50311,
+			"value_town" : "Linguere",
+			"code_district" : 40093
+		},
+		{
+			"code_town" : 50312,
+			"value_town" : "Dahra",
+			"code_district" : 40093
+		},
+		{
+			"code_town" : 50313,
+			"value_town" : "Coki",
+			"code_district" : 40094
+		},
+		{
+			"code_town" : 50314,
+			"value_town" : "Guet Ardo",
+			"code_district" : 40094
+		},
+		{
+			"code_town" : 50315,
+			"value_town" : "Thiamene",
+			"code_district" : 40094
+		},
+		{
+			"code_town" : 50316,
+			"value_town" : "Pete Ouarack",
+			"code_district" : 40094
+		},
+		{
+			"code_town" : 50317,
+			"value_town" : "Ndiagne",
+			"code_district" : 40094
+		},
+		{
+			"code_town" : 50318,
+			"value_town" : "Keur Momar Sarr",
+			"code_district" : 40095
+		},
+		{
+			"code_town" : 50319,
+			"value_town" : "Nguer Malal",
+			"code_district" : 40095
+		},
+		{
+			"code_town" : 50320,
+			"value_town" : "Syer",
+			"code_district" : 40095
+		},
+		{
+			"code_town" : 50321,
+			"value_town" : "Gande",
+			"code_district" : 40095
+		},
+		{
+			"code_town" : 50322,
+			"value_town" : "Mbediene",
+			"code_district" : 40096
+		},
+		{
+			"code_town" : 50323,
+			"value_town" : "Niomre",
+			"code_district" : 40096
+		},
+		{
+			"code_town" : 50324,
+			"value_town" : "Nguidile",
+			"code_district" : 40096
+		},
+		{
+			"code_town" : 50325,
+			"value_town" : "Kele Gueye",
+			"code_district" : 40096
+		},
+		{
+			"code_town" : 50326,
+			"value_town" : "Leona",
+			"code_district" : 40097
+		},
+		{
+			"code_town" : 50327,
+			"value_town" : "Ngueme Sarr",
+			"code_district" : 40097
+		},
+		{
+			"code_town" : 50328,
+			"value_town" : "Sakal",
+			"code_district" : 40097
+		},
+		{
+			"code_town" : 50329,
+			"value_town" : "Louga",
+			"code_district" : 40098
+		},
+		{
+			"code_town" : 50330,
+			"value_town" : "Wouro Sidy",
+			"code_district" : 40099
+		},
+		{
+			"code_town" : 50331,
+			"value_town" : "Ndendory",
+			"code_district" : 40100
+		},
+		{
+			"code_town" : 50332,
+			"value_town" : "Hamady Hounare",
+			"code_district" : 40100
+		},
+		{
+			"code_town" : 50333,
+			"value_town" : "Sinthiou Bamambe-Banadji",
+			"code_district" : 40100
+		},
+		{
+			"code_town" : 50334,
+			"value_town" : "Odobere",
+			"code_district" : 40100
+		},
+		{
+			"code_town" : 50335,
+			"value_town" : "Aoure",
+			"code_district" : 40101
+		},
+		{
+			"code_town" : 50336,
+			"value_town" : "Bokiladji",
+			"code_district" : 40101
+		},
+		{
+			"code_town" : 50337,
+			"value_town" : "Orkadiere",
+			"code_district" : 40101
+		},
+		{
+			"code_town" : 50338,
+			"value_town" : "Ouaounde",
+			"code_district" : 40101
+		},
+		{
+			"code_town" : 50339,
+			"value_town" : "Dembancane",
+			"code_district" : 40101
+		},
+		{
+			"code_town" : 50340,
+			"value_town" : "Semme",
+			"code_district" : 40101
+		},
+		{
+			"code_town" : 50341,
+			"value_town" : "Kanel",
+			"code_district" : 40102
+		},
+		{
+			"code_town" : 50342,
+			"value_town" : "Dabia",
+			"code_district" : 40103
+		},
+		{
+			"code_town" : 50343,
+			"value_town" : "Agnam Civol",
+			"code_district" : 40103
+		},
+		{
+			"code_town" : 50344,
+			"value_town" : "Orefonde",
+			"code_district" : 40103
+		},
+		{
+			"code_town" : 50345,
+			"value_town" : "Thilogne",
+			"code_district" : 40103
+		},
+		{
+			"code_town" : 50346,
+			"value_town" : "Nguidjilone",
+			"code_district" : 40103
+		},
+		{
+			"code_town" : 50347,
+			"value_town" : "Bokidiawe",
+			"code_district" : 40104
+		},
+		{
+			"code_town" : 50348,
+			"value_town" : "Nabadji Civol",
+			"code_district" : 40104
+		},
+		{
+			"code_town" : 50349,
+			"value_town" : "Ogo",
+			"code_district" : 40104
+		},
+		{
+			"code_town" : 50350,
+			"value_town" : "Matam",
+			"code_district" : 40105
+		},
+		{
+			"code_town" : 50351,
+			"value_town" : "Ourossogui",
+			"code_district" : 40105
+		},
+		{
+			"code_town" : 50352,
+			"value_town" : "Lougre Thioly",
+			"code_district" : 40106
+		},
+		{
+			"code_town" : 50353,
+			"value_town" : "Oudalaye",
+			"code_district" : 40106
+		},
+		{
+			"code_town" : 50354,
+			"value_town" : "Velingara",
+			"code_district" : 40106
+		},
+		{
+			"code_town" : 50355,
+			"value_town" : "Ranerou",
+			"code_district" : 40107
+		},
+		{
+			"code_town" : 50351,
+			"value_town" : "Ourossogui",
+			"code_district" : 40105
+		},
+		{
+			"code_town" : 50352,
+			"value_town" : "Lougre Thioly",
+			"code_district" : 40106
+		},
+		{
+			"code_town" : 50353,
+			"value_town" : "Oudalaye",
+			"code_district" : 40106
+		},
+		{
+			"code_town" : 50354,
+			"value_town" : "Velingara",
+			"code_district" : 40106
+		},
+		{
+			"code_town" : 50355,
+			"value_town" : "Ranerou",
+			"code_district" : 40107
+		},
+		{
+			"code_town" : 50356,
+			"value_town" : "Ngnith",
+			"code_district" : 40108
+		},
+		{
+			"code_town" : 50357,
+			"value_town" : "Diama",
+			"code_district" : 40108
+		},
+		{
+			"code_town" : 50358,
+			"value_town" : "Ronkh",
+			"code_district" : 40108
+		},
+		{
+			"code_town" : 50359,
+			"value_town" : "Ross-Bethio",
+			"code_district" : 40108
+		},
+		{
+			"code_town" : 50360,
+			"value_town" : "Rosso",
+			"code_district" : 40108
+		},
+		{
+			"code_town" : 50361,
+			"value_town" : "Bokhol",
+			"code_district" : 40109
+		},
+		{
+			"code_town" : 50362,
+			"value_town" : "Mbane",
+			"code_district" : 40109
+		},
+		{
+			"code_town" : 50363,
+			"value_town" : "Ndombo Sandjiry",
+			"code_district" : 40109
+		},
+		{
+			"code_town" : 50364,
+			"value_town" : "Gae",
+			"code_district" : 40109
+		},
+		{
+			"code_town" : 50365,
+			"value_town" : "Dagana",
+			"code_district" : 40110
+		},
+		{
+			"code_town" : 50366,
+			"value_town" : "Richard Toll",
+			"code_district" : 40110
+		},
+		{
+			"code_town" : 50367,
+			"value_town" : "Mery",
+			"code_district" : 40111
+		},
+		{
+			"code_town" : 50368,
+			"value_town" : "Doumga Lao",
+			"code_district" : 40111
+		},
+		{
+			"code_town" : 50369,
+			"value_town" : "Madina Diathbe",
+			"code_district" : 40111
+		},
+		{
+			"code_town" : 50370,
+			"value_town" : "Gollere",
+			"code_district" : 40111
+		},
+		{
+			"code_town" : 50371,
+			"value_town" : "Mboumba",
+			"code_district" : 40111
+		},
+		{
+			"code_town" : 50372,
+			"value_town" : "Walalde",
+			"code_district" : 40111
+		},
+		{
+			"code_town" : 50373,
+			"value_town" : "Aere Lao",
+			"code_district" : 40111
+		},
+		{
+			"code_town" : 50374,
+			"value_town" : "Gamadji Sare",
+			"code_district" : 40112
+		},
+		{
+			"code_town" : 50375,
+			"value_town" : "Dodel",
+			"code_district" : 40112
+		},
+		{
+			"code_town" : 50376,
+			"value_town" : "Guede Village",
+			"code_district" : 40112
+		},
+		{
+			"code_town" : 50377,
+			"value_town" : "Guede Chantier",
+			"code_district" : 40112
+		},
+		{
+			"code_town" : 50378,
+			"value_town" : "Demette",
+			"code_district" : 40112
+		},
+		{
+			"code_town" : 50379,
+			"value_town" : "Bode Lao",
+			"code_district" : 40112
+		},
+		{
+			"code_town" : 50380,
+			"value_town" : "Fanaye",
+			"code_district" : 40113
+		},
+		{
+			"code_town" : 50381,
+			"value_town" : "Ndiayene Peindao",
+			"code_district" : 40113
+		},
+		{
+			"code_town" : 50382,
+			"value_town" : "Niandane",
+			"code_district" : 40113
+		},
+		{
+			"code_town" : 50383,
+			"value_town" : "Mbolo Birane",
+			"code_district" : 40114
+		},
+		{
+			"code_town" : 50384,
+			"value_town" : "Boke Dialloube",
+			"code_district" : 40114
+		},
+		{
+			"code_town" : 50385,
+			"value_town" : "Galoya Toucouleur",
+			"code_district" : 40114
+		},
+		{
+			"code_town" : 50386,
+			"value_town" : "Pete",
+			"code_district" : 40114
+		},
+		{
+			"code_town" : 50387,
+			"value_town" : "Podor",
+			"code_district" : 40115
+		},
+		{
+			"code_town" : 50388,
+			"value_town" : "Ndioum",
+			"code_district" : 40115
+		},
+		{
+			"code_town" : 50389,
+			"value_town" : "Fass Ngom",
+			"code_district" : 40116
+		},
+		{
+			"code_town" : 50390,
+			"value_town" : "Ndiebene Gandiole",
+			"code_district" : 40116
+		},
+		{
+			"code_town" : 50391,
+			"value_town" : "Gandon",
+			"code_district" : 40116
+		},
+		{
+			"code_town" : 50392,
+			"value_town" : "Mpal",
+			"code_district" : 40116
+		},
+		{
+			"code_town" : 50393,
+			"value_town" : "Saint-Louis",
+			"code_district" : 40117
+		},
+				{
+			"code_town" : 50394,
+			"value_town" : "Boghal",
+			"code_district" : 40118
+		},
+		{
+			"code_town" : 50395,
+			"value_town" : "Tankon",
+			"code_district" : 40118
+		},
+		{
+			"code_town" : 50396,
+			"value_town" : "Ndamalathiel",
+			"code_district" : 40118
+		},
+		{
+			"code_town" : 50397,
+			"value_town" : "Djinany",
+			"code_district" : 40118
+		},
+		{
+			"code_town" : 50398,
+			"value_town" : "Ndiamacouta",
+			"code_district" : 40118
+		},
+		{
+			"code_town" : 50399,
+			"value_town" : "Diacounda",
+			"code_district" : 40119
+		},
+		{
+			"code_town" : 50400,
+			"value_town" : "Inor",
+			"code_district" : 40119
+		},
+		{
+			"code_town" : 50401,
+			"value_town" : "Kandion Mangana",
+			"code_district" : 40119
+		},
+		{
+			"code_town" : 50402,
+			"value_town" : "Bona",
+			"code_district" : 40119
+		},
+		{
+			"code_town" : 50403,
+			"value_town" : "Diambati",
+			"code_district" : 40120
+		},
+		{
+			"code_town" : 50404,
+			"value_town" : "Faoune",
+			"code_district" : 40120
+		},
+		{
+			"code_town" : 50405,
+			"value_town" : "Diaroume",
+			"code_district" : 40120
+		},
+		{
+			"code_town" : 50406,
+			"value_town" : "Madina Wandifa",
+			"code_district" : 40120
+		},
+		{
+			"code_town" : 50407,
+			"value_town" : "Boukiling",
+			"code_district" : 40121
+		},
+		{
+			"code_town" : 50408,
+			"value_town" : "Yarang Balante",
+			"code_district" : 40122
+		},
+		{
+			"code_town" : 50409,
+			"value_town" : "Mangaroungou Santo",
+			"code_district" : 40122
+		},
+		{
+			"code_town" : 50410,
+			"value_town" : "Simbandi Balante",
+			"code_district" : 40122
+		},
+		{
+			"code_town" : 50411,
+			"value_town" : "Djibanar",
+			"code_district" : 40122
+		},
+		{
+			"code_town" : 50412,
+			"value_town" : "Kaour",
+			"code_district" : 40122
+		},
+		{
+			"code_town" : 50413,
+			"value_town" : "Samine",
+			"code_district" : 40122
+		},
+		{
+			"code_town" : 50414,
+			"value_town" : "Diattacounda",
+			"code_district" : 40122
+		},
+		{
+			"code_town" : 50415,
+			"value_town" : "Diouboudou",
+			"code_district" : 40123
+		},
+		{
+			"code_town" : 50416,
+			"value_town" : "Simbandi Brassou",
+			"code_district" : 40123
+		},
+		{
+			"code_town" : 50417,
+			"value_town" : "Baghere",
+			"code_district" : 40123
+		},
+		{
+			"code_town" : 50418,
+			"value_town" : "Niagha",
+			"code_district" : 40123
+		},
+		{
+			"code_town" : 50419,
+			"value_town" : "Tanaff",
+			"code_district" : 40123
+		},
+		{
+			"code_town" : 50420,
+			"value_town" : "Karantaba",
+			"code_district" : 40124
+		},
+		{
+			"code_town" : 50421,
+			"value_town" : "Kolibantang",
+			"code_district" : 40124
+		},
+		{
+			"code_town" : 50422,
+			"value_town" : "Goudomp",
+			"code_district" : 40125
+		},
+		{
+			"code_town" : 50423,
+			"value_town" : "Djiredji",
+			"code_district" : 40126
+		},
+		{
+			"code_town" : 50424,
+			"value_town" : "Bambaly",
+			"code_district" : 40126
+		},
+		{
+			"code_town" : 50418,
+			"value_town" : "Niagha",
+			"code_district" : 40123
+		},
+		{
+			"code_town" : 50419,
+			"value_town" : "Tanaff",
+			"code_district" : 40123
+		},
+		{
+			"code_town" : 50420,
+			"value_town" : "Karantaba",
+			"code_district" : 40124
+		},
+		{
+			"code_town" : 50421,
+			"value_town" : "Kolibantang",
+			"code_district" : 40124
+		},
+		{
+			"code_town" : 50422,
+			"value_town" : "Goudomp",
+			"code_district" : 40125
+		},
+		{
+			"code_town" : 50423,
+			"value_town" : "Djiredji",
+			"code_district" : 40126
+		},
+		{
+			"code_town" : 50424,
+			"value_town" : "Bambaly",
+			"code_district" : 40126
+		},
+		{
+			"code_town" : 50425,
+			"value_town" : "Oudoucar",
+			"code_district" : 40127
+		},
+		{
+			"code_town" : 50426,
+			"value_town" : "Sama Kanta Peulh",
+			"code_district" : 40127
+		},
+		{
+			"code_town" : 50427,
+			"value_town" : "Diannah Ba",
+			"code_district" : 40127
+		},
+		{
+			"code_town" : 50428,
+			"value_town" : "Koussy",
+			"code_district" : 40127
+		},
+		{
+			"code_town" : 50429,
+			"value_town" : "Sakar",
+			"code_district" : 40127
+		},
+		{
+			"code_town" : 50430,
+			"value_town" : "Diende",
+			"code_district" : 40127
+		},
+		{
+			"code_town" : 50431,
+			"value_town" : "Diannah Malary",
+			"code_district" : 40127
+		},
+				{
+			"code_town" : 50432,
+			"value_town" : "San Samba",
+			"code_district" : 40128
+		},
+		{
+			"code_town" : 50433,
+			"value_town" : "Bemet Bidjini",
+			"code_district" : 40128
+		},
+		{
+			"code_town" : 50434,
+			"value_town" : "Djibabouya",
+			"code_district" : 40128
+		},
+		{
+			"code_town" : 50435,
+			"value_town" : "Sedhiou",
+			"code_district" : 40129
+		},
+		{
+			"code_town" : 50436,
+			"value_town" : "Marsassoum",
+			"code_district" : 40129
+		},
+		{
+			"code_town" : 50437,
+			"value_town" : "Bele",
+			"code_district" : 40130
+		},
+		{
+			"code_town" : 50438,
+			"value_town" : "Sinthiou Fissa",
+			"code_district" : 40130
+		},
+		{
+			"code_town" : 50439,
+			"value_town" : "Kidira",
+			"code_district" : 40130
+		},
+		{
+			"code_town" : 50440,
+			"value_town" : "Toumboura",
+			"code_district" : 40131
+		},
+		{
+			"code_town" : 50441,
+			"value_town" : "Sadatou",
+			"code_district" : 40131
+		},
+		{
+			"code_town" : 50442,
+			"value_town" : "Madina Foulbe",
+			"code_district" : 40131
+		},
+		{
+			"code_town" : 50443,
+			"value_town" : "Gathiary",
+			"code_district" : 40131
+		},
+		{
+			"code_town" : 50444,
+			"value_town" : "Moudery",
+			"code_district" : 40132
+		},
+		{
+			"code_town" : 50445,
+			"value_town" : "Ballou",
+			"code_district" : 40132
+		},
+		{
+			"code_town" : 50446,
+			"value_town" : "Gabou",
+			"code_district" : 40132
+		},
+		{
+			"code_town" : 50447,
+			"value_town" : "Diawara",
+			"code_district" : 40132
+		},
+		{
+			"code_town" : 50448,
+			"value_town" : "Bakel",
+			"code_district" : 40133
+		},
+		{
+			"code_town" : 50449,
+			"value_town" : "Boynguel Bamba",
+			"code_district" : 40134
+		},
+		{
+			"code_town" : 50450,
+			"value_town" : "Sinthiou Mamadou",
+			"code_district" : 40134
+		},
+		{
+			"code_town" : 50451,
+			"value_town" : "Boubou",
+			"code_district" : 40134
+		},
+		{
+			"code_town" : 50452,
+			"value_town" : "Koussan",
+			"code_district" : 40134
+		},
+		{
+			"code_town" : 50453,
+			"value_town" : "Dougue",
+			"code_district" : 40134
+		},
+		{
+			"code_town" : 50454,
+			"value_town" : "Dianke Makha",
+			"code_district" : 40135
+		},
+		{
+			"code_town" : 50455,
+			"value_town" : "Boutoucoufara",
+			"code_district" : 40135
+		},
+		{
+			"code_town" : 50456,
+			"value_town" : "Bani Israel",
+			"code_district" : 40135
+		},
+		{
+			"code_town" : 50457,
+			"value_town" : "Komoti",
+			"code_district" : 40135
+		},
+		{
+			"code_town" : 50458,
+			"value_town" : "Sinthiou Bocar Aly",
+			"code_district" : 40136
+		},
+		{
+			"code_town" : 50459,
+			"value_town" : "Koulor",
+			"code_district" : 40136
+		},
+		{
+			"code_town" : 50460,
+			"value_town" : "Kothiary",
+			"code_district" : 40136
+		},
+		{
+			"code_town" : 50461,
+			"value_town" : "Bala",
+			"code_district" : 40137
+		},
+		{
+			"code_town" : 50462,
+			"value_town" : "Koar",
+			"code_district" : 40137
+		},
+		{
+			"code_town" : 50463,
+			"value_town" : "Goumbayel",
+			"code_district" : 40137
+		},
+		{
+			"code_town" : 50464,
+			"value_town" : "Goudiry",
+			"code_district" : 40138
+		},
+		{
+			"code_town" : 50465,
+			"value_town" : "Ndame",
+			"code_district" : 40139
+		},
+		{
+			"code_town" : 50466,
+			"value_town" : "Mereto",
+			"code_district" : 40139
+		},
+		{
+			"code_town" : 50467,
+			"value_town" : "Kahene",
+			"code_district" : 40139
+		},
+		{
+			"code_town" : 50468,
+			"value_town" : "Bamba Thialene",
+			"code_district" : 40139
+		},
+		{
+			"code_town" : 50469,
+			"value_town" : "Payar",
+			"code_district" : 40140
+		},
+		{
+			"code_town" : 50470,
+			"value_town" : "Kouthia Guaydi",
+			"code_district" : 40140
+		},
+		{
+			"code_town" : 50471,
+			"value_town" : "Kouthiaba Wolof",
+			"code_district" : 40140
+		},
+		{
+			"code_town" : 50472,
+			"value_town" : "Pass Koto",
+			"code_district" : 40140
+		},
+		{
+			"code_town" : 50473,
+			"value_town" : "Malem Niani",
+			"code_district" : 40140
+		},
+		{
+			"code_town" : 50474,
+			"value_town" : "Koupentoum",
+			"code_district" : 40141
+		},
+		{
+			"code_town" : 50475,
+			"value_town" : "Niani Toucouleur",
+			"code_district" : 40142
+		},
+		{
+			"code_town" : 50476,
+			"value_town" : "Makacolibantang",
+			"code_district" : 40142
+		},
+		{
+			"code_town" : 50477,
+			"value_town" : "Ndoga Babacar",
+			"code_district" : 40142
+		},
+		{
+			"code_town" : 50478,
+			"value_town" : "Dialacoto",
+			"code_district" : 40143
+		},
+		{
+			"code_town" : 50479,
+			"value_town" : "Missirah",
+			"code_district" : 40143
+		},
+		{
+			"code_town" : 50480,
+			"value_town" : "Netteboulou",
+			"code_district" : 40143
+		},
+		{
+			"code_town" : 50481,
+			"value_town" : "Sinthiou Maleme",
+			"code_district" : 40144
+		},
+		{
+			"code_town" : 50482,
+			"value_town" : "Koussanar",
+			"code_district" : 40144
+		},
+		{
+			"code_town" : 50483,
+			"value_town" : "Tamba",
+			"code_district" : 40145
+		},
+		{
+			"code_town" : 50484,
+			"value_town" : "Fissel",
+			"code_district" : 40146
+		},
+		{
+			"code_town" : 50485,
+			"value_town" : "Ndiaganiao",
+			"code_district" : 40146
+		},
+		{
+			"code_town" : 50486,
+			"value_town" : "Sessene",
+			"code_district" : 40147
+		},
+		{
+			"code_town" : 50487,
+			"value_town" : "Sandiara",
+			"code_district" : 40147
+		},
+		{
+			"code_town" : 50488,
+			"value_town" : "Ngueniene",
+			"code_district" : 40147
+		},
+		{
+			"code_town" : 50489,
+			"value_town" : "Thiadiaye",
+			"code_district" : 40147
+		},
+		{
+			"code_town" : 50490,
+			"value_town" : "Sindia",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50491,
+			"value_town" : "Malicounda",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50492,
+			"value_town" : "Diass",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50493,
+			"value_town" : "Nguekhokh",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50494,
+			"value_town" : "Saly Portudal",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50495,
+			"value_town" : "Ngaparou",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50496,
+			"value_town" : "Somone",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50497,
+			"value_town" : "Popenguine",
+			"code_district" : 40148
+		},
+		{
+			"code_town" : 50498,
+			"value_town" : "Mbour",
+			"code_district" : 40149
+		},
+		{
+			"code_town" : 50499,
+			"value_town" : "Joal-Fadhiouth",
+			"code_district" : 40149
+		},
+		{
+			"code_town" : 50500,
+			"value_town" : "Thies Nord",
+			"code_district" : 40150
+		},
+		{
+			"code_town" : 50501,
+			"value_town" : "Thies Est",
+			"code_district" : 40151
+		},
+		{
+			"code_town" : 50502,
+			"value_town" : "Thies Ouest",
+			"code_district" : 40151
+		},
+		{
+			"code_town" : 50503,
+			"value_town" : "Thienaba",
+			"code_district" : 40152
+		},
+		{
+			"code_town" : 50504,
+			"value_town" : "Ngoudiane",
+			"code_district" : 40152
+		},
+		{
+			"code_town" : 50505,
+			"value_town" : "Ndieyene Surakh",
+			"code_district" : 40152
+		},
+		{
+			"code_town" : 50506,
+			"value_town" : "Touba Toul",
+			"code_district" : 40152
+		},
+		{
+			"code_town" : 50507,
+			"value_town" : "Keur Moussa",
+			"code_district" : 40153
+		},
+		{
+			"code_town" : 50508,
+			"value_town" : "Diender",
+			"code_district" : 40153
+		},
+		{
+			"code_town" : 50509,
+			"value_town" : "Fandene",
+			"code_district" : 40153
+		},
+		{
+			"code_town" : 50510,
+			"value_town" : "Kayar",
+			"code_district" : 40153
+		},
+		{
+			"code_town" : 50511,
+			"value_town" : "Notto",
+			"code_district" : 40154
+		},
+		{
+			"code_town" : 50512,
+			"value_town" : "Tassette",
+			"code_district" : 40154
+		},
+		{
+			"code_town" : 50513,
+			"value_town" : "Thies",
+			"code_district" : 40155
+		},
+		{
+			"code_town" : 50514,
+			"value_town" : "Khombole",
+			"code_district" : 40155
+		},
+		{
+			"code_town" : 50515,
+			"value_town" : "Pout",
+			"code_district" : 40155
+		},
+		{
+			"code_town" : 50516,
+			"value_town" : "Meouane",
+			"code_district" : 40156
+		},
+		{
+			"code_town" : 50517,
+			"value_town" : "Darou Khoudoss",
+			"code_district" : 40156
+		},
+		{
+			"code_town" : 50518,
+			"value_town" : "Taiba Ndiaye",
+			"code_district" : 40156
+		},
+		{
+			"code_town" : 50519,
+			"value_town" : "Mboro",
+			"code_district" : 40156
+		},
+		{
+			"code_town" : 50520,
+			"value_town" : "Merina Dakhar",
+			"code_district" : 40157
+		},
+		{
+			"code_town" : 50521,
+			"value_town" : "Koul",
+			"code_district" : 40157
+		},
+		{
+			"code_town" : 50522,
+			"value_town" : "Pekesse",
+			"code_district" : 40157
+		},
+		{
+			"code_town" : 50523,
+			"value_town" : "Niakhene",
+			"code_district" : 40158
+		},
+		{
+			"code_town" : 50524,
+			"value_town" : "Mbayene",
+			"code_district" : 40158
+		},
+		{
+			"code_town" : 50525,
+			"value_town" : "thilmakha",
+			"code_district" : 40158
+		},
+		{
+			"code_town" : 50526,
+			"value_town" : "Ngandiouf",
+			"code_district" : 40158
+		},
+		{
+			"code_town" : 50527,
+			"value_town" : "Tivaouane",
+			"code_district" : 40159
+		},
+		{
+			"code_town" : 50528,
+			"value_town" : "Mekhe",
+			"code_district" : 40159
+		},
+		{
+			"code_town" : 50529,
+			"value_town" : "Niaguis",
+			"code_district" : 40160
+		},
+		{
+			"code_town" : 50530,
+			"value_town" : "Adeane",
+			"code_district" : 40160
+		},
+		{
+			"code_town" : 50531,
+			"value_town" : "Boutoupa Camaracounda",
+			"code_district" : 40160
+		},
+		{
+			"code_town" : 50532,
+			"value_town" : "Niassia",
+			"code_district" : 40161
+		},
+		{
+			"code_town" : 50533,
+			"value_town" : "Enampore",
+			"code_district" : 40161
+		},
+		{
+			"code_town" : 50534,
+			"value_town" : "Ziguinchor",
+			"code_district" : 40162
+		},
+		{
+			"code_town" : 50535,
+			"value_town" : "Diembering",
+			"code_district" : 40163
+		},
+		{
+			"code_town" : 50536,
+			"value_town" : "Santhiaba Manjack",
+			"code_district" : 40163
+		},
+		{
+			"code_town" : 50537,
+			"value_town" : "Oukout",
+			"code_district" : 40164
+		},
+		{
+			"code_town" : 50538,
+			"value_town" : "Mlomp",
+			"code_district" : 40164
+		},
+		{
+			"code_town" : 50539,
+			"value_town" : "Oussouye",
+			"code_district" : 40165
+		},
+		{
+			"code_town" : 50540,
+			"value_town" : "Kataba 1",
+			"code_district" : 40166
+		},
+		{
+			"code_town" : 50541,
+			"value_town" : "Djinaky",
+			"code_district" : 40166
+		},
+		{
+			"code_town" : 50542,
+			"value_town" : "Kafountine",
+			"code_district" : 40166
+		},
+		{
+			"code_town" : 50543,
+			"value_town" : "Diouloulou",
+			"code_district" : 40166
+		},
+		{
+			"code_town" : 50544,
+			"value_town" : "Tenghori",
+			"code_district" : 40167
+		},
+		{
+			"code_town" : 50545,
+			"value_town" : "Niamone",
+			"code_district" : 40167
+		},
+		{
+			"code_town" : 50546,
+			"value_town" : "Ouonck",
+			"code_district" : 40167
+		},
+		{
+			"code_town" : 50547,
+			"value_town" : "Coubalan",
+			"code_district" : 40167
+		},
+		{
+			"code_town" : 50548,
+			"value_town" : "Balinghore",
+			"code_district" : 40168
+		},
+		{
+			"code_town" : 50549,
+			"value_town" : "Diegoune",
+			"code_district" : 40168
+		},
+		{
+			"code_town" : 50549,
+			"value_town" : "Kartiack",
+			"code_district" : 40168
+		},
+		{
+			"code_town" : 50550,
+			"value_town" : "Mangagoulack",
+			"code_district" : 40168
+		},
+		{
+			"code_town" : 50551,
+			"value_town" : "Mlomp",
+			"code_district" : 40168
+		},
+		{
+			"code_town" : 50552,
+			"value_town" : "Djibidione",
+			"code_district" : 40169
+		},
+		{
+			"code_town" : 50553,
+			"value_town" : "Oulampane",
+			"code_district" : 40169
+		},
+		{
+			"code_town" : 50554,
+			"value_town" : "Sindian",
+			"code_district" : 40169
+		},
+		{
+			"code_town" : 50555,
+			"value_town" : "Suelle",
+			"code_district" : 40169
+		},
+		{
+			"code_town" : 50556,
+			"value_town" : "Bignona",
+			"code_district" : 40170
+		},
+		{
+			"code_town" : 50557,
+			"value_town" : "Thionck-Essyl",
+			"code_district" : 40170
+		}
+	]
+}

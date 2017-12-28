@@ -1,0 +1,34 @@
+{
+	"trainingFacilities" : [
+		{
+			"code_trainingFacility" : 100,
+			"type_trainingFacility" : "faculte",
+			"value_trainingFacility" : "FASTEF",
+			"value_trainingFacility_long" : "Faculte des Sciences et Technologies de l'Education et de la Formation"
+		},
+		{
+			"code_trainingFacility" : 101,
+			"type_trainingFacility" : "institut",
+			"value_trainingFacility" : "INSEPS",
+			"value_trainingFacility_long" : "Institut National Superieur de l'Education Populaire et du Sport"
+		},
+		{
+			"code_trainingFacility" : 102,
+			"type_trainingFacility" : "ecole",
+			"value_trainingFacility" : "ENA",
+			"value_trainingFacility_long" : "Ecole Nationale d'Administration"
+		},
+		{
+			"code_trainingFacility" : 103,
+			"type_trainingFacility" : "ecole",
+			"value_trainingFacility" : "ENSETP",
+			"value_trainingFacility_long" : "Ecole Normale Superieure d'Enseignement Technique et Professionnel"
+		},
+		{
+			"code_trainingFacility" : 104,
+			"type_trainingFacility" : "UFR",
+			"value_trainingFacility" : "UFR-SEFS",
+			"value_trainingFacility_long" : "Unite de Formation et de Recherche des Sciences de l'Education, de la Formation et du Sport"
+		}
+	]
+}

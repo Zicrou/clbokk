@@ -1,0 +1,16 @@
+{
+	"categ_str" : [
+	  {
+	    "code_country": 1,
+	    "value_country_short": "Central"
+	  },
+	  {
+	    "code_country": 2,
+	    "value_country_short": "Deconcentré"
+	  },
+	  {
+	    "code_country": 3,
+	    "value_country_short": "Etablissement"
+	  }
+	]
+}

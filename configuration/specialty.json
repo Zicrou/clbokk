@@ -1,0 +1,646 @@
+{
+	"specialties" : [
+	  {
+	    "code_specialty": 1,
+	    "value_specialty": "Francais",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 2,
+	    "value_specialty": "Maths",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 3,
+	    "value_specialty": "Physique",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 4,
+	    "value_specialty": "HG",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 5,
+	    "value_specialty": "Angl",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 6,
+	    "value_specialty": "SVT",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 7,
+	    "value_specialty": "SP",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 8,
+	    "value_specialty": "Espa",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 9,
+	    "value_specialty": "Arabe",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 10,
+	    "value_specialty": "EFS",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 11,
+	    "value_specialty": "EM",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 12,
+	    "value_specialty": "Education Artistique",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 13,
+	    "value_specialty": "EPS",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 14,
+	    "value_specialty": "Philo",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 15,
+	    "value_specialty": "Italien",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 16,
+	    "value_specialty": "Russe",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 17,
+	    "value_specialty": "Allem",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 18,
+	    "value_specialty": "LM",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 19,
+	    "value_specialty": "LC",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 20,
+	    "value_specialty": "LA",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 21,
+	    "value_specialty": "LE",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 22,
+	    "value_specialty": "MSVT",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 23,
+	    "value_specialty": "MSP",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 24,
+	    "value_specialty": "Technologie",
+	    "order_specialty": 0,
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 25,
+	    "value_specialty": "Economie",
+	    "order_specialty": 0,
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 26,
+	    "value_specialty": "Product° végetales",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 27,
+	    "value_specialty": "Construction mécanique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 28,
+	    "value_specialty": "Fabrication Mécanique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 29,
+	    "value_specialty": "Electrotechnique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 30,
+	    "value_specialty": "Comptabilité",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 31,
+	    "value_specialty": "Tech. Administra (TA)",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 32,
+	    "value_specialty": "Mecanique Mot",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 33,
+	    "value_specialty": "Portug",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 34,
+	    "value_specialty": "E.T.",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 35,
+	    "value_specialty": "LHG",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 38,
+	    "value_specialty": "LP",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 39,
+	    "value_specialty": "Lettres Arabes",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 40,
+	    "value_specialty": "TQG",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 41,
+	    "value_specialty": "TQG/TSE",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 42,
+	    "value_specialty": "SES",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 43,
+	    "value_specialty": "Ouvrage métallique old",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 44,
+	    "value_specialty": "Tech. Expression",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 45,
+	    "value_specialty": "Dessin Batiment",
+	    "order_specialty": 0,
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 46,
+	    "value_specialty": "Restau",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 47,
+	    "value_specialty": "Couture",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 48,
+	    "value_specialty": "Chaudr.Tuy.Industrielle",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 49,
+	    "value_specialty": "Social",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 50,
+	    "value_specialty": "Chef des trvx",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 52,
+	    "value_specialty": "Marketing",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 53,
+	    "value_specialty": "Commerce Intern.",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 54,
+	    "value_specialty": "Informatique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 55,
+	    "value_specialty": "Secrétariat",
+	    "order_specialty": "",
+	    "type_specialty": "A"
+	  },
+	  {
+	    "code_specialty": 56,
+	    "value_specialty": "Electronique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 57,
+	    "value_specialty": "F.Construction méca",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 58,
+	    "value_specialty": "F.Fabrication méca",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 59,
+	    "value_specialty": "Mécanique auto",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 60,
+	    "value_specialty": "Droit",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 61,
+	    "value_specialty": "F.Topographie",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 62,
+	    "value_specialty": "F.Compta-Gestion",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 63,
+	    "value_specialty": "F.Bois",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 64,
+	    "value_specialty": "F.OM",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 65,
+	    "value_specialty": "Electricité",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 66,
+	    "value_specialty": "Bois",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 67,
+	    "value_specialty": "Batiment",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 68,
+	    "value_specialty": "Plomberie",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 70,
+	    "value_specialty": "Tolerie sérrur.",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 71,
+	    "value_specialty": "F.Agri-Elevage",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 72,
+	    "value_specialty": "Habillement",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 73,
+	    "value_specialty": "Styliste Mod",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 74,
+	    "value_specialty": "Construction métal.",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 75,
+	    "value_specialty": "Méca.générale",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 76,
+	    "value_specialty": "Méca.auto",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 77,
+	    "value_specialty": "Maçonnerie",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 78,
+	    "value_specialty": "Tech. Agricoles",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 79,
+	    "value_specialty": "Phytotechnie",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 80,
+	    "value_specialty": "Product° animales",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 81,
+	    "value_specialty": "L.P.",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 82,
+	    "value_specialty": "Poterie Ceramique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 83,
+	    "value_specialty": "Froid - Clim",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 84,
+	    "value_specialty": "Menuiserie bois",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 85,
+	    "value_specialty": "Agronomie",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 86,
+	    "value_specialty": "Ouvrage Métallique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 87,
+	    "value_specialty": "Biologie",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  },
+	  {
+	    "code_specialty": 88,
+	    "value_specialty": "Agri - Elevage",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 89,
+	    "value_specialty": "Coiffure",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 90,
+	    "value_specialty": "Diététique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 91,
+	    "value_specialty": "Alphabétisation",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 92,
+	    "value_specialty": "Agro-Alimentaire",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 93,
+	    "value_specialty": "Environnement",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 94,
+	    "value_specialty": "Developpement Rural",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 95,
+	    "value_specialty": "Santé Communautaire",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 96,
+	    "value_specialty": "Transformation Produits Locaux",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 97,
+	    "value_specialty": "Electromécanique",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 98,
+	    "value_specialty": "Horticulture",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 99,
+	    "value_specialty": "Hotellerie/Restauration",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 100,
+	    "value_specialty": "Santé/hygiene",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 101,
+	    "value_specialty": "Structures métalliques",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 102,
+	    "value_specialty": "Techniques de collectivités",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 103,
+	    "value_specialty": "Teinture",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 104,
+	    "value_specialty": "Genie civil",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 105,
+	    "value_specialty": "Gestion",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 106,
+	    "value_specialty": "Maintenance Industrielle",
+	    "order_specialty": "",
+	    "type_specialty": "T"
+	  },
+	  {
+	    "code_specialty": 107,
+	    "value_specialty": "M.EPS",
+	    "order_specialty": "",
+	    "type_specialty": ""
+	  },
+	  {
+	    "code_specialty": 108,
+	    "value_specialty": "FORMATION LITTERAIRE",
+	    "order_specialty": "",
+	    "type_specialty": ""
+	  },
+	  {
+	    "code_specialty": 109,
+	    "value_specialty": "FORMATION SCIENTIFIQUE",
+	    "order_specialty": "",
+	    "type_specialty": ""
+	  },
+	  {
+	    "code_specialty": 110,
+	    "value_specialty": "Développement Local",
+	    "order_specialty": "",
+	    "type_specialty": ""
+	  },
+	  {
+	    "code_specialty": -99,
+	    "value_specialty": "Sans Objet",
+	    "order_specialty": "",
+	    "type_specialty": "G"
+	  }
+	]
+}

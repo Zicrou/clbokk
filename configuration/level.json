@@ -1,0 +1,100 @@
+{
+	"levels" : [
+	  {
+	    "code_level": 1,
+	    "value_level_short": "PS",
+	    "code_cycle": 1,
+	    "value_level_long": "Petite section"
+	  },
+	  {
+	    "code_level": 2,
+	    "value_level_short": "MS",
+	    "code_cycle": 1,
+	    "value_level_long": "Moyenne Section"
+	  },
+	  {
+	    "code_level": 3,
+	    "value_level_short": "GS",
+	    "code_cycle": 1,
+	    "value_level_long": "Grande section"
+	  },
+	  {
+	    "code_level": 4,
+	    "value_level_short": "CI",
+	    "code_cycle": 2,
+	    "value_level_long": "CI"
+	  },
+	  {
+	    "code_level": 5,
+	    "value_level_short": "CP",
+	    "code_cycle": 2,
+	    "value_level_long": "CP"
+	  },
+	  {
+	    "code_level": 6,
+	    "value_level_short": "CE1",
+	    "code_cycle": 2,
+	    "value_level_long": "CE1"
+	  },
+	  {
+	    "code_level": 7,
+	    "value_level_short": "CE2",
+	    "code_cycle": 2,
+	    "value_level_long": "CE2"
+	  },
+	  {
+	    "code_level": 8,
+	    "value_level_short": "CM1",
+	    "code_cycle": 2,
+	    "value_level_long": "CM1"
+	  },
+	  {
+	    "code_level": 9,
+	    "value_level_short": "CM2",
+	    "code_cycle": 2,
+	    "value_level_long": "CM2"
+	  },
+	  {
+	    "code_level": 10,
+	    "value_level_short": "6E",
+	    "code_cycle": 3,
+	    "value_level_long": "6e"
+	  },
+	  {
+	    "code_level": 11,
+	    "value_level_short": "5E",
+	    "code_cycle": 3,
+	    "value_level_long": "5e"
+	  },
+	  {
+	    "code_level": 12,
+	    "value_level_short": "4E",
+	    "code_cycle": 3,
+	    "value_level_long": "4e"
+	  },
+	  {
+	    "code_level": 13,
+	    "value_level_short": "3E",
+	    "code_cycle": 3,
+	    "value_level_long": "3e"
+	  },
+	  {
+	    "code_level": 14,
+	    "value_level_short": "2E",
+	    "code_cycle": 3,
+	    "value_level_long": "Seconde"
+	  },
+	  {
+	    "code_level": 15,
+	    "value_level_short": "1E",
+	    "code_cycle": 3,
+	    "value_level_long": "Premiere"
+	  },
+	  {
+	    "code_level": 16,
+	    "value_level_short": "TLE",
+	    "code_cycle": 3,
+	    "value_level_long": "Terminale"
+	  }
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"idTypes" : [
+	  {
+	    "code_idType": 0,
+	    "value_idType": "Numéro de carte d'identité (nouvelle Carte d'identité CEDEAO)"
+	  },
+	  {
+		"code_idType": 1,
+		"value_idType": "Numéro d'identification nationale (ancienne CNI)"
+	  },
+	  {
+		"code_idType": 2,
+		"value_idType": "Acte de naissance"
+	  },
+	  {
+		"code_idType": 3,
+		"value_idType": "Passeport étranger"
+	  },
+	  {
+		"code_idType": 4,
+		"value_idType": "Non-inscrit à l'état-civil: Aucun document d'identité"
+	  }
+	]
+}

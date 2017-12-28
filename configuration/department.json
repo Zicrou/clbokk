@@ -1,0 +1,229 @@
+{
+	"departments" : [
+		{
+			"code_department" : 20001,
+			"value_department" : "Dakar",
+			"code_region" : 10001
+		},
+		{
+			"code_department" : 20002,
+			"value_department" : "Guediawaye",
+			"code_region" : 10001
+		},
+		{
+			"code_department" : 20003,
+			"value_department" : "Pikine",
+			"code_region" : 10001
+		},
+		{
+			"code_department" : 20004,
+			"value_department" : "Rufisque",
+			"code_region" : 10001
+		},
+		{
+			"code_department" : 20005,
+			"value_department" : "Bambey",
+			"code_region" : 10002
+		},
+		{
+			"code_department" : 20006,
+			"value_department" : "Diourbel",
+			"code_region" : 10002
+		},
+		{
+			"code_department" : 20007,
+			"value_department" : "Mbacke",
+			"code_region" : 10002
+		},
+		{
+			"code_department" : 20008,
+			"value_department" : "Fatick",
+			"code_region" : 10003
+		},
+		{
+			"code_department" : 20009,
+			"value_department" : "Foundiougne",
+			"code_region" : 10003
+		},
+		{
+			"code_department" : 20010,
+			"value_department" : "Gossas",
+			"code_region" : 10003
+		},
+		{
+			"code_department" : 20011,
+			"value_department" : "Birkelane",
+			"code_region" : 10004
+		},
+		{
+			"code_department" : 20012,
+			"value_department" : "Kaffrine",
+			"code_region" : 10004
+		},
+		{
+			"code_department" : 20013,
+			"value_department" : "Koungheul",
+			"code_region" : 10004
+		},
+		{
+			"code_department" : 20014,
+			"value_department" : "Malem Hoddar",
+			"code_region" : 10004
+		},
+		{
+			"code_department" : 20015,
+			"value_department" : "Guinguineo",
+			"code_region" : 10005
+		},
+		{
+			"code_department" : 20016,
+			"value_department" : "Kaolack",
+			"code_region" : 10005
+		},
+		{
+			"code_department" : 20017,
+			"value_department" : "Nioro",
+			"code_region" : 10005
+		},
+		{
+			"code_department" : 20018,
+			"value_department" : "Kedougou",
+			"code_region" : 10006
+		},
+		{
+			"code_department" : 20019,
+			"value_department" : "Salemata",
+			"code_region" : 10006
+		},
+		{
+			"code_department" : 20020,
+			"value_department" : "Saraya",
+			"code_region" : 10006
+		},
+		{
+			"code_department" : 20021,
+			"value_department" : "Kolda",
+			"code_region" : 10007
+		},
+		{
+			"code_department" : 20022,
+			"value_department" : "Medina Yora Foulah",
+			"code_region" : 10007
+		},
+		{
+			"code_department" : 20023,
+			"value_department" : "Velingra",
+			"code_region" : 10007
+		},
+		{
+			"code_department" : 20024,
+			"value_department" : "Kebemer",
+			"code_region" : 10008
+		},
+		{
+			"code_department" : 20025,
+			"value_department" : "Linguere",
+			"code_region" : 10008
+		},
+		{
+			"code_department" : 20026,
+			"value_department" : "Louga",
+			"code_region" : 10008
+		},
+		{
+			"code_department" : 20027,
+			"value_department" : "Kanel",
+			"code_region" : 10009
+		},
+		{
+			"code_department" : 20028,
+			"value_department" : "Matam",
+			"code_region" : 10009
+		},
+		{
+			"code_department" : 20029,
+			"value_department" : "Ranerou Ferlo",
+			"code_region" : 10009
+		},
+		{
+			"code_department" : 20030,
+			"value_department" : "Dagana ",
+			"code_region" : 10010
+		},
+		{
+			"code_department" : 20031,
+			"value_department" : "Podor",
+			"code_region" : 10010
+		},
+		{
+			"code_department" : 20032,
+			"value_department" : "Saint Louis",
+			"code_region" : 10010
+		},
+		{
+			"code_department" : 20033,
+			"value_department" : "Bounkiling ",
+			"code_region" : 10011
+		},
+		{
+			"code_department" : 20034,
+			"value_department" : "Goudomp",
+			"code_region" : 10011
+		},
+		{
+			"code_department" : 20035,
+			"value_department" : "Sedhiou",
+			"code_region" : 10011
+		},
+		{
+			"code_department" : 20036,
+			"value_department" : "Bakel",
+			"code_region" : 10012
+		},
+		{
+			"code_department" : 20037,
+			"value_department" : "Goudiry",
+			"code_region" : 10012
+		},
+		{
+			"code_department" : 20038,
+			"value_department" : "Koupentoum",
+			"code_region" : 10012
+		},
+		{
+			"code_department" : 20039,
+			"value_department" : "Tamba",
+			"code_region" : 10012
+		},
+		{
+			"code_department" : 20040,
+			"value_department" : "Mbour",
+			"code_region" : 10013
+		},
+		{
+			"code_department" : 20041,
+			"value_department" : "Thies",
+			"code_region" : 10013
+		},
+		{
+			"code_department" : 20042,
+			"value_department" : "Tivaouane",
+			"code_region" : 10013
+		},
+		{
+			"code_department" : 20043,
+			"value_department" : "Ziguinchor",
+			"code_region" : 10014
+		},
+		{
+			"code_department" : 20044,
+			"value_department" : "Oussoye",
+			"code_region" : 10014
+		},
+		{
+			"code_department" : 20045,
+			"value_department" : "Bignona",
+			"code_region" : 10014
+		}
+	]
+}

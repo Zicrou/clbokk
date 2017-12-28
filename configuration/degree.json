@@ -1,0 +1,81 @@
+{
+	"degrees" : [
+	  {
+	    "code_degree": 1,
+	    "value_degree": "BFEM"
+	  },
+	  {
+	    "code_degree": 2,
+	    "value_degree": "BAC"
+	  },
+	  {
+	    "code_degree": 3,
+	    "value_degree": "Licence"
+	  },
+	  {
+	    "code_degree": 4,
+	    "value_degree": "Maîtrise"
+	  },
+	  {
+	    "code_degree": 5,
+	    "value_degree": "Autres"
+	  },
+	  {
+	    "code_degree": 6,
+	    "value_degree": "Doctorat"
+	  },
+	  {
+	    "code_degree": 7,
+	    "value_degree": "CEPE"
+	  },
+	  {
+	    "code_degree": 8,
+	    "value_degree": "DUEL"
+	  },
+	  {
+	    "code_degree": 9,
+	    "value_degree": "DUES"
+	  },
+	  {
+	    "code_degree": 10,
+	    "value_degree": "DEUG"
+	  },
+	  {
+	    "code_degree": 11,
+	    "value_degree": "DEA"
+	  },
+	  {
+	    "code_degree": 12,
+	    "value_degree": "CAP"
+	  },
+	  {
+	    "code_degree": 13,
+	    "value_degree": "BEP"
+	  },
+	  {
+	    "code_degree": 14,
+	    "value_degree": "BT"
+	  },
+	  {
+	    "code_degree": 15,
+	    "value_degree": "BTS"
+	  },
+	  {
+	    "code_degree": 16,
+	    "value_degree": "DUT"
+	  },
+	  {
+	    "code_degree": 17,
+	    "value_degree": "DST"
+	  },
+	  {
+	    "code_degree": 18,
+	    "value_degree": "Master"
+	  },
+	  {
+	    "code_degree": -99,
+	    "value_degree": "Aucun"
+	  }
+	]
+	
+}

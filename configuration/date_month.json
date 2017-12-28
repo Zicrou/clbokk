@@ -1,0 +1,52 @@
+{
+	"date_months" : [
+		{
+	   	  "code_month": "01",
+		  "desc_month_fr":"Janvier"
+	  	},
+		{
+	   	  "code_month": "02",
+		  "desc_month_fr":"Février"
+	  	},
+		{
+	   	  "code_month": "03",
+		  "desc_month_fr":"Mars"
+	  	},
+		{
+	   	  "code_month": "04",
+		  "desc_month_fr":"Avril"
+	  	},
+		{
+	   	  "code_month": "05",
+		  "desc_month_fr":"Mai"
+	  	},
+		{
+	   	  "code_month": "06",
+		  "desc_month_fr":"Juin"
+	  	},
+		{
+	   	  "code_month": "07",
+		  "desc_month_fr":"Juillet"
+	  	},
+		{
+	   	  "code_month": "08",
+		  "desc_month_fr":"Août"
+	  	},
+		{
+	   	  "code_month": "09",
+		  "desc_month_fr":"Septembre"
+	  	},
+		{
+	   	  "code_month": "10",
+		  "desc_month_fr":"Octobre"
+	  	},
+		{
+	   	  "code_month": "11",
+		  "desc_month_fr":"Novembre"
+	  	},
+		{
+	   	  "code_month": "12",
+		  "desc_month_fr":"Décembre"
+	  	}
+  	]
+}
