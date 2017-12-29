@@ -10,7 +10,7 @@ label{
                 <h3 class='panel-title'>Liste des Pieces</h3>
             </div>
             <div class='panel-body' id="piece_control">
-    <form action='#' id='form' class='form-horizontal'>
+    <form action='C_enseignants/save_autorisation' method="post" id='form_autorisation' enctype="multipart/form-data" class='form-horizontal'>
         
                     <input type='hidden' id='id_ens' name='id_ens'/>
 
@@ -151,18 +151,23 @@ label{
                         <legend>Pieces Jointes</legend>
                         <?php
                         
-                         foreach ($piece as $value) { ?>
-                            <label class="custom-file">
-                                <input type="file" id="pj_1" class="custom-file-input" accept="image/jpeg,image/gif,image/png,application/pdf" />
-                                <span class="custom-file-control"></span>
-                            </label>
+                         foreach ($piece as $value) {?>
+                            <div class='form-group'>
+                              <label class='control-label col-md-6'><?php echo $value->libelle_type_piece ; echo ($value->obligatoire==1)?'*':'';?></label>
+                                <div class='col-md-6'>
+                                    <label class="custom-file">
+                                        <input type="file" name="<?php echo 'pj_'.$value->id_type_piece ;?>" id="<?php echo 'pj_'.$value->id_type_piece ;?>" class="custom-file-input" accept="image/jpeg,image/gif,image/png,application/pdf"  <?php echo ($value->obligatoire==1)?'required':'';?> />
+                                        <span class="custom-file-control"></span>
+                                    </label>
+                                </div>
+                            </div>
                         <?php } ?>
                         </fieldset>
                     </div>
                 </div>
                 
                 <div class='modal-footer'>
-                    <input type='submit' class='btn btn-primary' value='Enregistrer'/>
+                    <input type='submit' id="autorisation_control" class='btn btn-primary' value='Enregistrer'/>
                     <button type='button' class='btn btn-default' data-dismiss='modal'>Fermer</button>
                 </div>
 
@@ -172,3 +177,13 @@ label{
         </div>
     </div>
 </div>
+<script type='text/javascript'>
+    
+        $(document).ready(function () {
+            $("body").on("click", "#autorisation_control",function(){
+                if($('#form_autorisation').valid())
+                $('#form_autorisation').submit()
+            })
+        });
+   
+</script>
