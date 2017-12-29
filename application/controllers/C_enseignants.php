@@ -46,37 +46,51 @@
 			foreach ($piece as $value)
 			{
 				 
-				$config['upload_path']          = './uploads/';
-                $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-                $config['max_size']             = 300000;
-                $config['max_width']            = 1024;
-				$config['max_height']           = 768;
-				$config['file_name']           = $value->id_type_piece;
 				
-				$this->load->library('upload', $config);
-				$i+=1;
-					if ( ! $this->upload->do_upload('pj_'.$value->id_type_piece))
-					{
-							$error = array('error' => $this->upload->display_errors());
+				$filename = $_FILES["pj_".$value->id_type_piece]["name"];
+					$file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
+					$file_ext = substr($filename, strripos($filename, '.')); // get file name
+					$filesize = $_FILES["pj_".$value->id_type_piece]["size"];
+					$allowed_file_types = array('.gif','.jpg','.png','.jpeg','pdf');	
 
+						if (in_array($file_ext,$allowed_file_types) && ($filesize < 300000))
+						{	
+							$data = array(
+								'id_Type_dossier '=> 1, 
+							'id_type_piece '=> $value->id_type_piece, 
+							'niveau '=> 1, 
+							'id_deposant '=> $this->enseignant->id_ens , 
+							'date_depot '=>date("Y-m-d"), 
+							'numero_depot '=> 0, 
+							'id_user '=> 1
+							);
+							// Rename file
+							$this->db->insert('depot', $data);
 							
-					}
-					else
-					{
-												
-							$data = array('upload_data' => $this->upload->data());
-							$this->depot->id_depot ='';
-							$this->depot->id_Type_dossier = 1; 
-							$this->depot->id_type_piece = $value->id_type_piece; 
-							$this->depot->niveau = 1; 
-							$this->depot->id_deposant = $this->enseignant->id_ens ; 
-							$this->depot->date_depot =date("Y-m-d"); 
-							$this->depot->numero_depot = 0; 
-							$this->depot->id_user = 1; 
-							$this->depot->save(); 
-
 							
-					}
+							$id=$this->db->insert_id(); 
+							$newfilename = $id."_".$value->id_type_piece. $file_ext;
+								move_uploaded_file($_FILES["pj_".$value->id_type_piece]["tmp_name"], "./uploads/" . $newfilename);
+								echo "File uploaded successfully.";		
+								
+						}
+						elseif (empty($file_basename))
+						{	
+							// file selection error
+							echo "Please select a file to upload.";
+						} 
+						elseif ($filesize > 300000)
+						{	
+							// file size error
+							echo "The file you are trying to upload is too large.";
+						}
+						else
+						{
+							// file type error
+							echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
+							unlink($_FILES["pj_".$value->id_type_piece]["tmp_name"]);
+						}
+				
 				
 				//echo strlen($this->input->post('pj_'.$value->id_type_piece));
 			}
