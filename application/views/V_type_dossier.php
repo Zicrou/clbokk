@@ -1,7 +1,7 @@
 <!-- Page-Title -->
 <div class='row'>
     <div class='col-sm-12' style='margin-bottom: 30px'>
-        <button type='button' id='btn_add' class='btn btn-info'>Nouveau <span class='m-l-5'><i class='fa fa-plus-square'></i></span></button>
+        <button type='button' id='btn_add' class='btn btn-primary'>Nouveau <span class='m-l-5'><i class='fa fa-plus-square'></i></span></button>
     </div>
 </div>
 

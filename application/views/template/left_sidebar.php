@@ -172,19 +172,24 @@
                         <li><a href="<?php echo base_url(); ?>C_etablissement" class="menu" id="liste_etablissement">Liste Etablissements</a></li>
                         <?php endif; ?>
                         
-                        <?php if(isset($smenu_roles['AFFECT_ELEVE']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_affecter_eleve" class="menu" id="menu_affecter_eleve">Affectation Eleve</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['INSCRIPT_ELEVE']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_eleve_inscription" class="menu" id="menu_eleve_inscription">Inscription Eleve</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['OPT_ELEVE']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_eleve_option" class="menu" id="menu_option_eleve">Option Eleve</a></li>
-                        <?php endif; ?>
+
                     </ul>
                 </li>
+                <?php endif; ?>
+
+                <?php if(isset($menu_roles['ETABLISSEMENT'])):?>
+                                <li class="has_sub">
+                                    <a href="#" class="waves-effect"><i class="fa fa-graduation-cap"></i><span>Enseignant</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                    <ul class="list-unstyled">
+                                        <?php if(isset($smenu_roles['LISTE_ENSEIGNANTS']['d_read'])):?>
+                                        <li><a href="<?php echo base_url(); ?>C_enseignants" class="menu" id="liste_enseignants">Liste Enseignants</a></li>
+                                        <?php endif; ?>
+
+                                        <?php if(isset($smenu_roles['DEMANDE_AUTORISATION_ENSEIGNER']['d_read'])):?>
+                                        <li><a href="<?php echo base_url(); ?>C_enseignants/demande_autorisaton" class="menu" id="Demande">Demande</a></li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </li>
                 <?php endif; ?>
 
                 <?php if(isset($menu_roles['NOMENCLATURE'])):?>

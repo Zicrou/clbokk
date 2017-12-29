@@ -14,10 +14,15 @@ $("body").on("click", ".detail", function () {
 
 $('#frm_type_piece').find("*").off();
 $('#frm_type_piece').off('click');
+$('#frm_circuit').find("*").off();
+$('#frm_circuit').off('click');
+$('.btn_delete_piece').find("*").off();
+$('.btn_delete_piece').off('click');
+$('.btn_delete_circuit').find("*").off();
+$('.btn_delete_circuit').off('click');
 
 $(".btn_delete_piece").click(function () {
-    if($(this).attr('id') == undefined)
-        return false;
+
 
     href=$(this).attr('href');
     $('#piece_control').empty().load(href, function () { cache: false }).fadeIn('slow');
@@ -25,8 +30,7 @@ $(".btn_delete_piece").click(function () {
 });
 
 $(".btn_delete_circuit").click(function () {
-    if($(this).attr('id') == undefined)
-        return false;
+
     href=$(this).attr('href');
     $('#circuit_control').empty().load(href, function () { cache: false }).fadeIn('slow');
     return false;

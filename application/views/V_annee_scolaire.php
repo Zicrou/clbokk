@@ -1,7 +1,7 @@
 <!-- Page-Title -->
 <div class='row'>
     <div class='col-sm-12' style='margin-bottom: 30px'>
-        <button type='button' id='btn_add' class='btn btn-info'>Nouveau <span class='m-l-5'><i class='fa fa-plus-square'></i></span></button>
+        <button type='button' id='btn_add' class='btn btn-primary'>Nouveau <span class='m-l-5'><i class='fa fa-plus-square'></i></span></button>
     </div>
 </div>
 
@@ -129,8 +129,7 @@
 
 
 <script type='text/javascript'>
-    $(document).ready(function () {
-        //TableManageButtons.init();
+
         $(document).ready(function () {
             $('#datatable-buttons').managing_ajax({
                 //id_menu: 'menu_annee_scolaire', //id du menu dans le fichier navigation_bar
@@ -149,5 +148,5 @@
                 url_delete: '<?php echo site_url('C_annee_scolaire/delete')?>', //url de la fonction supprim�
             });
         });
-    });
+
 </script>
