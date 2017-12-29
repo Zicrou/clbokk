@@ -14,13 +14,24 @@
           return 'id_type_piece';
       }
   	
-      public function get_data_liste(){
-  
-  		$sql_ll="SELECT id_type_piece ,`libelle_type_piece`   FROM `type_piece`  ";		    
-  		
-  		$query = $this->db->query($sql_ll);
-  		
-  		return $query->result(); 
-      }
+//      public function get_piece(){
+//
+//  		$sql_ll="SELECT id_type_piece ,`libelle_type_piece`   FROM `type_piece`  ";
+//
+//  		$query = $this->db->query($sql_ll);
+//
+//  		return $query->result();
+//      }
+//
+//      public function get_piece_dossier(){
+//
+//          $sql_ll="SELECT id_type_piece ,`libelle_type_piece`   FROM `type_piece`  ";
+//
+//          $query = $this->db->query($sql_ll);
+//
+//          return $query->result();
+//      }
+
+
   
   }

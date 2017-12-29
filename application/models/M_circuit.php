@@ -18,11 +18,39 @@
   	
       public function get_cicuit_dossier($id_type_dossier){
   
-  		$sql_ll="SELECT id_circuit ,`id_type_dossier`,`id_type_structure`,`ordre` FROM `circuit` WHERE `id_type_structure`=?  ";		    
+  		$sql_ll="SELECT c.id_circuit ,c.id_type_dossier,c.id_type_structure,ts.libelle_type_structure,c.ordre FROM circuit c JOIN type_structure ts ON (c.id_type_structure=ts.id_type_structure) WHERE c.id_type_dossier=?  ORDER BY  ordre ";
   		
   		$query = $this->db->query($sql_ll,array($id_type_dossier));
   		
   		return $query->result(); 
       }
-  
+
+   public function get_structure($id_type_dossier){
+
+          $sql_ll="SELECT id_type_structure, libelle_type_structure FROM type_structure WHERE id_type_structure NOT IN(SELECT id_type_structure FROM circuit WHERE 	id_type_dossier=?)";
+
+          $query = $this->db->query($sql_ll,array($id_type_dossier));
+
+          return $query->result();
+      }
+      public function get_max_ordre($id_type_dossier){
+          $sql_ll="SELECT MAX(ordre) as max FROM circuit WHERE id_type_dossier=?";
+          $query = $this->db->query($sql_ll,array($id_type_dossier));
+          $result=$query->result();
+          $max='1';
+          foreach ($result as $value)
+          {
+              $max=$value->max+1;
+          }
+          return $max;
+      }
+
+      public function reordonne($dossier,$ordre)
+      {
+          $sql_ll="UPDATE `circuit` SET ordre=ordre-1 WHERE id_type_dossier=?  AND ordre >=? ";
+
+          $query = $this->db->query($sql_ll,array($dossier,$ordre));
+
+
+      }
   }

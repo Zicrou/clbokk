@@ -10,7 +10,7 @@
     <div class='col-md-12'>
         <div class='panel panel-default'>
             <div class='panel-heading'>
-                <h3 class='panel-title'>Liste des </h3>
+                <h3 class='panel-title'>Type Dossier </h3>
             </div>
             <div class='panel-body'>
                 <table id='datatable-buttons' class='table table-striped table-bordered'>
@@ -18,22 +18,35 @@
                     <tr>
                         <th>libelle_type_dossier</th>
                         <th>niveau</th>
-                        <th>jour_debut</th>
-                        <th>mois_debut</th>
-                        <th>jour_fin</th>
-                        <th>mois_fin</th>
+                        <th>Debut</th>
+                        <th>Fin</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($all_data as $value) { ?>
+                    <?php foreach ($all_data as $value) {
+                        $niveau="";
+                        switch ($value->niveau) {
+                            case 1:
+                                $niveau="Enseignant";
+                                break;
+                            case 2:
+                                $niveau="Enseignant retraité";
+                                break;
+                            case 3:
+                                $niveau="Etablissement";
+                                break;
+                            case 4:
+                                $niveau="Personnel";
+                                break;
+                        }
+                        ?>
                         <tr>
                             <td><?php echo $value->libelle_type_dossier; ?></td>
-                            <td><?php echo $value->niveau; ?></td>
-                            <td><?php echo $value->jour_debut; ?></td>
-                            <td><?php echo $value->mois_debut; ?></td>
-                            <td><?php echo $value->jour_fin; ?></td>
-                            <td><?php echo $value->mois_fin; ?></td>
+                            <td><?php echo $niveau; ?></td>
+                            <td><?php echo $value->jour_debut.' - '.strftime('%b',strtotime($value->mois_debut.'/01/2000')); ?></td>
+<!--                            <td>--><?php //echo $value->mois_debut; ?><!--</td>-->
+                            <td><?php echo $value->jour_fin.' - '.strftime('%b',strtotime($value->mois_fin.'/01/2000')); ?></td>
                             <td class='actions' style='width: 1%; text-align: center; white-space: nowrap'>
 				<a href='#' class='on-default btn_edit' id='<?php echo $value->id_type_dossier; ?>'>
 					<i class='fa fa-pencil'></i></a>
@@ -142,10 +155,10 @@
         <!-- /.modal-dialog -->
     </form>
 </div><!-- /.modal -->
-<script src="<?php echo base_url(); ?>assets/js/dossier.js"></script>
+
 
 <script type='text/javascript'>
-    $(document).ready(function () {
+
         //TableManageButtons.init();
         $(document).ready(function () {
             $('#datatable-buttons').managing_ajax({
@@ -165,5 +178,6 @@
                 url_delete: '<?php echo site_url('C_type_dossier/delete')?>', //url de la fonction supprim�
             });
         });
-    });
+
 </script>
+<script src="<?php echo base_url(); ?>assets/js/dossier.js"></script>

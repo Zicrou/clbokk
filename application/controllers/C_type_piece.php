@@ -11,9 +11,8 @@
     
    	public function index() 
    	{ 
-   		$all_data = $this->m_modele->get_data_liste(); 
-   		$data['all_data'] = $all_data; 
-          $data['all_type_status'] 	=  $this->m_modele->get_data(); 
+   		$all_data = $this->m_modele->get_data();
+   		$data['all_data'] = $all_data;
    		$this->load->view('v_type_piece', $data); 
    	} 
     

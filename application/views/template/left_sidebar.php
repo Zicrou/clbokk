@@ -186,28 +186,6 @@
                     </ul>
                 </li>
                 <?php endif; ?>
- 
-                
-                <?php if(isset($menu_roles['SECURITE'])):?>
-                <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="md md-settings"></i><span> Sécurité </span><span class="pull-right"><i class="md md-add"></i></span></a>
-                    <ul class="list-unstyled">
-                        
-                        <?php if(isset($smenu_roles['USR']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_sys_user" class="menu" id="menu_sys_users">Utilisateurs</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['MENU']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_sys_menu" class="menu" id="menu_sys_menu">Menus</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['PROFIL']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_sys_profil" class="menu" id="menu_sys_profils">Profils</a></li>
-                        <?php endif; ?>
-
-                    </ul>
-                </li>
-                <?php endif; ?>
 
                 <?php if(isset($menu_roles['NOMENCLATURE'])):?>
                 <li class="has_sub">
@@ -217,25 +195,38 @@
                         <?php if(isset($smenu_roles['ANNEE_SCOLAIRE']['d_read'])):?>
                         <li><a href="<?php echo base_url(); ?>C_annee_scolaire" class="menu" id="menu_annee_scolaire">Annee Scolaire</a></li>
                         <?php endif; ?>
+
+                        <?php if(isset($smenu_roles['TYPE_PROFIL']['d_read'])):?>
+                            <li><a href="<?php echo base_url(); ?>C_type_piece" class="menu" id="menu_type_piece">Type piece</a></li>
+                        <?php endif; ?>
                         
                         <?php if(isset($smenu_roles['TYPE_DOSSIER']['d_read'])):?>
                         <li><a href="<?php echo base_url(); ?>C_type_dossier" class="menu" id="menu_type_dossier">Type Dossier</a></li>
                         <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['TYPE_PROFIL']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_type_piece" class="menu" id="menu_type_piece">Type piece</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['TYPE_PIECE_PAR_DOSSIER']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_type_dossier_piece" class="menu" id="menu_type_dossier_piece">Type piece par dossier</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['CONFIGURATION']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_configuration" class="menu" id="menu_configuration">Configuration</a></li>
-                        <?php endif; ?>
 
                     </ul>
                 </li>
+                <?php endif; ?>
+
+                <?php if(isset($menu_roles['SECURITE'])):?>
+                    <li class="has_sub">
+                        <a href="#" class="waves-effect"><i class="md md-book"></i><span> Sécurité </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <ul class="list-unstyled">
+
+                            <?php if(isset($smenu_roles['USR']['d_read'])):?>
+                                <li><a href="<?php echo base_url(); ?>C_sys_user" class="menu" id="menu_sys_users">Utilisateurs</a></li>
+                            <?php endif; ?>
+
+                            <?php if(isset($smenu_roles['MENU']['d_read'])):?>
+                                <li><a href="<?php echo base_url(); ?>C_sys_menu" class="menu" id="menu_sys_menu">Menus</a></li>
+                            <?php endif; ?>
+
+                            <?php if(isset($smenu_roles['PROFIL']['d_read'])):?>
+                                <li><a href="<?php echo base_url(); ?>C_sys_profil" class="menu" id="menu_sys_profils">Profils</a></li>
+                            <?php endif; ?>
+
+                        </ul>
+                    </li>
                 <?php endif; ?>
             </ul>
 

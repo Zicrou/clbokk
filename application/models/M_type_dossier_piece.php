@@ -17,13 +17,23 @@
           return 'id_dossier_piece';
       }
   	
-      public function get_data_liste(){
+      public function get_piece($id_type_dossier){
   
-  		$sql_ll="SELECT id_dossier_piece ,`id_type_piece`,`id_type_dossier`,`etat_dossier_piece`,`obligatoire` FROM `type_dossier_piece` WHERE id_type_dossier=?  ";		    
+  		$sql_ll="SELECT dp.id_dossier_piece, dp.id_type_piece,tp.libelle_type_piece,dp.id_type_dossier,dp.etat_dossier_piece,dp.obligatoire FROM type_dossier_piece dp LEFT JOIN type_piece tp ON(dp.id_type_piece=tp.id_type_piece) WHERE id_type_dossier=?  ";
   		
-  		$query = $this->db->query($sql_ll,array());
+  		$query = $this->db->query($sql_ll,array($id_type_dossier));
   		
   		return $query->result(); 
       }
-  
+
+      public function get_piece_dossier($id_type_dossier){
+
+          $sql_ll="SELECT id_type_piece ,libelle_type_piece FROM type_piece WHERE id_type_piece NOT IN(select id_type_piece FROM type_dossier_piece where id_type_dossier=?)";
+
+          $query = $this->db->query($sql_ll,array($id_type_dossier));
+
+          return $query->result();
+      }
+
+
   }

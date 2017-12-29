@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center">
-            <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>SIMEN </span></a>
+            <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>GEPS </span></a>
         </div>
     </div>
     <!-- Button mobile view to collapse sidebar menu -->
