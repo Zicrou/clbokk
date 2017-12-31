@@ -12,22 +12,30 @@
   
      public function index() 
      { 
-        // $all_data = $this->etablissement->get_etablissement();
-        // foreach( $all_data as $etablissement)
-        // {
-        //  $this->etablissement->id = null; 
-        //  $this->etablissement->code = $etablissement->CODE_ADMINISTRATIF;
-        //  $this->etablissement->nom = $etablissement->NOM_STRUCTURE; 
-        //  $this->etablissement->status = $etablissement->LIBELLE_TYPE_RECONNAISSANCE_PRIVE; 
-        //  $this->etablissement->responsable = $etablissement->NOM_CHEF_STRUCTURE; 
-        //  $this->etablissement->jour_creation= $etablissement->DATE_CREATION_J;
-        //  $this->etablissement->mois_creation = $etablissement->DATE_CREATION_M;
-        //  $this->etablissement->annee_creation = $etablissement->DATE_CREATION;
-        //  $this->etablissement->Adresse = $etablissement->ADRESSE;
-        //  $this->etablissement->Telephone = $etablissement->TELEPHONE;         
-        //  $this->etablissement->save(); 
-        // }  
+        $data['type']= '';
          $data['all_data'] = $this->etablissement->get_data(); 
+         $this->load->view('V_etablissement', $data); 
+     } 
+     public function get_etablissement_type() 
+     { 
+         $type='';
+         $args =func_get_args();
+         switch ($args[0]) {
+            case 1:
+            $type='Autorisé';
+                break;
+            case 2:
+            $type='Non Autorisé';
+                break;
+            case 3:
+            $type='Reconnu';
+                break;
+            case 4:
+            $type='En Instance';
+                break;
+        }
+         $data['type']= $type;       
+         $data['all_data'] = $this->etablissement->get_etablissement_type($type); 
          $this->load->view('V_etablissement', $data); 
      } 
   

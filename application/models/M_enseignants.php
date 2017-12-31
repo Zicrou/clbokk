@@ -29,7 +29,7 @@
   	
       public function get_data_liste(){
   
-  		$sql_ll="SELECT id_ens ,`ien_ens`,`prenom_ens`,`nom_ens`,`sexe_ens`,`date_nais_ens`,`numero_autorisation`,`profil_aca`,`profil_pro`,`css`,`ipres`,`ipm`,`code_specialite`,`etat_ens`,`statut_ens` FROM `enseignants` LIMIT 100 ";
+  		$sql_ll="SELECT ens.id_ens ,ens.ien_ens,ens.prenom_ens,ens.nom_ens,ens.sexe_ens,ens.date_nais_ens,ens.numero_autorisation,ens.profil_aca,ens.profil_pro,ens.css,ens.ipres,ens.ipm,s.nom_specialite,ens.etat_ens,ens.statut_ens FROM enseignants ens JOIN specialite s on (ens.code_specialite=s.code_specialite) LIMIT 100 ";
   		
   		$query = $this->db->query($sql_ll);
   		

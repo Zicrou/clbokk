@@ -8,7 +8,6 @@
       public $date_depot;
       public $numero_depot;
       public $id_user;
-      public $id_type_piece;
   
       public function get_db_table()
       {

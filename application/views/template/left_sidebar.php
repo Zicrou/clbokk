@@ -169,7 +169,17 @@
                     <a href="#" class="waves-effect"><i class="fa fa-graduation-cap"></i><span>Etablissement</span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
                         <?php if(isset($smenu_roles['LISTE_ETABLISSMENTS']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_etablissement" class="menu" id="liste_etablissement">Liste Etablissements</a></li>
+                        <li></li>
+                        <li class="has_sub">
+                                        <a href="javascript:void(0);" class="waves-effect subdrop"><span>Etablissements</span> <span class="pull-right"><i class="md md-remove"></i></span></a>
+                                        <ul style="display: block;">
+                                            <li><a href="<?php echo base_url(); ?>C_etablissement" class="menu" id="liste_etablissement">Liste Etablissements</a></li>
+                                            <li><a href="<?php echo base_url(); ?>C_etablissement\get_etablissement_type\1" class="menu" id="liste_etablissement">Etablissements Autorises</a></li>
+                                            <li><a href="<?php echo base_url(); ?>C_etablissement\get_etablissement_type\2" class="menu" id="liste_etablissement">Etablissements Non Autorises</a></li>
+                                            <li><a href="<?php echo base_url(); ?>C_etablissement\get_etablissement_type\3" class="menu" id="liste_etablissement">Etablissements Reconnus</a></li>
+                                            <li><a href="<?php echo base_url(); ?>C_etablissement\get_etablissement_type\4" class="menu" id="liste_etablissement">Etablissements En Instance</a></li>
+                                        </ul>
+                                        </li>
                         <?php endif; ?>
                         
 
@@ -188,6 +198,7 @@
                                         <?php if(isset($smenu_roles['DEMANDE_AUTORISATION_ENSEIGNER']['d_read'])):?>
                                         <li><a href="<?php echo base_url(); ?>C_enseignants/demande_autorisaton" class="menu" id="Demande">Demande</a></li>
                                         <?php endif; ?>
+                                        
                                     </ul>
                                 </li>
                 <?php endif; ?>
@@ -229,7 +240,7 @@
                             <?php if(isset($smenu_roles['PROFIL']['d_read'])):?>
                                 <li><a href="<?php echo base_url(); ?>C_sys_profil" class="menu" id="menu_sys_profils">Profils</a></li>
                             <?php endif; ?>
-
+                                
                         </ul>
                     </li>
                 <?php endif; ?>

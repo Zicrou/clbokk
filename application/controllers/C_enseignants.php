@@ -9,6 +9,9 @@
 		  $this->load->model('M_enseignants', 'enseignant'); 
 		  $this->load->model('M_type_dossier_piece', 'type_piece');
 		  $this->load->model('M_depot', 'depot');
+		  $this->load->model('M_circuit', 'circuit');
+		  $this->load->model('M_specialite', 'specialite');
+		  
    	} 
     
    	public function index() 
@@ -19,6 +22,8 @@
    	}
 	   public function demande_autorisaton()
 	   {
+		$data_speciliate=$this->specialite->get_data();
+		$data['select_specialite'] 	= create_select_list($data_speciliate, 'code_specialite', 'nom_specialite', '');
    		$data['piece'] = $this->type_piece->get_piece(1);
 		$this->load->view('V_autorisation_enseignant',$data);
 	   }
@@ -29,47 +34,61 @@
 		$this->enseignant->nom_ens = $this->input->post('nom_ens'); 
 		$this->enseignant->sexe_ens = $this->input->post('sexe_ens'); 
 		$this->enseignant->date_nais_ens = $this->input->post('date_nais_ens'); 
-		$this->enseignant->numero_autorisation = $this->input->post('numero_autorisation'); 
+		$this->enseignant->numero_autorisation = '0'; 
 		$this->enseignant->profil_aca = $this->input->post('profil_aca'); 
 		$this->enseignant->profil_pro = $this->input->post('profil_pro'); 
 		$this->enseignant->css = $this->input->post('css'); 
 		$this->enseignant->ipres = $this->input->post('ipres'); 
 		$this->enseignant->ipm = $this->input->post('ipm'); 
 		$this->enseignant->code_specialite = $this->input->post('code_specialite'); 
-		$this->enseignant->etat_ens = $this->input->post('etat_ens'); 
+		$this->enseignant->etat_ens = '0'; 
 		$this->enseignant->statut_ens = $this->input->post('statut_ens'); 
 		$this->enseignant->save();
-		
+
+		$this->depot->id_Type_dossier = 1; 
+   		$this->depot->niveau = 1; 
+   		$this->depot->id_deposant = $this->enseignant->id_ens; 
+   		$this->depot->date_depot = date("Y-m-d"); 
+   		$this->depot->numero_depot = 0; 
+   		$this->depot->id_user = 1; 
+		$this->depot->save();  
+		$circuits=$this->circuit->get_cicuit_dossier(1);
+		foreach ($circuits as $circuit)
+		{
+			$data = array(
+				'id_circuit '=> $circuit->id_circuit, 
+				'id_depot '=> $this->depot->id_depot,
+				'etat'=> 'en_attente',
+				'code_traitement'=> '0',
+				'date_traitement'=> date("Y-m-d")
+				);
+				// Rename file
+				$this->db->insert('circuit_depot', $data);
+		}
 			$piece=$this->type_piece->get_piece(1);
 			var_dump($piece);
-			$i=1;
+			
 			foreach ($piece as $value)
 			{
-				 
-				
 				$filename = $_FILES["pj_".$value->id_type_piece]["name"];
 					$file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
 					$file_ext = substr($filename, strripos($filename, '.')); // get file name
 					$filesize = $_FILES["pj_".$value->id_type_piece]["size"];
-					$allowed_file_types = array('.gif','.jpg','.png','.jpeg','pdf');	
+					$allowed_file_types = array('.gif','.jpg','.png','.jpeg','.pdf');	
 
 						if (in_array($file_ext,$allowed_file_types) && ($filesize < 300000))
 						{	
 							$data = array(
-								'id_Type_dossier '=> 1, 
 							'id_type_piece '=> $value->id_type_piece, 
-							'niveau '=> 1, 
-							'id_deposant '=> $this->enseignant->id_ens , 
-							'date_depot '=>date("Y-m-d"), 
-							'numero_depot '=> 0, 
-							'id_user '=> 1
+							'id_depot '=> $this->depot->id_depot,
+							'extension '=> $file_ext
 							);
-							// Rename file
-							$this->db->insert('depot', $data);
+							$this->db->insert('piece_joint', $data);
 							
 							
 							$id=$this->db->insert_id(); 
-							$newfilename = $id."_".$value->id_type_piece. $file_ext;
+							// $newfilename = $this->depot->id_depot."_".$value->id_type_piece. $file_ext;
+							$newfilename = $id.$file_ext;
 								move_uploaded_file($_FILES["pj_".$value->id_type_piece]["tmp_name"], "./uploads/" . $newfilename);
 								echo "File uploaded successfully.";		
 								

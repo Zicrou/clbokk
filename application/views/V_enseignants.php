@@ -1,12 +1,5 @@
 <!-- Page-Title -->
 <div class='row'>
-    <div class='col-sm-12' style='margin-bottom: 30px'>
-        <button type='button' id='btn_add' class='btn btn-primary'>Nouveau <span class='m-l-5'><i class='fa fa-plus-square'></i></span></button>
-    </div>
-</div>
-
-
-<div class='row'>
     <div class='col-md-12'>
         <div class='panel panel-default'>
             <div class='panel-heading'>
@@ -16,19 +9,17 @@
                 <table id='datatable-buttons' class='table table-striped table-bordered' >
                     <thead>
                     <tr>
-                        <th>prenom_ens</th>
-                        <th>nom_ens</th>
-                        <th>sexe_ens</th>
-                        <th>date_nais_ens</th>
-                        <th>numero_autorisation</th>
-                        <th>profil_aca</th>
-                        <th>profil_pro</th>
+                        <th>Nom</th>
+                        <th>Date de naissance</th>
+                        <th>Numero d'autorisation</th>
+                        <th>Diplome academique</th>
+                        <th>Diplome professionnel</th>
 <!--                        <th>css</th>-->
 <!--                        <th>ipres</th>-->
 <!--                        <th>ipm</th>-->
-                        <th>code_specialite</th>
-                        <th>etat_ens</th>
-                        <th>statut_ens</th>
+                        <th>Specialite</th>
+                        <!-- <th>etat_ens</th> -->
+                        <th>statut</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -36,19 +27,18 @@
                     <?php foreach ($all_data as $value) { ?>
 
                         <tr>
-                            <td><?php echo $value->prenom_ens; ?></td>
-                            <td><?php echo $value->nom_ens; ?></td>
-                            <td><?php echo $value->sexe_ens; ?></td>
-                            <td><?php echo $value->date_nais_ens; ?></td>
+                            <td><?php echo $value->prenom_ens; ?> <?php echo $value->nom_ens; ?></td>
+                            <!-- <td><?php //echo $value->sexe_ens; ?></td> -->
+                            <td><?php echo date_parse_en2fr($value->date_nais_ens); ?></td>
                             <td><?php echo $value->numero_autorisation; ?></td>
                             <td><?php echo $value->profil_aca; ?></td>
                             <td><?php echo $value->profil_pro; ?></td>
 <!--                            <td>--><?php //echo $value->css; ?><!--</td>-->
 <!--                            <td>--><?php //echo $value->ipres; ?><!--</td>-->
 <!--                            <td>--><?php //echo $value->ipm; ?><!--</td>-->
-                            <td><?php echo $value->code_specialite; ?></td>
-                            <td><?php echo $value->etat_ens; ?></td>
-                            <td><?php echo $value->statut_ens; ?></td>
+                            <td><?php echo $value->nom_specialite; ?></td>
+                            <!-- <td><?php //echo $value->etat_ens; ?></td> -->
+                            <td><?php echo ($value->statut_ens=='F')?'Fonctionnaire':'Non Fonctionnaire'; ?></td>
                             <td class='actions' style='width: 1%; text-align: center; white-space: nowrap'>
 				<a href='#' class='on-default btn_edit' id='<?php echo $value->id_ens; ?>'>
 					<i class='fa fa-pencil'></i></a>
@@ -232,16 +222,16 @@
                 id_modal_form: 'modal_form', //id du modal qui contient le formulaire
 
                 id_form: 'form', //id du formulaire
-                url_submit: '<?php echo site_url('C_enseignants/save')?>', //url du save (données envoyés par post)
+                url_submit: '<?php echo site_url('C_enseignants/save')?>', //url du save (donnï¿½es envoyï¿½s par post)
 
-                title_modal_add: 'Nouveau ', //Title du modal à l'ouverture en mode ajout
+                title_modal_add: 'Nouveau ', //Title du modal ï¿½ l'ouverture en mode ajout
                 focus_add: 'libelle_type_statut_etablissement', //l'emplacement du focus en mode ajout
 
-                title_modal_edit: 'Edition ', //Title du modal à l'ouverture en mode edit
+                title_modal_edit: 'Edition ', //Title du modal ï¿½ l'ouverture en mode edit
                 focus_edit: 'libelle_type_statut_etablissement',//l'emplacement du focus en mode edit
 
-                url_edit: '<?php echo site_url('C_enseignants/get_record')?>', //url le fonction qui recupére la données de la ligne
-                url_delete: '<?php echo site_url('C_enseignants/delete')?>', //url de la fonction supprimé
+                url_edit: '<?php echo site_url('C_enseignants/get_record')?>', //url le fonction qui recupï¿½re la donnï¿½es de la ligne
+                url_delete: '<?php echo site_url('C_enseignants/delete')?>', //url de la fonction supprimï¿½
             });
         });
    

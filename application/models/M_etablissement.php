@@ -27,6 +27,15 @@
       {
           return 'id';
       }
+
+      public function get_etablissement_type($type){
+  
+        $sql_ll="SELECT id,code,nom,`status`,responsable,jour_creation,mois_creation,annee_creation,adresse,telephone FROM etablissement WHERE `status` =?";
+        
+        $query = $this->db->query($sql_ll,array($type));
+        
+        return $query->result(); 
+    }
   	
       
   }
