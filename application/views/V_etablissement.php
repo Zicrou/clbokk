@@ -1,5 +1,5 @@
 <!-- Page-Title -->
-<?php btn_add_action('LISTE_ETABLISSMENTS')?>
+
 
 
 <div class='row'>
