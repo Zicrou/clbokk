@@ -17,7 +17,12 @@
    		$all_data = $this->depot->get_list_depot(); 
    		$data['all_data'] = $all_data; 
    		$this->load->view('V_depot_en_cours', $data);          
-   	} 
+	   }
+	   public function nbr_depot()
+	   {
+		   	$nbr_notification= $this->depot->get_count_liste_depot();
+			echo $nbr_notification[0]->nbr_notification;
+	   } 
 	
 	public function detail_depot()
      {

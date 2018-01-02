@@ -27,7 +27,7 @@
                     <li class="dropdown hidden-xs">
                         <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" id="notification_control"
                            data-toggle="dropdown" aria-expanded="true">
-                            <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger"><?php echo $nbr_notification[0]->nbr_notification?></span>
+                            <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger nbr_notification_control"><?php echo $nbr_notification[0]->nbr_notification?></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-lg">
                             <li class="text-center notifi-title">Notification</li>
@@ -41,7 +41,7 @@
                                         <div class="media-body clearfix">
                                             <div class="media-heading">AUTORISATION D'ENSEIGNEMENT</div>
                                             <p class="m-0">
-                                                <small>Vous avez <?php echo $nbr_notification[0]->nbr_notification?> demande(s)</small>
+                                                <small>Vous avez <span class="nbr_notification_control"><?php echo $nbr_notification[0]->nbr_notification?></span> demande(s)</small>
                                             </p>
                                         </div>
                                     </div>

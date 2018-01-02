@@ -16,6 +16,7 @@ $("body").on("click",'#circuit_depot_control',function () {
         dataType: 'text',
         success: function(data) {
             $('#div_container').empty().html(data);
+            actualise_notification()
         },
         error: function(jqXHR) {
             content.html(jqXHR.responseText);
@@ -24,7 +25,22 @@ $("body").on("click",'#circuit_depot_control',function () {
     })
     return false;
 });
-
+function actualise_notification()
+{
+    $.ajax({
+        url: 'C_depot/nbr_depot',
+        type: 'GET',
+        dataType: 'text',
+        success: function(data) {
+            
+            $('.nbr_notification_control').empty().html(data);
+        },
+        error: function(jqXHR) {
+            content.html(jqXHR.responseText);
+            content.show();
+        }
+    })
+}
   $("body").on("click", "#autorisation_control",function(){
         if($('#form_autorisation').valid())
         {
@@ -41,12 +57,13 @@ $("body").on("click",'#circuit_depot_control',function () {
                 processData: false,
                 success: function(data) {
                     $('#div_container').empty().html(data);
+                    actualise_notification();
                 },
                 error: function(jqXHR) {
                     content.html(jqXHR.responseText);
                     content.show();
                 }
-    })
+        })
     return false;
         }
         //$('#form_autorisation').submit()

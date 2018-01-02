@@ -102,9 +102,9 @@
 					$file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
 					$file_ext = substr($filename, strripos($filename, '.')); // get file name
 					$filesize = $_FILES["pj_".$value->id_type_piece]["size"];
-					$allowed_file_types = array('.gif','.jpg','.png','.jpeg','.pdf');	
+					$allowed_file_types = array('.gif','.jpg','.png','.PNG','.jpeg','.pdf');	
 
-						if (in_array($file_ext,$allowed_file_types) && ($filesize < 500000))
+						if (in_array($file_ext,$allowed_file_types) && ($filesize < 300000))
 						{	
 							$data = array(
 							'id_type_piece '=> $value->id_type_piece, 
@@ -118,23 +118,23 @@
 							// $newfilename = $this->depot->id_depot."_".$value->id_type_piece. $file_ext;
 							$newfilename = $id.$file_ext;
 								move_uploaded_file($_FILES["pj_".$value->id_type_piece]["tmp_name"], "./uploads/" . $newfilename);
-								//echo "File uploaded successfully.";		
+								echo "File uploaded successfully.";		
 								
 						}
 						elseif (empty($file_basename))
 						{	
 							// file selection error
-							//echo "Please select a file to upload.";
+							echo "Please select a file to upload.";
 						} 
-						elseif ($filesize > 500000)
+						elseif ($filesize > 300000)
 						{	
 							// file size error
-							//echo "The file you are trying to upload is too large.";
+							echo "The file you are trying to upload is too large.";
 						}
 						else
 						{
 							// file type error
-							//echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
+							echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
 							unlink($_FILES["pj_".$value->id_type_piece]["tmp_name"]);
 						}				
 				
