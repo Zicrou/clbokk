@@ -166,7 +166,7 @@
 
                 <?php if(isset($menu_roles['ETABLISSEMENT'])):?>
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="fa fa-graduation-cap"></i><span>Etablissement</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <a href="#" class="waves-effect"><i class="fa  md-account-balance"></i><span>Etablissement</span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
                         <?php if(isset($smenu_roles['LISTE_ETABLISSMENTS']['d_read'])):?>
                         <li></li>
@@ -196,7 +196,10 @@
                                         <?php endif; ?>
 
                                         <?php if(isset($smenu_roles['DEMANDE_AUTORISATION_ENSEIGNER']['d_read'])):?>
-                                        <li><a href="<?php echo base_url(); ?>C_enseignants/demande_autorisaton" class="menu" id="Demande">Demande</a></li>
+                                        <li><a href="<?php echo base_url(); ?>C_enseignants/demande_autorisaton" class="menu" id="Demande">Demande d'enseignement</a></li>
+                                        <?php endif; ?>
+                                        <?php if(isset($smenu_roles['LISTE_DEMANDE']['d_read'])):?>
+                                        <li><a href="<?php echo base_url(); ?>C_depot/get_depots" class="menu" id="Demande">Demande d'enseignement</a></li>
                                         <?php endif; ?>
                                         
                                     </ul>
@@ -205,7 +208,7 @@
 
                 <?php if(isset($menu_roles['NOMENCLATURE'])):?>
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="md md-settings"></i><span> Nomenclature </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <a href="#" class="waves-effect"><i class="md md-book"></i><span> Nomenclature </span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
                         
                         <?php if(isset($smenu_roles['ANNEE_SCOLAIRE']['d_read'])):?>
@@ -226,7 +229,7 @@
 
                 <?php if(isset($menu_roles['SECURITE'])):?>
                     <li class="has_sub">
-                        <a href="#" class="waves-effect"><i class="md md-book"></i><span> Sécurité </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <a href="#" class="waves-effect"><i class="md md-settings"></i><span> Sécurité </span><span class="pull-right"><i class="md md-add"></i></span></a>
                         <ul class="list-unstyled">
 
                             <?php if(isset($smenu_roles['USR']['d_read'])):?>

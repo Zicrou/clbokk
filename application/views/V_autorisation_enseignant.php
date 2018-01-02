@@ -19,7 +19,7 @@ legend {
     <div class='col-md-12'>
         <div class='panel panel-default'>
             <div class='panel-heading'>
-                <h3 class='panel-title'>Liste des Pieces</h3>
+                <h3 class='panel-title'> &nbsp</h3>
             </div>
             <div class='panel-body' id="piece_control">
     <form action='C_enseignants/save_autorisation' method="post" id='form_autorisation' enctype="multipart/form-data" class='form-horizontal'>
