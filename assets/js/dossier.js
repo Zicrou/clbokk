@@ -2,7 +2,7 @@
 var detail = null;
 var id_div_container = 'div_container';
 
-$("body").on("click", ".detail", function () {
+$("body").on("click", ".detail,.detail", function () {
     if($(this).attr('id') == undefined)
         return false;
     
@@ -61,7 +61,7 @@ function save_piece_dossier(){
             $('#piece_control').empty().html(data);
         },
         error: function(jqXHR) {
-            // affichage réponse serveur
+            // affichage rï¿½ponse serveur
             content.html(jqXHR.responseText);
             content.show();
         }
@@ -79,7 +79,7 @@ function save_circuit(){
             $('#circuit_control').empty().html(data);
         },
         error: function(jqXHR) {
-            // affichage réponse serveur
+            // affichage rï¿½ponse serveur
             content.html(jqXHR.responseText);
             content.show();
         }

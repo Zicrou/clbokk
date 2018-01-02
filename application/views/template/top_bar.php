@@ -25,29 +25,29 @@
 
                 <ul class="nav navbar-nav navbar-right pull-right">
                     <li class="dropdown hidden-xs">
-                        <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                        <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" id="notification_control"
                            data-toggle="dropdown" aria-expanded="true">
-                            <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>
+                            <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger"><?php echo $nbr_notification[0]->nbr_notification?></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-lg">
                             <li class="text-center notifi-title">Notification</li>
                             <li class="list-group">
                                 <!-- list item-->
-                                <a href="javascript:void(0);" class="list-group-item">
+                                <a href="<?php echo base_url(); ?>C_depot/get_depots" class="list-group-item" id="notification_autorisation">
                                     <div class="media">
                                         <div class="media-left">
                                             <em class="fa fa-user-plus fa-2x text-info"></em>
                                         </div>
                                         <div class="media-body clearfix">
-                                            <div class="media-heading">New user registered</div>
+                                            <div class="media-heading">AUTORISATION D'ENSEIGNEMENT</div>
                                             <p class="m-0">
-                                                <small>You have 10 unread messages</small>
+                                                <small>Vous avez <?php echo $nbr_notification[0]->nbr_notification?> demande(s)</small>
                                             </p>
                                         </div>
                                     </div>
                                 </a>
                                 <!-- list item-->
-                                <a href="javascript:void(0);" class="list-group-item">
+                                <!-- <a href="javascript:void(0);" class="list-group-item">
                                     <div class="media">
                                         <div class="media-left">
                                             <em class="fa fa-diamond fa-2x text-primary"></em>
@@ -59,9 +59,9 @@
                                             </p>
                                         </div>
                                     </div>
-                                </a>
+                                </a> -->
                                 <!-- list item-->
-                                <a href="javascript:void(0);" class="list-group-item">
+                                <!-- <a href="javascript:void(0);" class="list-group-item">
                                     <div class="media">
                                         <div class="media-left">
                                             <em class="fa fa-bell-o fa-2x text-danger"></em>
@@ -75,7 +75,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                </a>
+                                </a> -->
                                 <!-- last list item -->
                                 <a href="javascript:void(0);" class="list-group-item">
                                     <small>See all notifications</small>

@@ -69,6 +69,7 @@
          $this->etablissement->Adresse = $this->input->post('Adresse');
          $this->etablissement->Telephone = $this->input->post('Telephone');    
          echo json_encode( $this->etablissement->save(), JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); 
-     } 
+     }
+     
   
  } 

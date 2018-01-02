@@ -32,7 +32,7 @@ legend {
                         
 
                         <div class='clearfix'>
-                            <label class='col-lg-12'>prenom</label>
+                            <label class='col-lg-12'>Prenom <span class="text-danger">*</span></label>
 
                             <div class='col-lg-12'>
                             <select style="display:none" name='statut_ens' id='statut_ens'  class='form-control' >
@@ -40,16 +40,16 @@ legend {
                                 </select>
                             <input name='ien_ens' id='ien_ens'
                                        class='form-control' type='hidden' required>
-                                <input name='prenom_ens' id='prenom_ens'
+                                <input name='prenom_ens' id='prenom_ens' data-msg-required="Le Prenom est obligatoire."
                                        class='form-control' type='text' required>
                             </div>
                         </div>
 
                         <div class='clearfix'>
-                            <label class='col-lg-12'>nom</label>
+                            <label class='col-lg-12'>Nom <span class="text-danger">*</span></label>
 
                             <div class='col-lg-12'>
-                                <input name='nom_ens' id='nom_ens'
+                                <input name='nom_ens' id='nom_ens' data-msg-required="Le Nom est obligatoire."
                                        class='form-control' type='text' required>
                             </div>
                         </div>
@@ -77,10 +77,10 @@ legend {
                                     <br>
                                 </div>
                         <div class='clearfix'>
-                            <label class='col-lg-12'>date de naissance</label>
+                            <label class='col-lg-12'>Date de Naissance <span class="text-danger">*</span></label>
 
                             <div class='col-lg-12'>
-                                <input name='date_nais_ens' id='date_nais_ens'
+                                <input name='date_nais_ens' id='date_nais_ens' data-msg-required="Le Date de naissance est obligatoire." 
                                        class='form-control' type='date' required>
                             </div>
                         </div>
@@ -88,44 +88,44 @@ legend {
                        
 
                         <div class='clearfix'>
-                            <label class='col-lg-12'>profil academique</label>
+                            <label class='col-lg-12'>Profil Academique</label>
 
                             <div class='col-lg-12'>
-                                <input name='profil_aca' id='profil_aca'
-                                       class='form-control' type='text' required>
+                                <input name='profil_aca' id='profil_aca' 
+                                       class='form-control' type='text' >
                             </div>
                         </div>
                     </div>
                     <div class='col-sm-6'>
                         <div class='clearfix'>
-                            <label class='col-lg-12'>profil professionnel</label>
+                            <label class='col-lg-12'>Profil Professionnel</label>
 
                             <div class='col-lg-12'>
                                 <input name='profil_pro' id='profil_pro'
-                                       class='form-control' type='text' required>
+                                       class='form-control' type='text' >
                             </div>
                         </div>
 
                         <div class='clearfix'>
-                            <label class='col-lg-12'>css</label>
+                            <label class='col-lg-12'>CSS</label>
 
                             <div class='col-lg-12'>
                                 <input name='css' id='css'
-                                       class='form-control' type='text' required>
+                                       class='form-control' type='text' >
                             </div>
                         </div>
 
                         <div class='clearfix'>
-                            <label class='col-lg-12'>ipres</label>
+                            <label class='col-lg-12'>IPRES</label>
 
                             <div class='col-lg-12'>
-                                <input name='ipres' id='ipres'
-                                       class='form-control' type='text' required>
+                                <input name='ipres' id='ipres' 
+                                       class='form-control' type='text' >
                             </div>
                         </div>
 
                         <div class='clearfix'>
-                            <label class='col-lg-12'>ipm</label>
+                            <label class='col-lg-12'>IPM</label>
 
                             <div class='col-lg-12'>
                                 <input name='ipm' id='ipm'
@@ -134,10 +134,10 @@ legend {
                         </div>
 
                         <div class='clearfix'>
-                            <label class='col-lg-12'>specialite</label>
+                            <label class='col-lg-12'>Specialite <span class="text-danger">*</span></label>
 
                             <div class='col-lg-12'>
-                            <select   class='form-control' name='code_specialite' id='code_specialite' required>
+                            <select   class='form-control' name='code_specialite' id='code_specialite' data-msg-required="La Specialite est obligatoire." required>
                                 <?php echo $select_specialite?>
                             </select>
                             </div>
@@ -159,12 +159,12 @@ legend {
                         
                          foreach ($piece as $value) {?>
                             <div class='clearfix'>
-                              <label class='col-md-12'><?php echo $value->libelle_type_piece ; echo ($value->obligatoire==1)?'*':'';?></label>
+                              <label class='col-md-12'><?php echo $value->libelle_type_piece ; echo ($value->obligatoire==1)?' <span class="text-danger">*</span>':'';?></label>
                                 <div class='col-md-12'>
                                 <div id="error-container-<?php echo 'pj_'.$value->id_type_piece ;?>"></div>
                                     <div class="col-md-10 " style="margin-left:0px;padding-left:0px;">
                                                    
-                                                        <input type="text" readonly="readonly" class="form-control" name="<?php echo 'pj_'.$value->id_type_piece.'_control' ;?>" id="<?php echo 'pj_'.$value->id_type_piece.'_control' ;?>" <?php echo ($value->obligatoire==1)?'required':'';?>  >
+                                                        <input type="text" readonly="readonly" class="form-control" name="<?php echo 'pj_'.$value->id_type_piece.'_control' ;?>"  id="<?php echo 'pj_'.$value->id_type_piece.'_control' ;?>" <?php echo ($value->obligatoire==1)?'data-msg-required="'.$value->libelle_type_piece.' obligatoire." required':'';?>  >
                                                         
                                                     
                                                 </div>
@@ -196,10 +196,7 @@ legend {
 <script type='text/javascript'>
     
         $(document).ready(function () {
-            $("body").on("click", "#autorisation_control",function(){
-                if($('#form_autorisation').valid())
-                $('#form_autorisation').submit()
-            });
+          
             $('.file').find("*").off();
             $('.file').off('click');
             $(".file").click(function(){

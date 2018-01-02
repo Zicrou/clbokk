@@ -18,8 +18,33 @@ class Accueil extends MY_Controller {
 
 	public function home()
 	{
-		$data = array();
-		// $this->load->model('M_table_param');
+		
+		$this->load->model('M_depot','depot');
+		$this->load->model('M_etablissement','etablissement');
+		$data['nbr_notification']= $this->depot->get_count_liste_depot();
+		$data['autoriser']=$this->etablissement->get_count_etablissement_type('Autorisé');
+		$autoriser_nbr=$this->etablissement->get_count_etablissement_type('Autorisé');
+
+		$data['non_autoriser']=$this->etablissement->get_count_etablissement_type('Non Autorisé');
+		$non_autoriser_nbr=$this->etablissement->get_count_etablissement_type('Non Autorisé');
+
+		$data['reconnu']=$this->etablissement->get_count_etablissement_type('Reconnu');
+		$reconnu_nbr=$this->etablissement->get_count_etablissement_type('Reconnu');
+
+		$data['instance']=$this->etablissement->get_count_etablissement_type('Instance');
+		$instance_nbr=$this->etablissement->get_count_etablissement_type('Instance');
+		$total=$autoriser_nbr[0]->nbr+$non_autoriser_nbr[0]->nbr+$reconnu_nbr[0]->nbr+$instance_nbr[0]->nbr;
+		$autoriser_pc=$autoriser_nbr[0]->nbr * 100/$total;
+		$data['autoriser_pc']=round($autoriser_pc,2);
+
+		$non_autoriser_pc=$non_autoriser_nbr[0]->nbr * 100/$total;
+		$data['non_autoriser_pc']=round($non_autoriser_pc,2);
+
+		$reconnu_pc=$reconnu_nbr[0]->nbr * 100/$total;
+		$data['reconnu_pc']=round($reconnu_pc,2);
+
+		$instance_pc=$instance_nbr[0]->nbr * 100/$total;
+		$data['instance_pc']=round($instance_pc,2);
 		// $this->load->model('M_personnel_structure');
 		// $this->load->model('M_statistique', 'stat');
 		// $annee_pass=$this->M_table_param->get_annne_archive('-1');

@@ -14,6 +14,7 @@
 <script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.nicescroll.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.scrollTo.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/gpes_script.js"></script>
 
 <script src="<?php echo base_url(); ?>assets/js/jquery.app.js"></script>
 
@@ -76,6 +77,8 @@
 
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/jquery-multi-select/jquery.multi-select.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/jquery-multi-select/jquery.quicksearch.js"></script>
+
+
 
 
 </body>

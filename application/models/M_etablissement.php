@@ -36,6 +36,14 @@
         
         return $query->result(); 
     }
+      public function get_count_etablissement_type($type){
+  
+        $sql_ll="SELECT COUNT(id) AS 'nbr' FROM etablissement WHERE `status` =?";
+        
+        $query = $this->db->query($sql_ll,array($type));
+        
+        return $query->result(); 
+    }
   	
       
   }

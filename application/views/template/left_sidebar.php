@@ -199,7 +199,7 @@
                                         <li><a href="<?php echo base_url(); ?>C_enseignants/demande_autorisaton" class="menu" id="Demande">Demande d'enseignement</a></li>
                                         <?php endif; ?>
                                         <?php if(isset($smenu_roles['LISTE_DEMANDE']['d_read'])):?>
-                                        <li><a href="<?php echo base_url(); ?>C_depot/get_depots" class="menu" id="Demande">Demande d'enseignement</a></li>
+                                        <li><a href="<?php echo base_url(); ?>C_depot/get_depots" class="menu" id="Demande">Validation Demande</a></li>
                                         <?php endif; ?>
                                         
                                     </ul>
