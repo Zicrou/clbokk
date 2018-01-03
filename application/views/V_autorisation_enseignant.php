@@ -129,7 +129,7 @@ legend {
 
                             <div class='col-lg-12'>
                                 <input name='ipm' id='ipm'
-                                       class='form-control' type='text' required>
+                                       class='form-control' type='text' >
                             </div>
                         </div>
 

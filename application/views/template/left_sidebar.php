@@ -206,7 +206,7 @@
                                 </li>
                 <?php endif; ?>
 
-                <?php if(isset($menu_roles['NOMENCLATURE'])):?>
+                <?php if(isset($menu_roles['NOMENCLATURE'])&&$this->session->lfc_jafr12_s['id_atlas']==1):?>
                 <li class="has_sub">
                     <a href="#" class="waves-effect"><i class="md md-book"></i><span> Nomenclature </span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">

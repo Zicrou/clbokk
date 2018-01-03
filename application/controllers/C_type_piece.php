@@ -13,7 +13,7 @@
    	{ 
    		$all_data = $this->m_modele->get_data();
    		$data['all_data'] = $all_data;
-   		$this->load->view('v_type_piece', $data); 
+   		$this->load->view('V_type_piece', $data); 
    	} 
     
    	public function get_record(){ 
