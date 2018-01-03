@@ -16,7 +16,7 @@
                 <table id='datatable-buttons' class='table table-striped table-bordered'>
                     <thead>
                     <tr>
-                        <th>libelle_type_dossier</th>
+                        <th>libelle type dossier</th>
                         <th>niveau</th>
                         <th>Debut</th>
                         <th>Fin</th>
