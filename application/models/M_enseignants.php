@@ -29,7 +29,11 @@
   	
       public function get_data_liste(){
   
-  		$sql_ll="SELECT ens.id_ens ,ens.ien_ens,ens.prenom_ens,ens.nom_ens,ens.sexe_ens,ens.date_nais_ens,ens.numero_autorisation,ens.profil_aca,ens.profil_pro,ens.css,ens.ipres,ens.ipm,s.nom_specialite,ens.etat_ens,ens.statut_ens FROM enseignants ens JOIN specialite s on (ens.code_specialite=s.code_specialite) LIMIT 100 ";
+  		$sql_ll="SELECT ens.id_ens ,ens.ien_ens,ens.prenom_ens,ens.nom_ens,ens.sexe_ens,ens.date_nais_ens,ens.numero_autorisation,ens.profil_aca,ens.profil_pro,ens.css,ens.ipres,ens.ipm,s.nom_specialite,ens.etat_ens,ens.statut_ens FROM enseignants ens JOIN specialite s on (ens.code_specialite=s.code_specialite) WHERE
+      ens.id_ens > ((SELECT 
+              MAX(id_ens)
+          FROM
+          enseignants) - 200)  ";
   		
   		$query = $this->db->query($sql_ll);
   		

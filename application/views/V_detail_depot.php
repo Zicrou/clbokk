@@ -56,7 +56,7 @@
                                         </label>
                                     </div> -->
                                     <div class="radio radio-inline">
-                                        <input type="radio" name="etat" id="traité" value="traité" >
+                                        <input type="radio" name="etat" id="traité" value="traité" checked>
                                         <label for="traité">
                                         traité
                                         </label>

@@ -118,23 +118,23 @@
 							// $newfilename = $this->depot->id_depot."_".$value->id_type_piece. $file_ext;
 							$newfilename = $id.$file_ext;
 								move_uploaded_file($_FILES["pj_".$value->id_type_piece]["tmp_name"], "./uploads/" . $newfilename);
-								echo "File uploaded successfully.";		
+								//echo "File uploaded successfully.";		
 								
 						}
 						elseif (empty($file_basename))
 						{	
 							// file selection error
-							echo "Please select a file to upload.";
+							//echo "Please select a file to upload.";
 						} 
 						elseif ($filesize > 300000)
 						{	
 							// file size error
-							echo "The file you are trying to upload is too large.";
+							//echo "The file you are trying to upload is too large.";
 						}
 						else
 						{
 							// file type error
-							echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
+							//echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
 							unlink($_FILES["pj_".$value->id_type_piece]["tmp_name"]);
 						}				
 				
