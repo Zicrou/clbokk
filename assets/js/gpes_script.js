@@ -41,6 +41,7 @@ function actualise_notification()
         }
     })
 }
+
   $("body").on("click", "#autorisation_control",function(){
         if($('#form_autorisation').valid())
         {

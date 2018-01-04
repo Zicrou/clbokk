@@ -29,7 +29,13 @@ legend {
 
                     <div class='form-body'>
                     <div class='col-sm-6 '>
-                        
+                        <div class='clearfix'>
+                                <label class='col-lg-12'>CNI</label>
+                                <div class='col-lg-12'>
+                                    <input name='cni' id='cni'
+                                        class='form-control' type='text' min="1000000000000" max="999999999999999999999999999999" required>
+                                </div>
+                        </div>
 
                         <div class='clearfix'>
                             <label class='col-lg-12'>Prenom <span class="text-danger">*</span></label>
@@ -77,11 +83,12 @@ legend {
                                     <br>
                                 </div>
                         <div class='clearfix'>
-                            <label class='col-lg-12'>Date de Naissance <span class="text-danger">*</span></label>
+                            <label class='col-lg-12'>Date de Naissance <span class="text-danger" >*</span></label>
 
                             <div class='col-lg-12'>
                                 <input name='date_nais_ens' id='date_nais_ens' data-msg-required="Le Date de naissance est obligatoire." 
-                                       class='form-control' type='date' required>
+                                       class='form-control' onchange="verif_date($(this).val())" type='date'  required>
+                                       <div class="error" id="date_nais_ens-error"></div>
                             </div>
                         </div>
 
@@ -214,5 +221,35 @@ legend {
                 $('#'+id+'_control').val(file_name);
                 $('#'+id+'_control').change();
             }
+            // jQuery.validator.addMethod("date_nais_ens", function(value, element){
+            // var date_jour=new Date();
+            // var date_nais=new Date(value);
+            // annee_saisie=date_nais.getFullYear()
+            
+            // annee_en_cours=date_jour.getFullYear();
+            // if(annee_saisie<(annee_en_cours-18))
+            // {
+            //     return true;
+            // }
+            // else
+            // {
+            //     return false;
+            // }
+            //     }, "wrong nic number");
+        function verif_date(txtDate)
+        {
+            var date_jour=new Date();
+            var date_nais=new Date(txtDate);
+            annee_saisie=date_nais.getFullYear()
+            annee_en_cours=date_jour.getFullYear();
+            if(annee_saisie>(annee_en_cours-18))
+            {
+                $('#date_nais_ens-error').empty().html("<b>erreur</b>");
+            }
+            else{
+                $('#date_nais_ens-error').empty();
+            }
+            //alert(annee_en_cours);
+        }
    
 </script>

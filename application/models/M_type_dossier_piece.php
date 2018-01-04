@@ -19,7 +19,7 @@
   	
       public function get_piece($id_type_dossier){
   
-  		$sql_ll="SELECT dp.id_dossier_piece, dp.id_type_piece,tp.libelle_type_piece,dp.id_type_dossier,dp.etat_dossier_piece,dp.obligatoire FROM type_dossier_piece dp LEFT JOIN type_piece tp ON(dp.id_type_piece=tp.id_type_piece) WHERE id_type_dossier=?  ";
+  		$sql_ll="SELECT dp.id_dossier_piece, dp.id_type_piece,tp.libelle_type_piece,dp.id_type_dossier,dp.etat_dossier_piece,dp.obligatoire FROM type_dossier_piece dp LEFT JOIN type_piece tp ON(dp.id_type_piece=tp.id_type_piece) WHERE id_type_dossier=? AND dp.archiver=0 ";
   		
   		$query = $this->db->query($sql_ll,array($id_type_dossier));
   		
@@ -28,10 +28,18 @@
 
       public function get_piece_dossier($id_type_dossier){
 
-          $sql_ll="SELECT id_type_piece ,libelle_type_piece FROM type_piece WHERE id_type_piece NOT IN(select id_type_piece FROM type_dossier_piece where id_type_dossier=?)";
+          $sql_ll="SELECT id_type_piece ,libelle_type_piece FROM type_piece WHERE id_type_piece NOT IN(select id_type_piece FROM type_dossier_piece where id_type_dossier=? AND archiver=0 )";
 
           $query = $this->db->query($sql_ll,array($id_type_dossier));
 
           return $query->result();
       }
+      public function archive_piece_dossier($id_type_dossier){
+
+          $sql_ll="UPDATE type_dossier_piece SET archiver=1 WHERE id_dossier_piece=?";
+
+          $query = $this->db->query($sql_ll,array($id_type_dossier));
+      }
+
+      
   }

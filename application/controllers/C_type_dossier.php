@@ -39,7 +39,7 @@
 		   $args =func_get_args();
 		   $this->type_piece->id_dossier_piece =  $args[0];
 		   $this->type_piece->get_record();
-		   $this->type_piece->delete();
+		   $this->type_piece->archive_piece_dossier($args[0]);
 		   $id_dossier=$this->type_piece->id_type_dossier;
 		   $data_type_piece= $this->type_piece->get_piece_dossier($id_dossier);
 		   $data['select_type_piece'] 	= create_select_list($data_type_piece, 'id_type_piece', 'libelle_type_piece', '');

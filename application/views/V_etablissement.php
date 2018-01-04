@@ -27,7 +27,7 @@
                         <tr>
                             <td><?php echo $value->code; ?></td>
                             <td><?php echo $value->nom; ?></td>
-                            <td><?php echo $value->status; ?></td>
+                            <td><?php echo $value->statuts; ?></td>
                             <td><?php echo $value->responsable; ?></td>
                             <?php
                             $jour=($value->jour_creation>0)?str_pad($value->jour_creation, 2, "0", STR_PAD_LEFT):'___';
@@ -90,7 +90,7 @@
                         </div>
 					
                         <div class='form-group'>
-                            <label class='control-label col-md-3'>Status</label>
+                            <label class='control-label col-md-3'>Statuts</label>
 
                             <div class='col-md-9'>
                                 <input name='status' id='status'

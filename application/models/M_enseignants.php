@@ -3,6 +3,7 @@
   
       public $id_ens;
       public $ien_ens;
+      public $cni;
       public $prenom_ens;
       public $nom_ens;
       public $sexe_ens;
