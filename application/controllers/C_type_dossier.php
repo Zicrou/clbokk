@@ -24,7 +24,7 @@
 		$args =func_get_args();
 		$this->type_dossier->id_type_dossier=$args[0];
 		$this->type_dossier->get_record();
-		$data_type_piece= $this->type_piece->get_piece_dossier($args[0]);
+		$data_type_piece= $this->type_piece->get_piece_hors_dossier($args[0]);
 		$data['select_type_piece'] 	= create_select_list($data_type_piece, 'id_type_piece', 'libelle_type_piece', '');
 		$data_structure= $this->circuit->get_structure($args[0]);
 		$data['select_structure'] 	= create_select_list($data_structure, 'id_type_structure', 'libelle_type_structure', '');
@@ -41,7 +41,7 @@
 		   $this->type_piece->get_record();
 		   $this->type_piece->archive_piece_dossier($args[0]);
 		   $id_dossier=$this->type_piece->id_type_dossier;
-		   $data_type_piece= $this->type_piece->get_piece_dossier($id_dossier);
+		   $data_type_piece= $this->type_piece->get_piece_hors_dossier($id_dossier);
 		   $data['select_type_piece'] 	= create_select_list($data_type_piece, 'id_type_piece', 'libelle_type_piece', '');
 		   $data['all_type'] =  $this->type_piece->get_piece($id_dossier);
 		   $data['id_dossier_piece']=$id_dossier;
@@ -54,7 +54,7 @@
 		   $this->circuit->id_circuit =  $args[0];
 		   $this->circuit->get_record();
 		   $id_dossier=$this->circuit->id_type_dossier;
-		   $this->circuit->delete();
+		   $this->circuit->archive_structure($args[0]);
 		   $this->circuit->reordonne($id_dossier,$this->circuit->ordre);
 
 		   $data_structure= $this->circuit->get_structure($id_dossier);
@@ -109,7 +109,7 @@
 		   $result = $this->type_piece->save();
 
 		   $id_dossier=$this->input->post('id_type_dossier');
-		   $data_type_piece= $this->type_piece->get_piece_dossier($id_dossier);
+		   $data_type_piece= $this->type_piece->get_piece_hors_dossier($id_dossier);
 		   $data['select_type_piece'] 	= create_select_list($data_type_piece, 'id_type_piece', 'libelle_type_piece', '');
 		   $data['all_type'] =  $this->type_piece->get_piece($id_dossier);
 		   $data['id_dossier_piece']=$id_dossier;

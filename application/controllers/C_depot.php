@@ -35,7 +35,7 @@
 	 }
 	public function save_circuit_depot()
 	{
-		$slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre <?";
+		$slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre =?";
 		$atlas=$this->session->lfc_jafr12_s['id_atlas'];
 		$etat=$this->input->post('etat');
 		if($atlas<>1 && $etat=='traité')
@@ -51,10 +51,10 @@
 		$this->circuit_depot->save();
 		$this->circuit->id_circuit=$this->input->post('id_circuit');    
 		$this->circuit->get_record();
-		$ordre=$this->circuit->ordre;
-		if($atlas==1 || $etat=="rejeté")
+		$ordre=$this->circuit->ordre+1;
+		if($etat!="rejeté")
 		{
-			$query = $this->db->query($slq_cascade,array($etat,$this->circuit_depot->id_depot,$ordre));
+			$query = $this->db->query($slq_cascade,array('a_traité',$this->circuit_depot->id_depot,$ordre));
 		}    
 		$this->get_depots();
 	} 

@@ -14,11 +14,12 @@
                     <tr>
                         <th>Code</th>
                         <th>Nom</th>
-                        <th>Status</th>
+                        <th>Statut</th>
                         <th>Responsable</th>
                         <th>Date Creation</th>
                         <th>Adresse</th>
                         <th>Telephone</th>
+                        <th>groupe scolaire</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -27,7 +28,7 @@
                         <tr>
                             <td><?php echo $value->code; ?></td>
                             <td><?php echo $value->nom; ?></td>
-                            <td><?php echo $value->statuts; ?></td>
+                            <td><?php echo $value->statut; ?></td>
                             <td><?php echo $value->responsable; ?></td>
                             <?php
                             $jour=($value->jour_creation>0)?str_pad($value->jour_creation, 2, "0", STR_PAD_LEFT):'___';
@@ -36,6 +37,7 @@
                             <td><?php echo ($value->annee_creation>0)?$jour."/".$mois."/".$value->annee_creation :'___/___/_____'; ?></td>
                             <td><?php echo $value->adresse; ?></td>
                             <td><?php echo $value->telephone; ?></td>
+                            <td><?php echo $value->libelle; ?></td>
                             <td class='actions' style='width: 1%; text-align: center; white-space: nowrap'>
 				<a href='#' class='on-default btn_edit' id='<?php echo $value->id; ?>'>
 					<i class='fa fa-pencil'></i></a>
@@ -90,11 +92,11 @@
                         </div>
 					
                         <div class='form-group'>
-                            <label class='control-label col-md-3'>Statuts</label>
+                            <label class='control-label col-md-3'>Statut</label>
 
                             <div class='col-md-9'>
-                                <input name='status' id='status'
-                                       class='form-control' type='text' data-msg-required='le status  est obligatoire' required>
+                                <input name='statut' id='statut'
+                                       class='form-control' type='text' data-msg-required='le statut  est obligatoire' required>
                             </div>
                         </div>
 					

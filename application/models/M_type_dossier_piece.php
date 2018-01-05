@@ -26,7 +26,7 @@
   		return $query->result(); 
       }
 
-      public function get_piece_dossier($id_type_dossier){
+      public function get_piece_hors_dossier($id_type_dossier){
 
           $sql_ll="SELECT id_type_piece ,libelle_type_piece FROM type_piece WHERE id_type_piece NOT IN(select id_type_piece FROM type_dossier_piece where id_type_dossier=? AND archiver=0 )";
 

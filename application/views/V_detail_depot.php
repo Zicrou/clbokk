@@ -74,7 +74,7 @@
                                 <br>
                                 </div>
                         </form>
-                       <?php if($circuit_depot[0]->etat=="en_cours")
+                       <?php if($circuit_depot[0]->etat!="a_traité")
                        {
                            echo "<script>$('#form_circuit_depot').hide();</script>";
                        }?>

@@ -57,6 +57,7 @@
 		$this->enseignant->ien_ens = $this->input->post('ien_ens'); 
 		$this->enseignant->prenom_ens = $this->input->post('prenom_ens'); 
 		$this->enseignant->nom_ens = $this->input->post('nom_ens'); 
+		$this->enseignant->cni = $this->input->post('cni'); 
 		$this->enseignant->sexe_ens = $this->input->post('sexe_ens'); 
 		$this->enseignant->date_nais_ens = $this->input->post('date_nais_ens'); 
 		$this->enseignant->numero_autorisation = '0'; 
@@ -81,17 +82,27 @@
    		$this->depot->depot_central= $depot_central; 
 		$this->depot->save();  
 		$circuits=$this->circuit->get_cicuit_dossier(1);
+		$etat_traitement="en_cours";
+		$atlas=$this->session->lfc_jafr12_s['id_atlas'];
 		foreach ($circuits as $circuit)
 		{
+			if($atlas==$circuit->id_type_structure)
+			{
+				$etat_traitement='a_traité';
+			}
 			$data = array(
 				'id_circuit '=> $circuit->id_circuit, 
 				'id_depot '=> $this->depot->id_depot,
-				'etat'=> 'en_attente',
+				'etat'=>$etat_traitement ,
 				'code_traitement'=> '0',
 				'date_traitement'=> date("Y-m-d")
 				);
-				// Rename file
+				
 				$this->db->insert('circuit_depot', $data);
+				if($etat_traitement=='a_traité')
+				{
+					$etat_traitement='en_attente';
+				}
 		}
 			$piece=$this->type_piece->get_piece(1);
 			
