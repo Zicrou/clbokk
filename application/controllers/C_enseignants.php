@@ -22,8 +22,7 @@
    		$this->load->view('V_enseignants', $data); 
    	}
 	   public function demande_autorisaton()
-	   {
-		
+	   {		
 		$this->type_dossier->id_type_dossier=1;
 		$this->type_dossier->get_record();
 		$jour_debut=$this->type_dossier->jour_debut;
@@ -150,8 +149,8 @@
 						}				
 				
 			}
-			$slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre <?";
-			$atlas=$this->session->lfc_jafr12_s['id_atlas'];
+			//$slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre <?";
+			//$atlas=$this->session->lfc_jafr12_s['id_atlas'];
 			$this->index();
 	   }
     

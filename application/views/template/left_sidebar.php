@@ -182,7 +182,24 @@
                                         </li>
                         <?php endif; ?>
                         
-
+                        <?php if(isset($smenu_roles['TRANSFERT']['d_read'])):?>
+                            <li class="has_sub">>
+                                <a href="javascript:void(0);" class="waves-effect subdrop"><span>transfert</span> <span class="pull-right"><i class="md md-remove"></i></span></a>
+                                <ul style="display: block;">
+                                    <li><a href="<?php echo base_url(); ?>C_etablissement\demande_transfert" class="menu" id="transfert_etablissement">Demande transfert</a></li>
+                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depot_trasfert" class="menu" id="transfert_etablissement">liste Demande</a></li>
+                                </ul>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(isset($smenu_roles['RECONNAISANCE']['d_read'])):?>
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_reconnaissance" class="menu" id="reconnaissance_etablissement">Demande de reconnaissance</a></li>
+                        <?php endif; ?>
+                        <?php if(isset($smenu_roles['EXTENSION_CYCLE']['d_read'])):?>
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_cycle" class="menu" id="_extension_cycle_etablissement">Demande extension cycle</a></li>
+                        <?php endif; ?>
+                        <?php if(isset($smenu_roles['EXTENSION_CLASSES']['d_read'])):?>
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_classe" class="menu" id="extension_classe_etablissement">Demande extension classe</a></li>
+                        <?php endif; ?>
                     </ul>
                 </li>
                 <?php endif; ?>

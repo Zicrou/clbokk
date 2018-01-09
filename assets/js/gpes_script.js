@@ -42,6 +42,32 @@ function actualise_notification()
     })
 }
 
+$("body").on("click",'#nom_etablissement_control',function () {
+    var code=$('#code_control').val();
+    if(code.length>0)
+    {
+        $.ajax({
+            url: 'C_etablissement/get_nom_etablissement/'+$('#code_control').val(),
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) { 
+                result=JSON.parse(data) ;      
+                $('#id_deposant').val(result.id);
+                $('#etablissement').val(result.nom);
+            },
+            error: function(jqXHR) {
+                $('#id_deposant').val('');
+                $('#etablissement').val('');
+            }
+        })
+    }
+    else{
+        $('#id_deposant').val('');
+                $('#etablissement').val('');
+    }
+});
+
+
   $("body").on("click", "#autorisation_control",function(){
         if($('#form_autorisation').valid())
         {
@@ -69,3 +95,34 @@ function actualise_notification()
         }
         //$('#form_autorisation').submit()
   });
+
+  $("body").on("click", "#transfert_control",function(){
+        if($('#form_transfert').valid())
+        {
+            var formulaire = $("#form_transfert");
+            var form = $("#form_transfert")[0];
+            $.ajax({
+                url: formulaire.attr('action'),
+                type: 'POST',
+                enctype: 'multipart/form-data',
+                data: new FormData(form),
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(data) {
+                    $('#div_container').empty().html(data);
+                    actualise_notification();
+                },
+                error: function(jqXHR) {
+                    content.html(jqXHR.responseText);
+                    content.show();
+                }
+        })
+    return false;
+        }
+        //$('#form_autorisation').submit()
+  });
+
+  
+  

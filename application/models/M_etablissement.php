@@ -52,7 +52,7 @@
         return $query->result(); 
     }
 
-      public function get_etablissement_type($type){
+    public function get_etablissement_type($type){
   
         $sql_ll="SELECT et.id,et.code,et.nom,et.statut,et.responsable,et.jour_creation,et.mois_creation,et.annee_creation,et.adresse,et.telephone,gs.libelle FROM etablissement et LEFT JOIN groupe_scolaires gs ON(et.id_groupe_scolaire=gs.id_groupe_scolaire)  WHERE `statut` =?";
         
@@ -61,9 +61,9 @@
         return $query->result(); 
     }
     
-    public function get_etablissement_id_by_code($code){
+    public function get_etablissement_by_code($code){
   
-        $sql_ll="SELECT id FROM etablissement WHERE code =?";
+        $sql_ll="SELECT * FROM etablissement WHERE code =?";
         
         $query = $this->db->query($sql_ll,array($code));
         

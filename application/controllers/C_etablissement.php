@@ -7,6 +7,11 @@
      { 
          parent::__construct(); 
         $this->load->model('M_etablissement', 'etablissement'); 
+        $this->load->model('M_type_dossier_piece', 'type_piece');
+        $this->load->model('M_type_dossier', 'type_dossier');
+        $this->load->model('M_depot', 'depot');
+        $this->load->model('M_circuit', 'circuit');
+        $this->load->model('M_atlas', 'atlas'); 
      } 
      
   
@@ -51,6 +56,10 @@
         $data['type']= '';
          $data['all_data'] = $this->etablissement->get_etablissement_liste(); 
          $this->load->view('V_etablissement', $data); 
+         $this->load->model('M_type_dossier_piece', 'type_piece');
+         $this->load->model('M_type_dossier', 'type_dossier');
+         $this->load->model('M_depot', 'depot');
+         $this->load->model('M_circuit', 'circuit');
      } 
      public function get_etablissement_type() 
      { 
@@ -74,6 +83,163 @@
          $data['all_data'] = $this->etablissement->get_etablissement_type($type); 
          $this->load->view('V_etablissement', $data); 
      } 
+
+    public function demande_transfert()
+	   {
+		
+		$this->type_dossier->id_type_dossier=3;
+		$this->type_dossier->get_record();
+		$jour_debut=$this->type_dossier->jour_debut;
+		$jour_fin=$this->type_dossier->jour_fin;
+		$mois_debut=$this->type_dossier->mois_debut;
+		$mois_fin=$this->type_dossier->mois_fin;
+		$anne_debut=date('Y');
+		$annee_fin=date('Y');
+		if($mois_debut > $mois_fin)
+		$annee_fin+=1;
+		$date_jour= new DateTime(date('Y-m-d'));
+		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
+		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		{
+			$data_region=$this->atlas->get_region();
+			$data['select_region'] 	= create_select_list($data_region, 'code_atlas', 'libelle_atlas', '');
+			$data_departement=$this->atlas->get_departement_region();
+			$data['select_departement'] 	= create_select_list($data_departement, 'code_atlas', 'libelle_atlas', null,'reg_code_atlas');
+			$data_commune=$this->atlas->get_commune_departement();
+			$data['select_commune'] 	= create_select_list($data_commune, 'code_atlas', 'libelle_atlas', null,'reg_code_atlas');
+			$data['piece'] = $this->type_piece->get_piece(3);
+			$this->load->view('V_transfert_etablissement',$data);
+		}
+		else
+		{
+			$d=$date_debut;
+			$data['titre']="DEMANDE DE TRANSFERT D'ETABLISSEMENT";
+			$data['message']=" Periode de depot : du ".$date_debut->format('d-M-Y')." au ".$date_fin->format('d-M-Y');
+			$this->load->view('V_hors_delai',$data);
+		}
+    }
+
+    public function demande_reconnaissance()
+	   {
+		
+		$this->type_dossier->id_type_dossier=4;
+		$this->type_dossier->get_record();
+		$jour_debut=$this->type_dossier->jour_debut;
+		$jour_fin=$this->type_dossier->jour_fin;
+		$mois_debut=$this->type_dossier->mois_debut;
+		$mois_fin=$this->type_dossier->mois_fin;
+		$anne_debut=date('Y');
+		$annee_fin=date('Y');
+		if($mois_debut > $mois_fin)
+		$annee_fin+=1;
+		$date_jour= new DateTime(date('Y-m-d'));
+		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
+		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		{
+			$data['piece'] = $this->type_piece->get_piece(4);
+			$this->load->view('V_reconnaissance_etablissement',$data);
+		}
+		else
+		{
+			$d=$date_debut;
+			$data['titre']="DEMANDE DE RECONNAISSANCE D'ETABLISSEMENT";
+			$data['message']=" Periode de depot : du ".$date_debut->format('d-M-Y')." au ".$date_fin->format('d-M-Y');
+			$this->load->view('V_hors_delai',$data);
+		}
+    }
+    public function demande_extension_cycle()
+	   {
+		
+		$this->type_dossier->id_type_dossier=5;
+		$this->type_dossier->get_record();
+		$jour_debut=$this->type_dossier->jour_debut;
+		$jour_fin=$this->type_dossier->jour_fin;
+		$mois_debut=$this->type_dossier->mois_debut;
+		$mois_fin=$this->type_dossier->mois_fin;
+		$anne_debut=date('Y');
+		$annee_fin=date('Y');
+		if($mois_debut > $mois_fin)
+		$annee_fin+=1;
+		$date_jour= new DateTime(date('Y-m-d'));
+		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
+		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		{
+			$data['piece'] = $this->type_piece->get_piece(5);
+			$this->load->view('V_extension_cycle',$data);
+		}
+		else
+		{
+			$d=$date_debut;
+			$data['titre']="DEMANDE D'EXTENSION DE CYCLE";
+			$data['message']=" Periode de depot : du ".$date_debut->format('d-M-Y')." au ".$date_fin->format('d-M-Y');
+			$this->load->view('V_hors_delai',$data);
+		}
+    }
+
+    public function demande_extension_classe()
+	   {		
+		$this->type_dossier->id_type_dossier=6;
+		$this->type_dossier->get_record();
+		$jour_debut=$this->type_dossier->jour_debut;
+		$jour_fin=$this->type_dossier->jour_fin;
+		$mois_debut=$this->type_dossier->mois_debut;
+		$mois_fin=$this->type_dossier->mois_fin;
+		$anne_debut=date('Y');
+		$annee_fin=date('Y');
+		if($mois_debut > $mois_fin)
+		$annee_fin+=1;
+		$date_jour= new DateTime(date('Y-m-d'));
+		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
+		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		{
+			$data['piece'] = $this->type_piece->get_piece(6);
+			$this->load->view('V_extension_classe',$data);
+		}
+		else
+		{
+			$d=$date_debut;
+			$data['titre']="DEMANDE D'EXTENSION DE CLASSE";
+			$data['message']=" Periode de depot : du ".$date_debut->format('d-M-Y')." au ".$date_fin->format('d-M-Y');
+			$this->load->view('V_hors_delai',$data);
+		}
+    }
+
+
+    
+        public function get_nom_etablissement()
+        {
+            $args =func_get_args();
+            $etablissement=$this->etablissement->get_etablissement_by_code($args[0]);
+            $id=0;
+            $nom="";
+            if(isset($etablissement[0]))
+            {
+                $id=$etablissement[0]->id;
+                $nom=$etablissement[0]->nom;
+            }
+            echo '{"id":'.$id.',"nom":"'.$nom.'"}';            
+        }
+
+        public function get_arrete()
+        {
+            $args =func_get_args();
+            $etablissement=$this->etablissement->get_etablissement_by_code($args[0]);
+            $id=0;
+            $jour=0;
+            $mois=0;
+            $annee=0;
+            $arrete="";
+            if(isset($etablissement[0]))
+            {
+                $id=$etablissement[0]->id;
+                $nom=$etablissement[0]->nom;
+            }
+            echo '{"id":'.$id.',"nom":"'.$nom.'"}';            
+        }
   
      public function get_record(){ 
          $args =func_get_args(); 

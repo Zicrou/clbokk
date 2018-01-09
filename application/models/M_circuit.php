@@ -39,7 +39,7 @@
         $query = $this->db->query($sql_ll,array($id_type_dossier));
     }
       public function get_max_ordre($id_type_dossier){
-          $sql_ll="SELECT MAX(ordre) as max FROM circuit WHERE id_type_dossier=? AND archiver=0 ";
+          $sql_ll="SELECT MAX(ordre),id_type_structure as max FROM circuit WHERE id_type_dossier=? AND archiver=0 ";
           $query = $this->db->query($sql_ll,array($id_type_dossier));
           $result=$query->result();
           $max='1';
@@ -53,9 +53,7 @@
       public function reordonne($dossier,$ordre)
       {
           $sql_ll="UPDATE `circuit` SET ordre=ordre-1 WHERE id_type_dossier=?  AND ordre >=? AND archiver=0 ";
-
           $query = $this->db->query($sql_ll,array($dossier,$ordre));
-
 
       }
   }

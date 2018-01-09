@@ -10,7 +10,7 @@
     <div class='col-sm-12'>
         <div class='panel panel-default' >
                 <div class='panel-heading'>
-                    <h3 class="panel-title">DETAIL - AUTORISATION D'ENSEIGNEMENT OU D'EXERCER DANS LES ECOLES PRIVÉES DU SÉNÉGAL</h3>
+                    <h3 class="panel-title">DETAIL - TRANSFERT</h3>
                 </div>
                 <div class='panel-body'>
                 <div class="container">
@@ -19,14 +19,20 @@
             <div class="">
                 <div class="row">
                     <div class="  col-md-2">
-                        <center><img  src="<?php echo ($all_data[0]->sexe_ens=='M')? base_url().'assets/images/man.png':base_url().'assets/images/woman.png'; ?>" style=" border-radius:50%;width:80%;" alt="" class="img-rounded img-responsive" /></center>
+                        <center><img  src="<?php echo base_url().'assets/images/man.png';?>" style=" border-radius:50%;width:80%;" alt="" class="img-rounded img-responsive" /></center>
                     </div>
                     <div class="col-md-offset-0 col-md-5">
-                        <div><h1 style="color:#5e35b1"><?php echo $all_data[0]->prenom_ens.' '.$all_data[0]->nom_ens ;?></h1><hr style='padding-right:20%'></div>
+                        <div><h1 style="color:#5e35b1"><?php echo $all_data[0]->nom ;?></h1><hr style='padding-right:20%'></div>
                         
-                        <h4> Specialite: <?php echo $all_data[0]->nom_specialite ;?></b></h4>
-                        <h4>  Profil Académique: <?php echo $all_data[0]->profil_aca ;?></b></h4>
-                        <h4>  Profil Professionnel: <?php echo $all_data[0]->profil_pro ;?></b></h4>
+                        <h4> Responsable: <?php echo $all_data[0]->responsable ;?></b></h4>
+                        <?php
+                            $jour=($all_data[0]->jour_ouverture>0)?str_pad($all_data[0]->jour_ouverture, 2, "0", STR_PAD_LEFT):'___';
+                            $mois=($all_data[0]->mois_ouverture>0)?str_pad($all_data[0]->mois_ouverture, 2, "0", STR_PAD_LEFT):'___';
+                            $date_ouverture=($all_data[0]->annee_ouverture>0)?$jour."/".$mois."/".$all_data[0]->annee_ouverture :'___/___/_____';
+                        ?>
+                        <h4>  Date ouverture: <?php echo $date_ouverture ;?></b></h4>
+                        <h4>  Statut: <?php echo  $all_data[0]->statut;?></b></h4>
+                        
                         
                     </div>
                     <div class="col-md-5">
@@ -41,20 +47,16 @@
                 <div class='row'>
                     <div class="col-md-12">
                     <br>
-                    <form action='C_depot/save_depot_autorisation' method="post" id='form_circuit_depot'  class='form-horizontal'>
+                    <form action='C_depot/save_depot_transfert' method="post" id='form_circuit_depot'  class='form-horizontal'>
                        <div class="clearfix">
                                 <input type='hidden' id="id_circuit_depot" name="id_circuit_depot" value="<?php echo $circuit_depot[0]->id_circuit_depot;?>">
                                 <input type='hidden' id="id_depot" name="id_depot" value="<?php echo $circuit_depot[0]->id_depot;?>">
                                 <input type='hidden' id="id_circuit" name="id_circuit" value="<?php echo $circuit_depot[0]->id_circuit;?>">
+                                <input type='hidden' id="id_deposant" name="id_deposant" value="<?php echo $all_data[0]->id_deposant;?>">
                                 <label class="col-lg-12 " style="padding-top:5px;margin-bottom:-7px" for="">Action <span class="text-danger">*</span></label>
 
-                                <div class="col-lg-12" style="padding-bottom:10px;">
-                                    <!-- <div class="radio radio-inline">
-                                        <input type="radio" name="etat" id="en_cours" value="en_cours" checked echo >
-                                        <label for="en_cours">
-                                        en cours
-                                        </label>
-                                    </div> -->
+                                <div class="col-lg-3" style="padding-bottom:10px;">
+                                   
                                     <div class="radio radio-inline">
                                         <input type="radio" name="etat" id="traité" value="traité" checked>
                                         <label for="traité">
@@ -68,15 +70,26 @@
                                         </label>
                                     </div>
                                     
-                                     <input type='submit' style="margin-left:10px" id="circuit_depot_control" class='btn btn-primary' value='Enregistrer'/>
+                                     
+                                     
+                                </div>
+                                <div  class="col-lg-9" id='info_transfert'>
+                                    <label for='numero_arrete'>arrete: </label><input type='text' name='numero_arrete' id='numero_arrete' required>
+                                    <label for='date_arrete'>date :</label><input type='date' name='date_arrete' id='date_arrete' required>
                                     
                                 </div>
+                                <input type='submit' style="margin-left:10px" id="circuit_depot_control" class='btn btn-primary' value='Enregistrer'/>
                                 <br>
                                 </div>
+                                
                         </form>
                        <?php if($circuit_depot[0]->etat!="a_traité")
                        {
                            echo "<script>$('#form_circuit_depot').hide();</script>";
+                       }?>
+                       <?php if($this->session->lfc_jafr12_s['id_atlas']!=1)
+                       {
+                           echo "<script>$('#info_transfert').hide();</script>";
                        }?>
                         <br>
                     </div>
