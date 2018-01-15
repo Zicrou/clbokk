@@ -36,7 +36,7 @@
 		$date_jour= new DateTime(date('Y-m-d'));
 		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
 		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
-		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_type_structure']==1))
 		{
 			$data_speciliate=$this->specialite->get_data();
 			$data['select_specialite'] 	= create_select_list($data_speciliate, 'code_specialite', 'nom_specialite', '');
@@ -76,13 +76,13 @@
    		$this->depot->date_depot = date("Y-m-d"); 
    		$this->depot->numero_depot = 0; 
 		$this->depot->id_user = 1; 
-		$atlas=$this->session->lfc_jafr12_s['id_atlas'];
+		$atlas=$this->session->lfc_jafr12_s['id_type_structure'];
 		$depot_central=($atlas==1)?1:0;
    		$this->depot->depot_central= $depot_central; 
 		$this->depot->save();  
 		$circuits=$this->circuit->get_cicuit_dossier(1);
 		$etat_traitement="en_cours";
-		$atlas=$this->session->lfc_jafr12_s['id_atlas'];
+		$atlas=$this->session->lfc_jafr12_s['id_type_structure'];
 		foreach ($circuits as $circuit)
 		{
 			if($atlas==$circuit->id_type_structure)
@@ -112,7 +112,7 @@
 					$file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
 					$file_ext = substr($filename, strripos($filename, '.')); // get file name
 					$filesize = $_FILES["pj_".$value->id_type_piece]["size"];
-					$allowed_file_types = array('.gif','.jpg','.png','.PNG','.jpeg','.pdf');	
+					$allowed_file_types = array('.gif','.jpg','.png','.PNG','.jpeg','.JPEG','.pdf');	
 
 						if (in_array($file_ext,$allowed_file_types) && ($filesize < 300000))
 						{	
@@ -150,7 +150,7 @@
 				
 			}
 			//$slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre <?";
-			//$atlas=$this->session->lfc_jafr12_s['id_atlas'];
+			//$atlas=$this->session->lfc_jafr12_s['id_type_structure'];
 			$this->index();
 	   }
     

@@ -13,6 +13,7 @@
 		  $this->load->model('M_type_dossier', 'dossier'); 		  
 		  $this->load->model('M_type_dossier_piece', 'type_piece');
    	   $this->load->model('M_etablissement', 'etablissement'); 
+   	   $this->load->model('M_enseignants', 'enseignant'); 
    	   $this->load->model('M_structure_localisation', 'localisation'); 
    	} 
     
@@ -43,6 +44,10 @@
 	/******************** demande d'autorisation ****************************/
 		public function save_depot_autorisation()
 		{
+			if($this->session->lfc_jafr12_s['id_type_structure']==1 && $this->input->post('etat')=='traité')
+			{
+				$this->enseignant->valide_enseignant($this->input->post('id_deposant'));
+			}
 			$this->save_circuit_depot();
 			$this->get_depots();
 		}
@@ -61,7 +66,7 @@
 		public function get_depot_trasfert() 
 		{ 
 			$args =func_get_args();
-			$all_data = $this->depot->get_list_depot_transfert(); 
+			$all_data = $this->depot->get_list_depot_etablissement(3); 
 			$data['all_data'] = $all_data; 
 			$this->load->view('V_transfert_en_cours', $data);          
 		}
@@ -80,7 +85,7 @@
 		}
 		public function save_depot_transfert()
 		{
-			if($this->session->lfc_jafr12_s['id_atlas']==1)
+			if($this->session->lfc_jafr12_s['id_type_structure']==1 && $this->input->post('etat')=='traité')
 			{
 				$this->localisation->get_last_etablissement_localisation($this->input->post('id_deposant'));
 				$this->localisation->get_new_etablissement_localisation($this->input->post('id_deposant'),$this->input->post('numero_arrete'),$this->input->post('date_arrete'));
@@ -90,11 +95,119 @@
 		}
 
 /********************fin tranfert ****************************/
+
+/******************** reconnaissance ****************************/
+	public function save_reconnaissance(){ 
+		$this->save_depot(4,3,$this->input->post('id_deposant'));
+		$this->get_depot_reconnaissance();
+	}
+	public function detail_reconnaissance()
+	{
+		$args =func_get_args(); 
+		$data['all_data']=$this->depot->get_info_etablissement($args[0]);
+		$data['piece_joint']=$this->piece_joint->get_piece_depot($args[0]);
+		$data['circuit_Precedent']=$this->circuit_depot->get_circuit_depot($args[0]);
+		$data['circuit_depot']=$this->circuit_depot->get_circuit_depot_atlas($args[0]);
+		$this->load->view('depot\reconnaissance\V_detail_reconnaissance',$data);
+	}
+
+	public function get_depot_reconnaissance() 
+	{ 
+		$args =func_get_args();
+		$all_data = $this->depot->get_list_depot_etablissement(4); 
+		$data['all_data'] = $all_data; 
+		$this->load->view('depot\reconnaissance\V_reconnaissance_en_cours', $data);          
+	}
+
 	
-public function save_circuit_depot()
+	public function save_depot_reconnaissance()
+	{
+		if($this->session->lfc_jafr12_s['id_type_structure']==1 && $this->input->post('etat')=='traité')
+		{
+			$this->etablissement->set_reconnue($this->input->post('id_deposant'));
+		}
+		$this->save_circuit_depot();
+		$this->get_depot_reconnaissance();
+	}
+
+/********************fin reconnaissance ****************************/
+
+/******************** extension_cycle ****************************/
+public function save_extension_cycle(){ 
+	$this->save_depot(5,3,$this->input->post('id_deposant'));
+	$this->get_depot_extension_cycle();
+}
+public function detail_extension_cycle()
+{
+	$args =func_get_args(); 
+	$data['all_data']=$this->depot->get_info_etablissement($args[0]);
+	$data['piece_joint']=$this->piece_joint->get_piece_depot($args[0]);
+	$data['circuit_Precedent']=$this->circuit_depot->get_circuit_depot($args[0]);
+	$data['circuit_depot']=$this->circuit_depot->get_circuit_depot_atlas($args[0]);
+	$this->load->view('depot\extension_cycle\V_detail_extension_cycle',$data);
+}
+
+public function get_depot_extension_cycle() 
+{ 
+	$args =func_get_args();
+	$all_data = $this->depot->get_list_depot_etablissement(5); 
+	$data['all_data'] = $all_data; 
+	$this->load->view('depot\extension_cycle\V_extension_cycle_en_cours', $data);          
+}
+
+
+public function save_depot_extension_cycle()
+{
+	if($this->session->lfc_jafr12_s['id_type_structure']==1 && $this->input->post('etat')=='traité')
+	{
+		$this->etablissement->set_reconnue($this->input->post('id_deposant'));
+	}
+	$this->save_circuit_depot();
+	$this->get_depot_extension_cycle();
+}
+
+/********************fin extension_cycle ****************************/
+
+/******************** extension_classe ****************************/
+public function save_extension_classe(){ 
+	$this->save_depot(6,3,$this->input->post('id_deposant'));
+	$this->get_depot_extension_classe();
+}
+public function detail_extension_classe()
+{
+	$args =func_get_args(); 
+	$data['all_data']=$this->depot->get_info_etablissement($args[0]);
+	$data['piece_joint']=$this->piece_joint->get_piece_depot($args[0]);
+	$data['circuit_Precedent']=$this->circuit_depot->get_circuit_depot($args[0]);
+	$data['circuit_depot']=$this->circuit_depot->get_circuit_depot_atlas($args[0]);
+	$this->load->view('depot\extension_classe\V_detail_extension_classe',$data);
+}
+
+public function get_depot_extension_classe() 
+{ 
+	$args =func_get_args();
+	$all_data = $this->depot->get_list_depot_etablissement(6); 
+	$data['all_data'] = $all_data; 
+	$this->load->view('depot\extension_classe\V_extension_classe_en_cours', $data);          
+}
+
+
+public function save_depot_extension_classe()
+{
+	if($this->session->lfc_jafr12_s['id_type_structure']==1 && $this->input->post('etat')=='traité')
+	{
+		$this->etablissement->set_reconnue($this->input->post('id_deposant'));
+	}
+	$this->save_circuit_depot();
+	$this->get_depot_extension_classe();
+}
+
+/********************fin extension_classe ****************************/
+	
+	public function save_circuit_depot()
 	{
 		$slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre =?";
-		$atlas=$this->session->lfc_jafr12_s['id_atlas'];
+		$atlas=$this->session->lfc_jafr12_s['id_type_structure'];
 		$etat=$this->input->post('etat');
 		if($atlas<>1 && $etat=='traité')
 		{
@@ -104,8 +217,8 @@ public function save_circuit_depot()
 		$this->circuit_depot->id_depot = $this->input->post('id_depot'); 
    		$this->circuit_depot->id_circuit = $this->input->post('id_circuit'); 
    		$this->circuit_depot->etat = $etat; 
-   		$this->circuit_depot->code_traitement = 1; 
    		$this->circuit_depot->date_traitement = date("Y-m-d"); 
+   		$this->circuit_depot->code_traitement = $this->input->post('code_traitement'); 
 		$this->circuit_depot->save();
 		$this->circuit->id_circuit=$this->input->post('id_circuit');    
 		$this->circuit->get_record();
@@ -120,7 +233,7 @@ public function save_circuit_depot()
 	public function save_depot($dossier,$niveau,$deposant)
 	   {
 		
-		$atlas=$this->session->lfc_jafr12_s['id_atlas'];
+		$atlas=$this->session->lfc_jafr12_s['id_type_structure'];
 		$user=$this->session->lfc_jafr12_s['id'];
 		$this->depot->id_Type_dossier = $dossier; 
    		$this->depot->niveau = $niveau; 
@@ -200,7 +313,7 @@ public function save_circuit_depot()
 				
 			}
 			// $slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre <?";
-			// $atlas=$this->session->lfc_jafr12_s['id_atlas'];
+			// $atlas=$this->session->lfc_jafr12_s['id_type_structure'];
 			//$this->dossier->get_depot_dossier(3);
 	   } 
    } 

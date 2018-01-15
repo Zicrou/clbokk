@@ -100,7 +100,7 @@
 		$date_jour= new DateTime(date('Y-m-d'));
 		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
 		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
-		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_type_structure']==1))
 		{
 			$data_region=$this->atlas->get_region();
 			$data['select_region'] 	= create_select_list($data_region, 'code_atlas', 'libelle_atlas', '');
@@ -136,10 +136,10 @@
 		$date_jour= new DateTime(date('Y-m-d'));
 		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
 		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
-		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_type_structure']==1))
 		{
 			$data['piece'] = $this->type_piece->get_piece(4);
-			$this->load->view('V_reconnaissance_etablissement',$data);
+			$this->load->view('depot\reconnaissance\V_reconnaissance_etablissement',$data);
 		}
 		else
 		{
@@ -149,6 +149,39 @@
 			$this->load->view('V_hors_delai',$data);
 		}
     }
+
+    public function demande_ouverture()
+	   {
+		
+		$this->type_dossier->id_type_dossier=4;
+		$this->type_dossier->get_record();
+		$jour_debut=$this->type_dossier->jour_debut;
+		$jour_fin=$this->type_dossier->jour_fin;
+		$mois_debut=$this->type_dossier->mois_debut;
+		$mois_fin=$this->type_dossier->mois_fin;
+		$anne_debut=date('Y');
+		$annee_fin=date('Y');
+		if($mois_debut > $mois_fin)
+		$annee_fin+=1;
+		$date_jour= new DateTime(date('Y-m-d'));
+		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
+		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_type_structure']==1))
+		{
+            $data['piece'] = $this->type_piece->get_piece(4);
+            $statut=$this->etablissement->get_statut_religieux();
+			$data['select_statut_religieux'] 	= create_select_list($statut, 'id_statut', 'libelle_statut', null,null);
+			$this->load->view('depot/ouverture_ecole/V_ouverture_ecole_etablissement',$data);
+		}
+		else
+		{
+			$d=$date_debut;
+			$data['titre']="DEMANDE DE RECONNAISSANCE D'ETABLISSEMENT";
+			$data['message']=" Periode de depot : du ".$date_debut->format('d-M-Y')." au ".$date_fin->format('d-M-Y');
+			$this->load->view('V_hors_delai',$data);
+		}
+    }
+
     public function demande_extension_cycle()
 	   {
 		
@@ -165,10 +198,10 @@
 		$date_jour= new DateTime(date('Y-m-d'));
 		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
 		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
-		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_type_structure']==1))
 		{
 			$data['piece'] = $this->type_piece->get_piece(5);
-			$this->load->view('V_extension_cycle',$data);
+			$this->load->view('depot\extension_cycle\V_extension_cycle',$data);
 		}
 		else
 		{
@@ -194,10 +227,10 @@
 		$date_jour= new DateTime(date('Y-m-d'));
 		$date_debut =new DateTime($anne_debut.'-'.$mois_debut.'-'.$jour_debut);
 		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
-		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_atlas']==1))
+		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_type_structure']==1))
 		{
 			$data['piece'] = $this->type_piece->get_piece(6);
-			$this->load->view('V_extension_classe',$data);
+			$this->load->view('depot\extension_classe\V_extension_classe',$data);
 		}
 		else
 		{
@@ -216,12 +249,18 @@
             $etablissement=$this->etablissement->get_etablissement_by_code($args[0]);
             $id=0;
             $nom="";
+            $date_ouverture="";
+            $arrete_ouverture="";
             if(isset($etablissement[0]))
             {
                 $id=$etablissement[0]->id;
                 $nom=$etablissement[0]->nom;
+                $jour=($etablissement[0]->jour_ouverture>0)?str_pad($etablissement[0]->jour_ouverture, 2, "0", STR_PAD_LEFT):'___';
+                $mois=($etablissement[0]->mois_ouverture>0)?str_pad($etablissement[0]->mois_ouverture, 2, "0", STR_PAD_LEFT):'___';
+                $date_ouverture=($etablissement[0]->annee_ouverture>0)?$jour."/".$mois."/".$etablissement[0]->annee_ouverture :'___/___/_____';
+                $arrete_ouverture=$etablissement[0]->arrete_ouverture;
             }
-            echo '{"id":'.$id.',"nom":"'.$nom.'"}';            
+            echo '{"id":'.$id.',"nom":"'.$nom.'","date_ouverture":"'.$date_ouverture.'","arrete_ouverture":"'.$arrete_ouverture.'"}';            
         }
 
         public function get_arrete()
