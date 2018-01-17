@@ -15,7 +15,6 @@
                         <th>Code</th>
                         <th>Nom</th>
                         <th>Statut</th>
-                        <th>Responsable</th>
                         <th>Date Creation</th>
                         <th>Adresse</th>
                         <th>Telephone</th>
@@ -29,7 +28,6 @@
                             <td><?php echo $value->code; ?></td>
                             <td><?php echo $value->nom; ?></td>
                             <td><?php echo $value->statut; ?></td>
-                            <td><?php echo $value->responsable; ?></td>
                             <?php
                             $jour=($value->jour_creation>0)?str_pad($value->jour_creation, 2, "0", STR_PAD_LEFT):'___';
                             $mois=($value->mois_creation>0)?str_pad($value->mois_creation, 2, "0", STR_PAD_LEFT):'___';
@@ -39,14 +37,10 @@
                             <td><?php echo $value->telephone; ?></td>
                             <td><?php echo $value->libelle; ?></td>
                             <td class='actions' style='width: 1%; text-align: center; white-space: nowrap'>
-				<a href='#' class='on-default btn_edit' id='<?php echo $value->id; ?>'>
-					<i class='fa fa-pencil'></i></a>
+				<?php btn_edit_action($value->id,'LISTE_ETABLISSMENTS')?>
+				<?php btn_delete_action($value->id,'LISTE_ETABLISSMENTS')?>
 				&nbsp;
-				<a href='#' class='on-default btn_delete' id='<?php echo $value->id; ?>'>
-					<i class='fa fa-trash-o' style='color:red'></i></a>
-				&nbsp;
-				<a href='#' class='on-default btn_edit' id='<?php echo $value->id; ?>'>
-					<i class='fa fa-eye' style='color:#CCCCCC'></i></a>
+				<?php btn_show_action($value->id,'LISTE_ETABLISSMENTS')?>
                             </td>
                         </tr>
                     <?php } ?>

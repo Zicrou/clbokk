@@ -84,17 +84,20 @@ legend {
                                     <label class='col-md-12'><?php echo $value->libelle_type_piece ; echo ($value->obligatoire==1)?' <span class="text-danger">*</span>':'';?></label>
                                         <div class='col-md-12'>
                                         <div id="error-container-<?php echo 'pj_'.$value->id_type_piece ;?>"></div>
-                                            <div class="col-md-10 " style="margin-left:0px;padding-left:0px;">
+                                            <div class="col-md-9 " style="margin-left:0px;padding-left:0px;">
                                                         
                                                                 <input type="text" readonly="readonly" class="form-control" name="<?php echo 'pj_'.$value->id_type_piece.'_control' ;?>"  id="<?php echo 'pj_'.$value->id_type_piece.'_control' ;?>" <?php echo ($value->obligatoire==1)?'data-msg-required="'.$value->libelle_type_piece.' obligatoire." required':'';?>  >
                                                                 
                                                             
                                                         </div>
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-3">
                                                         <button type="button" data-id="<?php echo 'pj_'.$value->id_type_piece ;?>" class="btn waves-effect waves-light btn-primary file">Parcourir</button>
+                                                        <i style="color:#58c9c7;font-size:24px;padding-left:12px;padding-right:12px;vertical-align: middle;display:none" class=" fa  fa-check " id="<?php echo 'pj_'.$value->id_type_piece.'_V' ;?>"></i>
+                                                        <button style="display:none" type="button" data-id="<?php echo 'pj_'.$value->id_type_piece ;?>" class="btn btn-icon waves-effect waves-light btn-danger display:none" id="<?php echo 'pj_'.$value->id_type_piece.'_D'?>" onclick="reset_file($(this).attr('data-id'))"> <i class="fa fa-remove"></i> </button>
+                                        
                                                 </div>                 
                                             <label class="custom-file">
-                                                <input style="display:none" type="file" name="<?php echo 'pj_'.$value->id_type_piece ;?>" id="<?php echo 'pj_'.$value->id_type_piece ;?>" class="custom-file-input" accept="image/jpeg,image/gif,image/png,application/pdf" onchange="set_input($(this).attr('id'));"  />
+                                                <input style="display:none" type="file" name="<?php echo 'pj_'.$value->id_type_piece ;?>" id="<?php echo 'pj_'.$value->id_type_piece ;?>" class="custom-file-input" accept="image/jpeg,image/gif,image/png,application/pdf" onchange="set_input($(this).attr('id'),this);" />
                                                 
                                             </label>
                                         </div>
@@ -117,23 +120,52 @@ legend {
     $(document).ready(function () {
         $("#departement").chained("#region");
         $("#commune").chained("#departement");
-
-    $('.file').find("*").off();
-    $('.file').off('click');
-    $(".file").click(function(){
-        var input_file=$(this).attr("data-id");
-        $('#'+input_file).click();                
-    });
-    });
-    function set_input(id)
-  {
-      var str=$('#'+id).val();
-      var file_name=str.replace("C:\\fakepath\\", " ");
-      $('#'+id+'_control').val(file_name);
-      $('#'+id+'_control').change();
-
-      
-  }
+        $('.file').find("*").off();
+            $('.file').off('click');
+            $(".file").click(function(){
+                    
+                
+                var input_file=$(this).attr("data-id");
+                $('#'+input_file).click();                
+            });
+        });
+        function set_input(id,file)
+            {
+                ext =$('#'+id).val().split('.').pop().toLowerCase();
+                
+                if(file.files[0].size>300000)
+                {
+                    $.Notification.notify('error','bottom left','Piece jointe', 'Ce fichier est trop lourd')
+                    $('#'+id+'_V').css('display','none');
+                    $('#'+id+'_D').css('display','none');
+                }
+                else if($.inArray(ext, ['gif','jpg','png','PNG','jpeg','JPEG','pdf']) == -1)
+                {
+                    $.Notification.notify('error','bottom left','Piece jointe', 'pas pris en compte')
+                    $('#'+id+'_V').css('display','none');
+                    $('#'+id+'_D').css('display','none');
+                }
+                else{
+                    var str=$('#'+id).val();
+                    var file_name=str.replace("C:\\fakepath\\", " ");
+                    $('#'+id+'_control').val(file_name);
+                    $('#'+id+'_control').change();
+                    $('#'+id+'_V').css('display','inline');
+                    $('#'+id+'_D').css('display','inline');
+                }
+                
+                //alert(file.files[0].type);
+            }
+            function reset_file(id)
+            {
+                $('#'+id+'_V').css('display','none');
+                $('#'+id+'_D').css('display','none');           
+                $('#'+id).val('');
+                $('#'+id+'_control').val('');
+            }
+   
+  
+   
     
 
 </script>

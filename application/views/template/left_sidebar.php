@@ -41,129 +41,7 @@
 				//Recuperation du tableau des roles menus enregistré dans la session
 				$menu_roles = $this->session->menu_roles;
 				$smenu_roles = $this->session->smenu_roles;
-
-				if(isset($menu_roles['GES_BLOC'])):?>
-                <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="fa fa-cubes"></i><span> Blocs/Bureaux </span><span class="pull-right"><i class="md md-add"></i></span></a>
-
-                    <ul class="list-unstyled">
-
-                        <?php if(isset($smenu_roles['NIVEAU']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_niveau" class="menu" id="menu_niveau">Les Niveaux</a></li>
-                        <?php endif; ?>
-						
-						<?php if(isset($smenu_roles['BLOC']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_bloc" class="menu" id="menu_bloc">Liste Blocs</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['BUREAU']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_bureau" class="menu" id="menu_bureau">Les Bureaux</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['BUREAU_STR']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_bureau_structure" class="menu" id="menu_bureau_structure">Bureaux Structures</a></li>
-                        <?php endif; ?>
-
-                    </ul>
-                </li>
-                <?php endif; ?>
-				
-				<?php
-				if(isset($menu_roles['BAT_SALLE'])):?>
-                <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="material-icons">&#xE0AF;</i><!--i class="md md-account-balance"></i--><span>Batiments/Salle </span><span class="pull-right"><i class="md md-add"></i></span></a>
-
-                    <ul class="list-unstyled">
-						
-                        <?php if(isset($smenu_roles['TYP_BAT']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_type_batiment" class="menu" id="menu_type_batiment">Type Batiment</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['BAT']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_batiments" class="menu" id="menu_batiments">Batiments</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['EQUIPEMENT']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_type_equipement" class="menu" id="menu_type_equipement">Equipement</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['TYP_CLASSE_PHY']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_type_classe_physique" class="menu" id="menu_type_classe_physique">Type classe Physique</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['CLASSE_PHY']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_classe_physique" class="menu" id="menu_classe_physique">Classe Physique</a></li>
-                        <?php endif; ?>
-
-                    </ul>
-
-                </li>
-                <?php endif; ?>
-
-                <?php if(isset($menu_roles['PARAM'])):?>
-                <li class="has_sub">
-
-                    <a href="#" class="waves-effect"><i class="md md-settings"></i><span> Paramétrages </span><span class="pull-right"><i class="md md-add"></i></span></a>
-
-                    <ul class="list-unstyled">
-
-                        <?php if(isset($smenu_roles['CLASSE_PEDA']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_classe_pedagogiques" class="menu" id="menu_classe_pedagogique">Classe Pedagogique</a></li>
-                        <?php endif; ?>
-                        
-                        <?php if(isset($smenu_roles['TYP_GRPMT']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_type_groupement" class="menu" id="menu_type_groupement">Groupements</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['OPT']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_option" class="menu" id="menu_option">Option</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['PROG']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_programmes" class="menu" id="menu_programmes">Programmes</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['PROG_STR']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_programmes_contenu_structure" class="menu" id="menu_programmes_contenu_structure">Programmes structure</a></li>
-                        <?php endif; ?>
-
-                    </ul>
-                </li>
-                <?php endif; ?>
-                
-                <?php if(isset($menu_roles['GES_PERS'])):?>
-                <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="fa fa-users"></i><span> Gestion Personnel </span><span class="pull-right"><i class="md md-add"></i></span></a>
-
-                    <ul class="list-unstyled">
-
-                        <?php if(isset($smenu_roles['PERSONNEL']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_bureau_personnel" class="menu" id="menu_bureau_personnel">Le Personnel</a></li>
-                        <?php endif; ?>
-
-                        <?php if(isset($smenu_roles['PRISE_SRV']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_prise_service_personnel" class="menu" id="menu_prise_service_personnel">Prise de Services</a></li>
-                        <?php endif; ?>
-
-                    </ul>
-                </li>
-                <?php endif; ?>
-                
-                
-                <?php if(isset($menu_roles['GES_ETAB'])):?>
-                <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="material-icons">&#xE8D1;</i><!--i class="md md-braille"></i--><span> Gestion Etabliss. </span><span class="pull-right"><i class="md md-add"></i></span></a>
-
-                    <ul class="list-unstyled">
-
-                        <?php if(isset($smenu_roles['ETAB']['d_read'])):?>
-                        <li><a href="<?php echo base_url(); ?>C_gestion_etablissement" class="menu" id="menu_gestion_etablissement">Etablissements</a></li>
-                        <?php endif; ?>
-                    </ul>
-                </li>
-                <?php endif; ?>
-                
-
+                ?>
                 <?php if(isset($menu_roles['ETABLISSEMENT'])):?>
                 <li class="has_sub">
                     <a href="#" class="waves-effect"><i class="fa  md-account-balance"></i><span>Etablissement</span><span class="pull-right"><i class="md md-add"></i></span></a>
@@ -180,26 +58,8 @@
                                             <li><a href="<?php echo base_url(); ?>C_etablissement\get_etablissement_type\4" class="menu" id="liste_etablissement">Etablissements En Instance</a></li>
                                         </ul>
                                         </li>
-                        <?php endif; ?>
+                        <?php endif; ?>                       
                         
-                        <?php if(isset($smenu_roles['TRANSFERT']['d_read'])):?>
-                            <li class="has_sub">>
-                                <a href="javascript:void(0);" class="waves-effect subdrop"><span>transfert</span> <span class="pull-right"><i class="md md-remove"></i></span></a>
-                                <ul style="display: block;">
-                                    <li><a href="<?php echo base_url(); ?>C_etablissement\demande_transfert" class="menu" id="transfert_etablissement">Demande transfert</a></li>
-                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depot_trasfert" class="menu" id="transfert_etablissement">liste Demande</a></li>
-                                </ul>
-                            </li>
-                        <?php endif; ?>
-                        <?php if(isset($smenu_roles['RECONNAISANCE']['d_read'])):?>
-                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_reconnaissance" class="menu" id="reconnaissance_etablissement">Demande de reconnaissance</a></li>
-                        <?php endif; ?>
-                        <?php if(isset($smenu_roles['EXTENSION_CYCLE']['d_read'])):?>
-                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_cycle" class="menu" id="_extension_cycle_etablissement">Demande extension cycle</a></li>
-                        <?php endif; ?>
-                        <?php if(isset($smenu_roles['EXTENSION_CLASSES']['d_read'])):?>
-                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_classe" class="menu" id="extension_classe_etablissement">Demande extension classe</a></li>
-                        <?php endif; ?>
                     </ul>
                 </li>
                 <?php endif; ?>
@@ -212,9 +72,7 @@
                                         <li><a href="<?php echo base_url(); ?>C_enseignants" class="menu" id="liste_enseignants">Liste Enseignants</a></li>
                                         <?php endif; ?>
 
-                                        <?php if(isset($smenu_roles['DEMANDE_AUTORISATION_ENSEIGNER']['d_read'])):?>
-                                        <li><a href="<?php echo base_url(); ?>C_enseignants/demande_autorisaton" class="menu" id="Demande">Demande d'enseignement</a></li>
-                                        <?php endif; ?>
+                                        
                                         <?php if(isset($smenu_roles['LISTE_DEMANDE']['d_read'])):?>
                                         <li><a href="<?php echo base_url(); ?>C_depot/get_depots" class="menu" id="Demande">Validation Demande</a></li>
                                         <?php endif; ?>
@@ -223,7 +81,7 @@
                                 </li>
                 <?php endif; ?>
 
-                <?php if(isset($menu_roles['NOMENCLATURE'])&&$this->session->lfc_jafr12_s['id_atlas']==1):?>
+                <?php if(isset($menu_roles['NOMENCLATURE'])):?>
                 <li class="has_sub">
                     <a href="#" class="waves-effect"><i class="md md-book"></i><span> Nomenclature </span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
@@ -243,7 +101,42 @@
                     </ul>
                 </li>
                 <?php endif; ?>
+                <?php if(isset($menu_roles['DEPOT'])):?>
+                    <li class="has_sub">
+                        <a href="#" class="waves-effect"><i class="md md-assignment"></i><span> Depot </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <ul class="list-unstyled">
+                        <?php if(isset($smenu_roles['DEPOT_ENSEIGNANT']['d_read'])):?>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect subdrop"><span>Liste</span> <span class="pull-right"><i class="md md-remove"></i></span></a>
+                                <ul style="display: block;">                                    
+                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depot_ouverture_etablissement" class="menu" id="depot_transfert_etablissement">Demande ouverture etablissement</a></li> 
+                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depots" class="menu" id="Depot_autorisation">Demande Autorisation</a></li>
+                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depot_trasfert" class="menu" id="depot_transfert_etablissement">Demande Transfert</a></li>
+                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depot_reconnaissance" class="menu" id="depot_reconnaissance">Demande reconnaissance</a></li>
+                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depot_extension_cycle" class="menu" id="depot_extension_cycle">Demande extension cycle</a></li>
+                                    <li><a href="<?php echo base_url(); ?>C_depot\get_depot_extension_classe" class="menu" id="depot_transfert_etablissement">Demande extension classe</a></li>
+                                
+                                </ul>
+                        </li>
+                        <?php endif; ?>
+                        <?php if(isset($smenu_roles['DEPOT_ETABLISSEMENT']['d_read'])):?>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect subdrop"><span>Nouveau</span> <span class="pull-right"><i class="md md-remove"></i></span></a>
+                                <ul style="display: block;">
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_ouverture" class="menu" id="ouverture_etablissement">Demande ouverture etablissement</a></li>
+                                        <li><a href="<?php echo base_url(); ?>C_enseignants\demande_autorisaton" class="menu" id="Demande">Autorisation d'enseignement</a></li>
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_transfert" class="menu" id="transfert_etablissement">Demande transfert</a></li> 
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_reconnaissance" class="menu" id="reconnaissance_etablissement">Demande de reconnaissance</a></li>
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_cycle" class="menu" id="extension_cycle_etablissement">Demande extension cycle</a></li>
+                                        <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_classe" class="menu" id="extension_classe_etablissement">Demande extension classe</a></li>
+                                </ul>
 
+                        </li>
+                        <?php endif; ?>                                
+                        </ul>
+                    </li>
+                    
+                <?php endif; ?>
                 <?php if(isset($menu_roles['SECURITE'])):?>
                     <li class="has_sub">
                         <a href="#" class="waves-effect"><i class="md md-settings"></i><span> Sécurité </span><span class="pull-right"><i class="md md-add"></i></span></a>
@@ -264,6 +157,7 @@
                         </ul>
                     </li>
                 <?php endif; ?>
+                
             </ul>
 
             <div class="clearfix"></div>

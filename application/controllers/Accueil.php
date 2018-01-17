@@ -31,8 +31,8 @@ class Accueil extends MY_Controller {
 		$data['reconnu']=$this->etablissement->get_count_etablissement_type('Reconnu');
 		$reconnu_nbr=$this->etablissement->get_count_etablissement_type('Reconnu');
 
-		$data['instance']=$this->etablissement->get_count_etablissement_type('Instance');
-		$instance_nbr=$this->etablissement->get_count_etablissement_type('Instance');
+		$data['instance']=$this->etablissement->get_count_etablissement_type('En Instance');
+		$instance_nbr=$this->etablissement->get_count_etablissement_type('En Instance');
 		$total=$autoriser_nbr[0]->nbr+$non_autoriser_nbr[0]->nbr+$reconnu_nbr[0]->nbr+$instance_nbr[0]->nbr;
 		$autoriser_pc=$autoriser_nbr[0]->nbr * 100/$total;
 		$data['autoriser_pc']=round($autoriser_pc,2);

@@ -1,4 +1,4 @@
-  <?php
+<?php
   class M_type_dossier extends  MY_Model{
   
       public $id_type_dossier;

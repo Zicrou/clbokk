@@ -1,4 +1,4 @@
-  <?php
+<?php
   class M_specialite extends  MY_Model{
   
       public $code_specialite;

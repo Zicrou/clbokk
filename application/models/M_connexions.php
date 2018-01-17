@@ -18,10 +18,12 @@ class M_connexions extends CI_Model {
 					pr.id_type_profil AS id_profil, 
 					usr.ien ,
 					usr.id_atlas,
-					usr.password
+					usr.password,
+					atl.ordre_atlas
 				FROM
 					sys_niits usr 
 				INNER JOIN sys_type_profil pr ON (pr.id_type_profil = usr.id_profil)  
+				LEFT JOIN atlas atl ON (usr.id_atlas = atl.code_atlas)  
 				WHERE 
 					usr.email = ? AND usr.password = ?";
 		

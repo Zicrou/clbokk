@@ -34,8 +34,8 @@
             globalPosition:position,
             showAnimation: "show",
             showDuration: 0,
-            hideDuration: 0,
-            autoHide: false,
+            hideDuration: 5000,
+            autoHide: true,
             clickToHide: true
         });
     },

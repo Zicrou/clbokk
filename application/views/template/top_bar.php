@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center">
-            <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>GEPS </span></a>
+            <a href="#" class="logo"><i class="md md-terrain"></i> <span>GEPS </span></a>
         </div>
     </div>
     <!-- Button mobile view to collapse sidebar menu -->
@@ -100,7 +100,7 @@
 
 
                     <li class="hidden-xs">
-                        <a href="#" id="btn-logout" class="waves-effect waves-light" ><i
+                        <a href="<?php  echo site_url() ?>" id="btn-logout" class="waves-effect waves-light" ><i
                                 class="md md-settings-power"></i></a>
                     </li>
 

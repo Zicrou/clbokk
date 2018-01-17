@@ -86,16 +86,5 @@ foreach($menu_liste as $smenu)
 </div> <!-- End Row -->
 
 
-<script type="text/javascript">
-$(document).ready(function ()
-{
-	$('#datatable-buttons').managing_ajax(
-	{
-		id_menu: 'menu_sys_menu', //id du menu dans le fichier de (navigation) dans notre cas left_side_bar
-
-	});
-});
-  
-</script>
 
  

@@ -21,7 +21,7 @@
       }
   	
       public function get_list_depot(){
-        $atlas=$this->session->lfc_jafr12_s['id_atlas'];
+        $atlas=$this->session->lfc_jafr12_s['id_type_structure'];
         $add_sql="";
         $sql_ll="SELECT cd.id_circuit_depot,cd.id_depot,d.date_depot,cd.etat,cd.code_traitement,cd.date_traitement,c.id_type_structure,c.ordre,e.prenom_ens,e.nom_ens,td.libelle_type_dossier 
         FROM circuit_depot cd 
@@ -37,7 +37,7 @@
       }
 
       public function get_count_liste_depot(){
-        $atlas=$this->session->lfc_jafr12_s['id_atlas'];
+        $atlas=$this->session->lfc_jafr12_s['id_type_structure'];
         $add_sql="";
         $sql_ll="SELECT COUNT(cd.id_circuit_depot) AS nbr_notification FROM circuit_depot cd 
         JOIN( circuit c JOIN type_dossier td ON(c.id_type_dossier=td.id_type_dossier))ON(cd.id_circuit=c.id_circuit) 
@@ -52,8 +52,8 @@
       }
       
 /***************** transfert  **********************************/
-      public function get_list_depot_transfert(){
-        $atlas=$this->session->lfc_jafr12_s['id_atlas'];
+      public function get_list_depot_etablissement($id_type_dossier){
+        $atlas=$this->session->lfc_jafr12_s['id_type_structure'];
         $add_sql="";
         
         $sql_ll="SELECT cd.id_circuit_depot,cd.id_depot,d.date_depot,cd.etat,cd.code_traitement,cd.date_traitement,c.id_type_structure,c.ordre,e.nom,td.libelle_type_dossier 
@@ -62,17 +62,17 @@
         JOIN( depot d JOIN etablissement e ON(d.id_deposant=e.id) )ON(d.id_depot=cd.id_depot) 
         WHERE c.id_type_structure=? 
         AND cd.etat IN ('en_attente','en_cours','a_traité') 
-         AND c.id_type_dossier=3
+         AND c.id_type_dossier=?
         AND  cd.id_depot NOT IN(SELECT cd2.id_depot FROM circuit_depot cd2 JOIN( circuit c2 JOIN type_dossier td2 ON(c2.id_type_dossier=td2.id_type_dossier))ON(cd2.id_circuit=c2.id_circuit) WHERE cd2.id_depot=cd.id_depot  AND cd2.etat IN ('traité','rejeté') )
         ";		    
        
-        $query = $this->db->query($sql_ll,array($atlas));  		
+        $query = $this->db->query($sql_ll,array($atlas,$id_type_dossier));  		
         return $query->result(); 
       }
 
       public function get_info_etablissement($id_depot)
       {
-        $sql="SELECT d.id_deposant,d.date_depot,e.nom,e.responsable,e.jour_ouverture,e.mois_ouverture,e.annee_ouverture,e.statut FROM depot d JOIN etablissement e ON ( d.id_deposant=e.id) AND d.id_depot=?";
+        $sql="SELECT d.id_deposant,d.date_depot,e.nom,CONCAT(dc.prenom_declarant,' ',dc.nom_declarant) AS responsable,e.jour_ouverture,e.mois_ouverture,e.annee_ouverture,e.statut FROM depot d JOIN etablissement e ON ( d.id_deposant=e.id) JOIN (structure_declarant sd  JOIN declarant dc ON (sd.id_declarant=dc.id_declarant))ON (e.id=sd.id_structure) AND d.id_depot=? AND  sd.type_declarant=1 AND sd.annee_sortie='9999'";
         $query = $this->db->query($sql,array($id_depot));  		
         return $query->result(); 
       }

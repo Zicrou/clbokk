@@ -13,7 +13,6 @@ class C_connexions extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->helper('url');
 		$this->load->library('javascript');
-
 	}
 
 
@@ -38,7 +37,19 @@ class C_connexions extends CI_Controller {
 		{
 
 			//$ens_element = $this->p_str->get_data_liste_by_ens($data['connexions_item']['ien']);
-
+			$type_structure=0;
+			$atlas=intval($data['connexions_item']['ordre_atlas']);
+			switch ($atlas) {
+				case 0:
+				$type_structure=1;
+					break;
+				case 2:
+				$type_structure=2;
+					break;
+				case 3:
+				$type_structure=3;
+					break;
+			}
 			$datas_user = array(
 				'lfc_jafr12_s'=> array(
 					   'nom'		=> $data['connexions_item']['user_conn'],
@@ -47,6 +58,7 @@ class C_connexions extends CI_Controller {
 					   'profil'     => $data['connexions_item']['profil'],
 					   'id_profil'	=> $data['connexions_item']['id_profil'],
 					   'id_atlas'	=> $data['connexions_item']['id_atlas'],
+					   'id_type_structure'	=> $type_structure,
 					   'logged_in' 	=> TRUE
 					)
 				);

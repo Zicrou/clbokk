@@ -41,20 +41,16 @@
                 <div class='row'>
                     <div class="col-md-12">
                     <br>
-                    <form action='C_depot/save_depot_autorisation' method="post" id='form_circuit_depot'  class='form-horizontal'>
-                       <div class="clearfix">
+                    <form action='C_depot/save_depot_autorisation' method="post" id='form_circuit_depot'  class='form-inline'>
+                    <label class="col-lg-12 " style="padding-top:5px;margin-bottom:7px" for="">Action <span class="text-danger">*</span></label>
+
+                       <div class="form-group">
                                 <input type='hidden' id="id_circuit_depot" name="id_circuit_depot" value="<?php echo $circuit_depot[0]->id_circuit_depot;?>">
                                 <input type='hidden' id="id_depot" name="id_depot" value="<?php echo $circuit_depot[0]->id_depot;?>">
                                 <input type='hidden' id="id_circuit" name="id_circuit" value="<?php echo $circuit_depot[0]->id_circuit;?>">
-                                <label class="col-lg-12 " style="padding-top:5px;margin-bottom:-7px" for="">Action <span class="text-danger">*</span></label>
-
-                                <div class="col-lg-12" style="padding-bottom:10px;">
-                                    <!-- <div class="radio radio-inline">
-                                        <input type="radio" name="etat" id="en_cours" value="en_cours" checked echo >
-                                        <label for="en_cours">
-                                        en cours
-                                        </label>
-                                    </div> -->
+                                <input type='hidden' id="id_deposant" name="id_deposant" value="<?php echo $all_data[0]->id_deposant;?>">
+                                
+                                <div class="col-lg-12" style="">
                                     <div class="radio radio-inline">
                                         <input type="radio" name="etat" id="traité" value="traité" checked>
                                         <label for="traité">
@@ -67,12 +63,14 @@
                                         rejeté
                                         </label>
                                     </div>
-                                    
-                                     <input type='submit' style="margin-left:10px" id="circuit_depot_control" class='btn btn-primary' value='Enregistrer'/>
-                                    
                                 </div>
                                 <br>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail2">Numero de dossier</label>
+                            &nbsp;<input type="text" class="form-control" id="code_traitement" name="code_traitement" placeholder="Numero de dossier" data-msg-required="Le Numero de dossier est obligatoire." required>
+                        </div>
+                        <input type='submit' style="margin-left:10px" id="circuit_depot_control" class='btn btn-primary' value='Enregistrer'/>
                         </form>
                        <?php if($circuit_depot[0]->etat!="a_traité")
                        {

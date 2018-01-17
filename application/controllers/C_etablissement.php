@@ -168,10 +168,19 @@
 		$date_fin =new DateTime($annee_fin.'-'.$mois_fin.'-'.$jour_fin);
 		if(($date_jour>=$date_debut && $date_jour<=$date_fin)||($this->session->lfc_jafr12_s['id_type_structure']==1))
 		{
-            $data['piece'] = $this->type_piece->get_piece(4);
+            $data['piece'] = $this->type_piece->get_piece(7);
             $statut=$this->etablissement->get_statut_religieux();
 			$data['select_statut_religieux'] 	= create_select_list($statut, 'id_statut', 'libelle_statut', null,null);
-			$this->load->view('depot/ouverture_ecole/V_ouverture_ecole_etablissement',$data);
+            $data_cycle=$this->etablissement->get_cycle();
+            $data['select_cycle'] 	= create_select_list($data_cycle, 'id_cycle', 'libelle_cycle', null,null);
+            $data_region=$this->atlas->get_region();
+            $data['select_region'] 	= create_select_list($data_region, 'code_atlas', 'libelle_atlas', '');
+			$data_departement=$this->atlas->get_departement_region();
+			$data['select_departement'] 	= create_select_list($data_departement, 'code_atlas', 'libelle_atlas', null,'reg_code_atlas');
+			$data_commune=$this->atlas->get_commune_departement();
+			$data['select_commune'] 	= create_select_list($data_commune, 'code_atlas', 'libelle_atlas', null,'reg_code_atlas');
+			
+			$this->load->view('depot/ouverture_etablissement/V_ouverture_etablissement',$data);
 		}
 		else
 		{

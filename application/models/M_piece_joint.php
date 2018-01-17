@@ -1,4 +1,4 @@
-  <?php 
+<?php 
   class M_piece_joint extends  MY_Model{
   
       public $id_piece_joint;

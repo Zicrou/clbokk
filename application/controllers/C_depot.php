@@ -1,4 +1,4 @@
- <?php
+<?php
  defined('BASEPATH') OR exit('No direct script access allowed'); 
     
    class C_depot extends MY_Controller { 
@@ -6,15 +6,18 @@
    	public function __construct() 
    	{ 
    	    parent::__construct(); 
-   	   $this->load->model('M_depot', 'depot'); 
-   	   $this->load->model('M_circuit_depot', 'circuit_depot'); 
-   	   $this->load->model('M_piece_joint', 'piece_joint'); 
-   	   $this->load->model('M_circuit', 'circuit'); 
-		  $this->load->model('M_type_dossier', 'dossier'); 		  
-		  $this->load->model('M_type_dossier_piece', 'type_piece');
-   	   $this->load->model('M_etablissement', 'etablissement'); 
-   	   $this->load->model('M_enseignants', 'enseignant'); 
-   	   $this->load->model('M_structure_localisation', 'localisation'); 
+   	   	$this->load->model('M_depot', 'depot'); 
+   	   	$this->load->model('M_circuit_depot', 'circuit_depot'); 
+   	   	$this->load->model('M_piece_joint', 'piece_joint'); 
+   	   	$this->load->model('M_circuit', 'circuit'); 
+		$this->load->model('M_type_dossier', 'dossier'); 		  
+		$this->load->model('M_type_dossier_piece', 'type_piece');
+   	   	$this->load->model('M_etablissement', 'etablissement'); 
+   	   	$this->load->model('M_enseignants', 'enseignant'); 
+   	   	$this->load->model('M_structure_localisation', 'localisation'); 
+   	   	$this->load->model('M_declarant', 'declarant'); 
+   	   	$this->load->model('M_structure_declarant', 'structure_declarant'); 
+   	   	$this->load->model('M_groupe_scolaires', 'groupe_scolaires'); 
    	} 
     
    	public function get_depots() 
@@ -24,9 +27,6 @@
    		$this->load->view('V_depot_en_cours', $data);          
 	}
 
-   	
-
-	
 	public function nbr_depot()
 	{
 		$nbr_notification= $this->depot->get_count_liste_depot();
@@ -108,7 +108,7 @@
 		$data['piece_joint']=$this->piece_joint->get_piece_depot($args[0]);
 		$data['circuit_Precedent']=$this->circuit_depot->get_circuit_depot($args[0]);
 		$data['circuit_depot']=$this->circuit_depot->get_circuit_depot_atlas($args[0]);
-		$this->load->view('depot\reconnaissance\V_detail_reconnaissance',$data);
+		$this->load->view('depot/reconnaissance/V_detail_reconnaissance',$data);
 	}
 
 	public function get_depot_reconnaissance() 
@@ -116,7 +116,7 @@
 		$args =func_get_args();
 		$all_data = $this->depot->get_list_depot_etablissement(4); 
 		$data['all_data'] = $all_data; 
-		$this->load->view('depot\reconnaissance\V_reconnaissance_en_cours', $data);          
+		$this->load->view('depot/reconnaissance/V_reconnaissance_en_cours', $data);          
 	}
 
 	
@@ -144,7 +144,7 @@ public function detail_extension_cycle()
 	$data['piece_joint']=$this->piece_joint->get_piece_depot($args[0]);
 	$data['circuit_Precedent']=$this->circuit_depot->get_circuit_depot($args[0]);
 	$data['circuit_depot']=$this->circuit_depot->get_circuit_depot_atlas($args[0]);
-	$this->load->view('depot\extension_cycle\V_detail_extension_cycle',$data);
+	$this->load->view('depot/extension_cycle/V_detail_extension_cycle',$data);
 }
 
 public function get_depot_extension_cycle() 
@@ -152,7 +152,7 @@ public function get_depot_extension_cycle()
 	$args =func_get_args();
 	$all_data = $this->depot->get_list_depot_etablissement(5); 
 	$data['all_data'] = $all_data; 
-	$this->load->view('depot\extension_cycle\V_extension_cycle_en_cours', $data);          
+	$this->load->view('depot/extension_cycle/V_extension_cycle_en_cours', $data);          
 }
 
 
@@ -180,7 +180,7 @@ public function detail_extension_classe()
 	$data['piece_joint']=$this->piece_joint->get_piece_depot($args[0]);
 	$data['circuit_Precedent']=$this->circuit_depot->get_circuit_depot($args[0]);
 	$data['circuit_depot']=$this->circuit_depot->get_circuit_depot_atlas($args[0]);
-	$this->load->view('depot\extension_classe\V_detail_extension_classe',$data);
+	$this->load->view('depot/extension_classe/V_detail_extension_classe',$data);
 }
 
 public function get_depot_extension_classe() 
@@ -188,7 +188,7 @@ public function get_depot_extension_classe()
 	$args =func_get_args();
 	$all_data = $this->depot->get_list_depot_etablissement(6); 
 	$data['all_data'] = $all_data; 
-	$this->load->view('depot\extension_classe\V_extension_classe_en_cours', $data);          
+	$this->load->view('depot/extension_classe/V_extension_classe_en_cours', $data);          
 }
 
 
@@ -203,7 +203,109 @@ public function save_depot_extension_classe()
 }
 
 /********************fin extension_classe ****************************/
+
+/******************** ouverture_etablissement ****************************/
+public function save_ouverture_etablissement(){
 	
+	//declarant responsable (directeur technique)
+	$this->declarant->prenom_declarant = $this->input->post('prenom_declarant'); 
+   	$this->declarant->nom_declarant = $this->input->post('nom_declarant'); 
+   	$this->declarant->sexe_declarant = $this->input->post('sexe_declarant'); 
+   	$this->declarant->dipl_declarant = $this->input->post('dipl_declarant');
+	$this->declarant->save();
+	$id_declarant_responsable=$this->declarant->id_declarant;
+	if($this->input->post('dt_directeur_technique')=='A')
+	{
+		//declarant Directeur technique
+		$this->declarant->id_declaran=null;
+		$this->declarant->prenom_declarant = $this->input->post('dt_prenom_declarant'); 
+		$this->declarant->nom_declarant = $this->input->post('dt_nom_declarant'); 
+		$this->declarant->sexe_declarant = $this->input->post('dt_sexe_declarant'); 
+		$this->declarant->dipl_declarant = $this->input->post('dt_dipl_declarant');
+		$this->declarant->save();
+	}
+	$id_declarant_directeur_technique=$this->declarant->id_declarant;
+
+	//groupe scolaire
+	$this->groupe_scolaires->code = rand(10000,99999); 
+   	$this->groupe_scolaires->libelle = $this->input->post('nom'); 
+   	$this->groupe_scolaires->email = $this->input->post('mail'); 
+   	$this->groupe_scolaires->telephone = $this->input->post('telephone'); 
+   	$this->groupe_scolaires->etat = 1; 
+   	$this->groupe_scolaires->save();
+
+	//etablissement
+	$this->etablissement->code =rand(1000000000,9999999999); 
+	$this->etablissement->id_groupe_scolaire =$this->groupe_scolaires->id_groupe_scolaire; 
+	$this->etablissement->nom = $this->input->post('nom'); 
+	$this->etablissement->statut_religieux = $this->input->post('statut_religieux'); 
+	$this->etablissement->jour_creation = $this->input->post('jour_creation'); 
+	$this->etablissement->mois_creation = $this->input->post('mois_creation'); 
+	$this->etablissement->annee_creation = $this->input->post('annee_creation'); 
+	$this->etablissement->adresse = $this->input->post('adresse'); 
+	$this->etablissement->telephone = $this->input->post('telephone');
+	$this->etablissement->mail = $this->input->post('mail'); 
+	$this->etablissement->id_atlas = $this->input->post('id_atlas'); 
+	$this->etablissement->id_cycle = $this->input->post('id_cycle');  
+	$this->etablissement->statut = 'Non Autorisé';
+	$this->etablissement->save();
+
+	//structure declarant responsable
+	$this->structure_declarant->date_gerance =new DateTime($this->input->post('annee_creation').'-'.$this->input->post('mois_creation').'-'.$this->input->post('jour_creation')); 
+	$this->structure_declarant->annee_debut_gerance = $this->input->post('annee_creation'); 
+	$this->structure_declarant->annee_sortie = '9999'; 
+	$this->structure_declarant->id_structure = $this->etablissement->id; 
+	$this->structure_declarant->id_declarant = $id_declarant_responsable; 
+	$this->structure_declarant->type_declarant ='1'; 
+	$this->structure_declarant->save();
+
+	//structure declarant directeur technique
+	$this->structure_declarant->id_structure_declarant=null;
+	$this->structure_declarant->date_gerance =new DateTime($this->input->post('annee_creation').'-'.$this->input->post('mois_creation').'-'.$this->input->post('jour_creation')); 
+	$this->structure_declarant->annee_debut_gerance = $this->input->post('annee_creation'); 
+	$this->structure_declarant->annee_sortie = '9999'; 
+	$this->structure_declarant->id_structure = $this->etablissement->id; 
+	$this->structure_declarant->id_declarant = $id_declarant_directeur_technique; 
+	$this->structure_declarant->type_declarant ='2'; 
+	$this->structure_declarant->save();
+
+	$this->save_depot(7,3,$this->etablissement->id);
+	$this->get_depot_ouverture_etablissement();
+}
+public function detail_ouverture_etablissement()
+{
+	$args =func_get_args(); 
+	$data['all_data']=$this->depot->get_info_etablissement($args[0]);
+	$data['piece_joint']=$this->piece_joint->get_piece_depot($args[0]);
+	$data['circuit_Precedent']=$this->circuit_depot->get_circuit_depot($args[0]);
+	$data['circuit_depot']=$this->circuit_depot->get_circuit_depot_atlas($args[0]);
+	$this->load->view('depot/ouverture_etablissement/V_detail_ouverture_etablissement',$data);
+}
+
+public function get_depot_ouverture_etablissement() 
+{ 
+	$args =func_get_args();
+	$all_data = $this->depot->get_list_depot_etablissement(7); 
+	$data['all_data'] = $all_data; 
+	$this->load->view('depot/ouverture_etablissement/V_ouverture_etablissement_en_cours', $data);          
+}
+
+
+public function save_depot_ouverture_etablissement()
+{
+	if($this->session->lfc_jafr12_s['id_type_structure']==1 && $this->input->post('etat')=='traité')
+	{
+		$this->etablissement->set_autorise($this->input->post('date_autorisation'),$this->input->post('numero_autorisation'),$this->input->post('id_deposant'));
+	}
+	if($this->session->lfc_jafr12_s['id_type_structure']==2 && $this->input->post('etat')=='traité')
+	{
+		$this->etablissement->set_ouvert($this->input->post('date_recepisse'),$this->input->post('numero_recepisse'),$this->input->post('id_deposant'));
+	}
+	$this->save_circuit_depot();
+	$this->get_depot_ouverture_etablissement();
+}
+
+/********************fin ouverture_etablissement ****************************/
 	public function save_circuit_depot()
 	{
 		$slq_cascade="UPDATE circuit_depot cd JOIN depot d ON(d.id_depot=cd.id_depot) JOIN circuit c ON(cd.id_circuit=c.id_circuit) SET cd.etat=? WHERE cd.id_depot=?  AND c.ordre =?";

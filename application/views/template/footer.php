@@ -65,6 +65,7 @@
 <script type="text/javascript" src="<php echo base_url(); ?>assets/plugins/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fr.min.js"></script>->
 
 <!-- notification js-->
+<script src="<?php echo base_url(); ?>assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
 <link href="<?php echo base_url(); ?>assets/plugins/notifications/notification.css" rel="stylesheet">
 <script src="<?php echo base_url(); ?>assets/plugins/notifyjs/dist/notify.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/notifications/notify-metro.js"></script>

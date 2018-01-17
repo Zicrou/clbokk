@@ -1,4 +1,4 @@
-  <?php
+<?php
   class M_circuit extends  MY_Model{
   
       public $id_circuit;
@@ -34,21 +34,22 @@
           return $query->result();
       }
 
-    public function archive_structure($id_type_dossier){
-        $sql_ll="UPDATE circuit SET archiver=1 WHERE id_circuit=?";
-        $query = $this->db->query($sql_ll,array($id_type_dossier));
-    }
-      public function get_max_ordre($id_type_dossier){
-          $sql_ll="SELECT MAX(ordre),id_type_structure as max FROM circuit WHERE id_type_dossier=? AND archiver=0 ";
-          $query = $this->db->query($sql_ll,array($id_type_dossier));
-          $result=$query->result();
-          $max='1';
-          foreach ($result as $value)
-          {
-              $max=$value->max+1;
-          }
-          return $max;
-      }
+        public function archive_structure($id_type_dossier){
+            $sql_ll="UPDATE circuit SET archiver=1 WHERE id_circuit=?";
+            $query = $this->db->query($sql_ll,array($id_type_dossier));
+        }
+
+        public function get_max_ordre($id_type_dossier){
+            $sql_ll="SELECT MAX(ordre)as max,id_type_structure  FROM circuit WHERE id_type_dossier=? AND archiver=0 ";
+            $query = $this->db->query($sql_ll,array($id_type_dossier));
+            $result=$query->result();
+            $max='1';
+            foreach ($result as $value)
+            {
+                $max=$value->max+1;
+            }
+            return $max;
+        }
 
       public function reordonne($dossier,$ordre)
       {

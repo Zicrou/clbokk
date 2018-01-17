@@ -1,4 +1,4 @@
-  <?php
+<?php
   class M_enseignants extends  MY_Model{
   
       public $id_ens;
@@ -39,6 +39,12 @@
   		$query = $this->db->query($sql_ll);
   		
   		return $query->result(); 
+      }
+
+      public function valide_enseignant($id_ens)
+      {
+        $sql="UPDATE enseignants SET etat_ens=1 WHERE id_ens=?";
+        $query = $this->db->query($sql,array($id_ens));
       }
   
   }

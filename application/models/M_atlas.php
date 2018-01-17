@@ -1,4 +1,4 @@
- <?php
+<?php
   class M_atlas extends  MY_Model{
   
       public $code_atlas;

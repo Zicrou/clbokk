@@ -1,4 +1,4 @@
-  <?php
+<?php
   class M_structure_localisation extends  MY_Model{
   
       public $id_structure_localistion;

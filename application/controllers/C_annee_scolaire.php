@@ -1,4 +1,4 @@
- <?php
+<?php
  defined('BASEPATH') OR exit('No direct script access allowed'); 
     
    class C_annee_scolaire extends MY_Controller { 

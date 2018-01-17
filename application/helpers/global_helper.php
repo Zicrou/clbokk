@@ -1,5 +1,5 @@
 <?php
-
+$ins=get_instance();
 function btn_add_action($smenu_code)
 {
 	$ins=get_instance();
@@ -19,6 +19,7 @@ function btn_add_action($smenu_code)
 
 function btn_edit_action($id, $smenu_code)
 {
+	$ins=get_instance();
     $tab_smrole = $ins->session->smenu_roles;
 	if(isset($tab_smrole[$smenu_code]['d_upd']))
 	{
@@ -31,6 +32,8 @@ function btn_edit_action($id, $smenu_code)
 
 function btn_delete_action($id, $smenu_code)
 {
+	
+	$ins=get_instance();
 	$tab_smrole = $ins->session->smenu_roles;
 	if(isset($tab_smrole[$smenu_code]['d_del']))
 	{
@@ -42,6 +45,7 @@ function btn_delete_action($id, $smenu_code)
 
 function btn_show_action($id, $smenu_code)
 {
+	$ins=get_instance();
     $tab_smrole = $ins->session->smenu_roles;
 	if(isset($tab_smrole[$smenu_code]['d_read']))
 	{
