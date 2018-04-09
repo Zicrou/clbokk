@@ -149,13 +149,12 @@
                                                             </div>&nbsp;
                                                             <div class="form-group m-l-10">
                                                                 <label class="sr-only" for='date_arrete'>date :</label><input type='date' name='date_recepisse' id='date_recepisse'  class="form-control recepisse_control" required value="<?php echo date('Y-m-d');?>">
-                                                                
                                                             </div>
                                                             <div class="form-group m-l-10" >
-                                                                <label class="sr-only" for='numero_autorisation'>autorisation: </label>&nbsp;<input type='text' name='numero_autorisation' placeholder="Numero autorisation"  class="form-control autorisation_control " required>
+                                                                <label class="sr-only" for='numero_lettre_demande_enquete'>demande_enquete: </label>&nbsp;<input type='text' name='numero_lettre_demande_enquete' placeholder="Numero lettre demande enquete"  class="form-control demande_enquete_control " required>
                                                             </div>&nbsp;
                                                             <div class="form-group m-l-10">
-                                                                <label class="sr-only" for='date_autorisation'>date :</label><input type='date' name='date_autorisation' id='date_autorisation'  class="form-control autorisation_control" required value="<?php echo date('Y-m-d');?>">
+                                                                <label class="sr-only" for='date_demande_enquete'>date :</label><input type='date' name='date_demande_enquete' id='date_demande_enquete'  class="form-control demande_enquete_control" required value="<?php echo date('Y-m-d');?>">
                                                                 
                                                             </div>
                                                             <input type='submit' style="margin-left:10px" id="circuit_depot_control" class='btn btn-primary' value='Enregistrer'/>
@@ -171,7 +170,7 @@
                                                         }
                                                         if($this->session->lfc_jafr12_s['id_type_structure']!=1)
                                                         {
-                                                            echo "<script>$('.autorisation_control').hide();</script>";
+                                                            echo "<script>$('.demande_enquete_control').hide();</script>";
                                                         } 
                                                         ?>
                                                     <br>

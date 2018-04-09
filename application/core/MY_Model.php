@@ -3,7 +3,7 @@
 require_once 'application/core/MY_Model_Interface.php';
 
 abstract class MY_Model extends CI_Model implements MY_Model_Interface{
-
+               
     private function insert($without_null){
 
         if($without_null == true)

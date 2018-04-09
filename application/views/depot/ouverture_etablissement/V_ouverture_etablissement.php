@@ -70,7 +70,7 @@ legend {
                                             <label class=' col-md-3'>Telephone</label>
 
                                             <div class='col-md-9'>
-                                                <input name='telephone' id='telephone' placeholder data-mask="9 999 99 99"
+                                                <input name='telephone' id='telephone' placeholder data-mask="99 999 99 99"
                                                     class='form-control' type='text' required>
                                             </div>
                                         </div>

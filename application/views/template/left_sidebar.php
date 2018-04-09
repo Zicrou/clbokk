@@ -59,7 +59,9 @@
                                         </ul>
                                         </li>
                         <?php endif; ?>                       
-                        
+                        <?php if(isset($smenu_roles['SUIVIT_OUVERTURE']['d_read'])):?>
+                                        <li><a href="<?php echo base_url(); ?>C_depot/get_suivit_depot_ouverture_structure" class="menu" id="Demande">Validation Demande</a></li>
+                        <?php endif; ?>
                     </ul>
                 </li>
                 <?php endif; ?>
@@ -76,6 +78,8 @@
                                         <?php if(isset($smenu_roles['LISTE_DEMANDE']['d_read'])):?>
                                         <li><a href="<?php echo base_url(); ?>C_depot/get_depots" class="menu" id="Demande">Validation Demande</a></li>
                                         <?php endif; ?>
+                                        
+                                        
                                         
                                     </ul>
                                 </li>
@@ -115,7 +119,6 @@
                                     <li><a href="<?php echo base_url(); ?>C_depot\get_depot_reconnaissance" class="menu" id="depot_reconnaissance">Demande reconnaissance</a></li>
                                     <li><a href="<?php echo base_url(); ?>C_depot\get_depot_extension_cycle" class="menu" id="depot_extension_cycle">Demande extension cycle</a></li>
                                     <li><a href="<?php echo base_url(); ?>C_depot\get_depot_extension_classe" class="menu" id="depot_transfert_etablissement">Demande extension classe</a></li>
-                                
                                 </ul>
                         </li>
                         <?php endif; ?>
@@ -129,8 +132,8 @@
                                         <li><a href="<?php echo base_url(); ?>C_etablissement\demande_reconnaissance" class="menu" id="reconnaissance_etablissement">Demande de reconnaissance</a></li>
                                         <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_cycle" class="menu" id="extension_cycle_etablissement">Demande extension cycle</a></li>
                                         <li><a href="<?php echo base_url(); ?>C_etablissement\demande_extension_classe" class="menu" id="extension_classe_etablissement">Demande extension classe</a></li>
+                                        <li><a href="<?php echo base_url(); ?>C_depot\get_depots_en_cours" class="menu" id="extension_classe_etablissement">depot</a></li>
                                 </ul>
-
                         </li>
                         <?php endif; ?>                                
                         </ul>

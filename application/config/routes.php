@@ -63,3 +63,9 @@ $route['sign-in'] 			    		= 'Welcome/index';
 $route['verif-connexion'] 			    = 'C_connexions/verif_connexion';
 $route['se_deconnecter'] 			    = 'C_connexions/se_deconnecter';
 $route['front-office'] 			        = 'Accueil/home';
+
+/**
+*************************************************************************
+* MY NEW ROUTE
+*************************************************************************
+*/
