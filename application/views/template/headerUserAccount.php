@@ -15,8 +15,9 @@ if ($this->session->userdata('mess')['statut_ok'] == null) {
     <meta name="author" content="">
 
     <title>Modern Business - Start Bootstrap Template</title>
+      <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
 
-    <!-- Bootstrap core CSS -->
+      <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -51,11 +52,11 @@ if ($this->session->userdata('mess')['statut_ok'] == null) {
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                <img src="<?php echo base_url().'image/'.$this->session->userdata('photo')?>" style="width:40px;height:40px;margin-top:0;padding-top:0;border-radius:50%;vertical-align:middle;" alt="Mon profil" title="Mon profil">
+                <img src="<?php if($photo == null){echo base_url().'image/img1.png';}else{echo base_url().'image/'.$photo;} ?>" style="width:40px;height:40px;margin-top:0;padding-top:0;border-radius:50%;vertical-align:middle;" alt="Mon profil" title="Mon profil">
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="<?php echo base_url() ?>C_connexion/BlogUser">Mon Compte</a>
-                <a class="dropdown-item" href="<?php echo base_url() ?>C_connexion/log_out">Deconnection</a>
+                <a class="dropdown-item" href="<?php echo base_url() ?>se_deconnecter">Deconnection</a>
                  
            <!--    <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/page/V_portfolio-2-col">2 Column Portfolio</a>
                 <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/page/V_portfolio-3-col">3 Column Portfolio</a>

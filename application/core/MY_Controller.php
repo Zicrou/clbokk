@@ -25,7 +25,7 @@ class MY_Controller extends CI_Controller {
 		{
 			$tab_data_ses = $this->session->all_userdata();
 			$this->session->sess_destroy();
-			header("Location:".base_url('')."sign-in?erreur=login");
+			header("Location:".base_url('')."se_deconnecter");
 			exit();
 		}
 		else

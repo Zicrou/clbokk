@@ -87,12 +87,13 @@
 			return $req->row_array();
 		}
 
-		public function save_photo($id_users)
+		public function update_photo($id_users)
 		{
-			//Requete update pour modifier le champs photo dans la table especifique a chaque id.
+			//Requete update pour modifier le champs photo especifique a chaque id.
 			$this->db->set('photo', $this->photo);
 			$this->db->where('id_users', $id_users);
-			$this->db->update('users'); 
+			$this->db->update('users');
+			return $this->photo;
 		}
 
 	}

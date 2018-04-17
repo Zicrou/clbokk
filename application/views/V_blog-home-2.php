@@ -1,6 +1,8 @@
 <?php require 'template/headerUserAccount.php'; ?>
-    <!-- Page Content -->
-    <div class="container">
+
+
+   <!-- Page Content -->
+<div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Recherchez: 
@@ -49,7 +51,7 @@
             <div class="col-lg-8">
               <h2 class="card-title"><?php echo $cc->metier1." à ".$cc->region." departement ".$cc->departement; ?></h2>
               <p class="card-text"><?php echo $cc->nom."  ".$cc->prenom; ?></p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+              <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Voir plus &rarr;</a>
             </div>
           </div>
         </div>
@@ -58,7 +60,53 @@
           <a href="#">Start Bootstrap</a>
         </div>
       </div>
-        <?php endforeach; ?>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel"><?php echo $cc->nom."  ".$cc->prenom; ?></h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!--h5>Popover in a modal</h5>
+                                    <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p-->
+                                    <p><?php echo $cc->metier1." à ".$cc->region; ?></p>
+                                    <hr>
+                                        <!--span class="alert-secondary"><?php echo "Region  :".$cc->region; ?></span><br-->
+                                        <span ><?php echo "Departement  :".$cc->departement; ?></span><br>
+                                        <span class="alert-secondary"><?php echo "Metier  :".$cc->metier1; ?></span><br>
+                                        <span ><?php echo "Experience  :".$cc->annees_experience." ans"; ?></span>
+                                    <br>
+                                         <span class="alert-secondary"><?php echo "Description  :".$cc->description?></span><br>
+                                        <span ><?php echo "Entreprise frequente  :".$cc->entreprise_frequente; ?></span>
+                                    <br>
+                                    <span class="alert-secondary"><?php echo "Telephone  :".$cc->telephone1; ?></span>
+                                    <span ><?php echo "Telephone2  :".$cc->telephone2; ?></span>
+                                    <hr>
+                                    <!--h5>Tooltips in a modal</h5>
+                                    <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p-->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <!--button type="button" class="btn btn-primary">Save changes</button-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+   <?php endforeach; ?>
+
+    <!-- Button trigger modal >
+    <button-- type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button -->
+
+
+
 
     <!--  <div class="card mb-4">
         <div class="card-body">
@@ -135,9 +183,7 @@
         </li>
       </ul>-->
 
-    </div>
-
-  </div>
+</div>
   <!-- /.container -->
 
   <!-- Footer -->
@@ -152,6 +198,14 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+
+
+</script>
   <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

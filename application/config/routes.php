@@ -53,16 +53,16 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['visualiser-informations'] 	= 'Cont_z_general/show_data';
+/*$route['visualiser-informations'] 	= 'Cont_z_general/show_data';
 $route['supprimer-une-information'] = 'Cont_z_general/delete_data';
-$route['liste-agents-siment'] = 'C_test/liste_agents_simen';
+$route['liste-agents-siment'] = 'C_test/liste_agents_simen';  */
 
 
 
-$route['sign-in'] 			    		= 'Welcome/index';
+$route['sign-in'] 			    		= 'C_pages/Conn';
 $route['verif-connexion'] 			    = 'C_connexions/verif_connexion';
-$route['se_deconnecter'] 			    = 'C_connexions/se_deconnecter';
-$route['front-office'] 			        = 'Accueil/home';
+$route['se_deconnecter'] 			    = 'C_connexion/log_out';
+//$route['MyAccount'] 			        = 'C_connexion/Account';
 
 /**
 *************************************************************************
