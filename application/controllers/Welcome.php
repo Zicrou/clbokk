@@ -23,7 +23,7 @@ class Welcome extends CI_Controller {
 		//$data['contents'] = 'dashboard/container';
 		//$this->load->view('template/layout', $data);
 		$data = array();
-		$this->load->view('');
+		$this->load->view('index');
 	}
 
 	

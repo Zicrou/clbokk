@@ -40,4 +40,10 @@ class C_recrutement extends MY_Controller
         $data['consCandid'] = $this->candid->get_data_const($reg, $met);
         $this->load->view('V_blog-home-2', $data);
     }
+
+    public function dataCandid()
+    {
+        $
+        $this->load->view('dataCandid');        
+    }
 }

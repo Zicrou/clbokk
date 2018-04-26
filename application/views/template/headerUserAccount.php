@@ -1,12 +1,27 @@
 <?php
 $suite_req = base_url();
-if ($this->session->userdata('mess')['statut_ok'] == null) {
-    header("Location:".$suite_req."C_pages/Conn");
+//echo '<br><br><br><br><br><br><br><br>';
+//var_dump($this->session->userdata('photo'));
+//exit();
+if($_SESSION['mess']['statut_ok'] == null)
+{
+  header("Location:".$suite_req."C_pages/Conn");
 }
+// verfifier la donnee de retour du tableau qui est dans cette session
+/*var_dump($_SESSION['mess']['statut_ok']);
+echo '<br><br>';
+var_dump($this->session->userdata('mess')['statut_ok'] == null);
+exit();
+
+if ($this->session->userdata('mess')['statut_ok'] == null) ;
+  {
+    //var_dump($_SESSION);
+    header("Location:".$suite_req."C_pages/Conn");
+  }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
 
     <meta charset="utf-8">
@@ -52,7 +67,7 @@ if ($this->session->userdata('mess')['statut_ok'] == null) {
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                <img src="<?php if($photo == null){echo base_url().'image/img1.png';}else{echo base_url().'image/'.$photo;} ?>" style="width:40px;height:40px;margin-top:0;padding-top:0;border-radius:50%;vertical-align:middle;" alt="Mon profil" title="Mon profil">
+                <img src="<?php if($this->session->userdata('photo') == null){echo base_url().'image/img1.png';}else{echo base_url().'image/'.$this->session->userdata('photo');} ?>" style="width:40px;height:40px;margin-top:0;padding-top:0;border-radius:50%;vertical-align:middle;" alt="Mon profil" title="Mon profil">
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="<?php echo base_url() ?>C_connexion/BlogUser">Mon Compte</a>

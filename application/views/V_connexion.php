@@ -7,6 +7,7 @@
            echo '<div class="alert alert-danger" style="margin-top:1%;">
             <p>Impossible de se connecter</p>
             <li>Verifier votre email ou mot de passe</li>
+            <li>Si vous n\'avez pas de compte, Vous pouvez-vous inscrire <a href="Inscrip">ici</a></li>
             </div>';
         endif; ?>
         <?php
@@ -50,7 +51,7 @@
             <div id="success"></div>
             <!-- For success/fail messages -->
             <input type="submit" class="btn btn-primary" id="submit" name="save" value="Connection">
-              <!--a href="<?php echo base_url(); ?>C_pages/Inscrip" class="btn btn-info"> M'inscrire</a-->
+              <!--a href="<?php echo base_url(); ?>C_connexion/verifConn" class="btn btn-info"> M'inscrire</a-->
           </form>
         </div>
         <div class="col-md mb-4" style="border: 1px solid white;">

@@ -12,7 +12,6 @@ class C_connexion extends MY_Controller
 		parent::__construct();
 		$this->load->model('M_users','usrs');
 		$this->load->library('session');
-
 	}
 
 
@@ -21,23 +20,36 @@ class C_connexion extends MY_Controller
 	public function connexion()
 	{
         $suite_req = base_url();
-		$a = $this->usrs->get_connected();
-		if ($this->usrs->email != null AND $this->usrs->password != null) {
+		$a = $this->usrs->get_connected();		
+		if ($a != null) {
 
             $allData = array(
                 'id' => $a['id_users'],
                 'email' => $a['email'],
+                'photo' => $a['photo'],
                 'prenom' => $a['prenom'],
                 'nom' => $a['nom'],
                 'ip_address' => $_SERVER['REMOTE_ADDR'],
                 'logged_in' => TRUE
-            );
-            $mess['statut_ok'] = 'Ok';
-            $data['mess'] = $mess;
-            $this->session->set_userdata($allData);
+			);
+			/*var_dump($allData);
+			exit(); */
+            $mess['statut_ok'] = 'ok';
+            //$data['mess'] = $mess;
+			$allData['mess'] = $mess;
+			$this->session->set_userdata($allData);
             $data['photo'] = $a['photo'];
-            $this->load->view('V_blog-home-1', $data);
-		    //header("Refresh:1; Location:".$suite_req."C_connexion/BlogUser"); //""
+			$this->load->view('V_blog-home-1');
+			//header("Location:".$suite_req."C_connexion/BlogUser");
+			/*
+				//$this->load->view('V_blog-home-1', $data);
+				//var_dump($allData);
+				//exit();
+				//echo 'bien';
+				//$this->load->view('V_blog-home-1');
+				//"Location:".$suite_req."C_connexion/BlogUser";
+				header("Location:".$suite_req."C_connexion/BlogUser"); //""
+			*/
 		}else{
 			$msgAlrt['msg_no_no'] = 'Vous devez d\'abord vous connecter!';
 			$this->load->view('V_connexion',$msgAlrt);
@@ -73,7 +85,8 @@ class C_connexion extends MY_Controller
     }*/
 	public function getImage()
 	{
-	    //$a = $this->usrs->get_connected();
+		$suite_req = site_url();
+		//$a = $this->usrs->get_connected();
 	    $p = $_FILES['pic']['name'];
 		$upload_extension =  explode(".", $p);
 		$upload_extension = end($upload_extension);
@@ -82,8 +95,14 @@ class C_connexion extends MY_Controller
 		$data_photo = $_SESSION['id'].'.'.$up_ext;
 		$this->usrs->photo = $data_photo;
         $data_photo = $this->usrs->update_photo($_SESSION['id']);
-        $data['photo'] = $data_photo;
-		$this->load->view('V_blog-home-1', $data);
+		$photo['photo'] = $data_photo;
+		//$this->session->unset_userdata('photo');
+		$this->session->set_userdata($photo);
+	/*var_dump($_SESSION);
+		exit(); */
+
+		header("Location:".$suite_req."C_connexion/BlogUser");
+		//$this->BlogUser(); //load->view('V_blog-home-1');
 	}
 
 	public function log_out()
@@ -100,31 +119,31 @@ class C_connexion extends MY_Controller
 
 	public function index()
 	{
-        $a = $this->usrs->get_tofProfil($_SESSION['id']);
-	    $data['photo'] = $a;
-		$this->load->view('index', $data);
+        /*$a = $this->usrs->get_tofProfil($_SESSION['id']);
+	    $data['photo'] = $a;*/
+		$this->load->view('index');
 	}
 
 	public function About()
 	{
-        $a = $this->usrs->get_tofProfil($_SESSION['id']);
-        $data['photo'] = $a;
-        $this->load->view('V_about', $data);
+        /*$a = $this->usrs->get_tofProfil($_SESSION['id']);
+        $data['photo'] = $a;*/
+        $this->load->view('V_about');
 	}
 
 	public function Service()
 	{
-        $data['photo'] = $this->usrs->get_tofProfil($_SESSION['id']);
+        /*$data['photo'] = $this->usrs->get_tofProfil($_SESSION['id']);
 	    //var_dump($data['photo']);
-	    exit();
-	    $this->load->view('V_services', $data);
+	    exit();*/
+	    $this->load->view('V_services');
 	}
 
 	public function Contact()
 	{
-        $a = $this->usrs->get_tofProfil($_SESSION['id']);
-        $data['photo'] = $a['photo'];
-	    $this->load->view('V_contact', $data);
+        /*$a = $this->usrs->get_tofProfil($_SESSION['id']);
+        $data['photo'] = $a['photo'];*/
+	    $this->load->view('V_contact');
 	}
 
 	public function Conn()
@@ -139,9 +158,7 @@ class C_connexion extends MY_Controller
 
 	public function BlogUser()
 	{
-        $a = $this->usrs->get_tofProfil($_SESSION['id']);
-        $data['photo'] = $a['photo'];
-	    $this->load->view('V_blog-home-1', $data);
+		$this->load->view('V_blog-home-1');
 	}
 
     /*	public function compte()

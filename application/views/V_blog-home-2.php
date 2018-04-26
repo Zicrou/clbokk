@@ -9,7 +9,7 @@
         <small>un Metier dans une Région</small>
       </h1>
       <hr>
-        <form action="<?php echo base_url() ?>C_recrutement/rechCandid"" method="post">
+        <form action="<?php echo base_url() ?>C_recrutement/rechCandid" method="post">
       <div class="col-md-12 form-inline" style="">
 
         <div class="col-md-3 form-group">
@@ -51,7 +51,8 @@
             <div class="col-lg-8">
               <h2 class="card-title"><?php echo $cc->metier1." à ".$cc->region." departement ".$cc->departement; ?></h2>
               <p class="card-text"><?php echo $cc->nom."  ".$cc->prenom; ?></p>
-              <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Voir plus &rarr;</a>
+              <a href="<?php echo base_url() ?>C_recrutement/dataCandid" class="btn btn-outline-primary" data-toggle="" data-target="#myModal">Voir plus &rarr;</a>
+              <!-- a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Voir plus &rarr;</a -->              
             </div>
           </div>
         </div>
@@ -67,7 +68,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title" id="exampleModalLabel"><?php echo $cc->nom."  ".$cc->prenom; ?></h4>
+                                    <h4 class="modal-title" id="exampleModalLabel"><?php echo $cc->nom."  ".$cc->prenom." ".$cc->id_Cpersos; ?></h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -208,7 +209,6 @@
 </script>
   <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

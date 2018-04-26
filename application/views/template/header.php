@@ -39,19 +39,25 @@
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url() ?>C_pages/Contact">Contact</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url() ?>C_pages/Conn">Connexion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url() ?>C_pages/Inscrip">S'inscrire</a>
+            </li>
+            <!--li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Connection
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="<?php echo base_url() ?>C_pages/Inscrip">M'inscrire</a>
-                <a class="dropdown-item" href="<?php echo base_url() ?>C_pages/Conn">Me connecter</a>
+                <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/Inscrip">M'inscrire</a>
+                <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/Conn">Me connecter</a!-->
                <!-- <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/page/V_portfolio-2-col">2 Column Portfolio</a>
                 <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/page/V_portfolio-3-col">3 Column Portfolio</a>
                 <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/page/V_portfolio-4-col">4 Column Portfolio</a>
                 <a class="dropdown-item" href="<?php //echo base_url() ?>C_pages/page/V_portfolio-item">Single Portfolio Item</a-->
-              </div>
-            </li>
+              <!--/div>
+            </li-->
 
            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
