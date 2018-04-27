@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+echo 'bien';
+?>
+
+
+
+
+
+
+
+<!--DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -106,6 +116,6 @@
         <input type="text" name="insertedby" id="insertedby">
     </div>
     </form>
-    </div>
+    </div-->
 </body>
 </html>

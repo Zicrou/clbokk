@@ -3,9 +3,8 @@
 	/**
 	* 
 	*/
-	class M_Candidats extends MY_MODEL
+	class M_Candidats extends MY_Model
 	{
-		
 		public $id_Cpersos;
 		public $payed;
 		public $domaine;
@@ -43,15 +42,6 @@
 			return 'id_Cpersos';
 		}
 
-		public function get_data()
-        {
-            return $this->db->select('*')
-                ->from($this->get_db_table())
-                ->get()
-                ->result();
-        }
-
-
         public function get_data_const($reg, $met1)
         {
             return $this->db->select('*')
@@ -86,6 +76,22 @@
                 ->result();
         }
 
+		public function get_id_record($id){
+        $row = $this->db->select('*')
+            ->from($this->get_db_table())
+            ->where($this->get_db_table_pk(), $id)
+            ->get()
+            ->result();
+		$row = reset($row);
+		$row = $this->db->query("select * from candidats where id_Cpersos='$id'");
+		return $row->row();
+		if($row == null)
+            $this->{$this->get_db_table_pk()} = null;
+        else
+            foreach ($row as $param => $value){
+                $this->{$param} = $value;
+            }
+    	}
     }
 
 ?>

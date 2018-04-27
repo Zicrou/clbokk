@@ -14,7 +14,8 @@ class C_test extends MY_Controller
 
 	public function test()
 	{
-		echo '<img src='.base_url().'image/img1.png>';
+		//echo '<img src='.base_url().'image/img1.png>';
+		$this->load->view('test');
 	}
 }
 

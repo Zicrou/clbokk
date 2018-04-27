@@ -8,6 +8,7 @@ class C_pages extends MY_Controller
 	public function index()
 	{
 		$this->load->view('index');
+		//echo 'Maty-Oul';
 	}
 
 	public function About()

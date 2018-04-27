@@ -51,8 +51,9 @@
             <div class="col-lg-8">
               <h2 class="card-title"><?php echo $cc->metier1." à ".$cc->region." departement ".$cc->departement; ?></h2>
               <p class="card-text"><?php echo $cc->nom."  ".$cc->prenom; ?></p>
-              <a href="<?php echo base_url() ?>C_recrutement/dataCandid" class="btn btn-outline-primary" data-toggle="" data-target="#myModal">Voir plus &rarr;</a>
-              <!-- a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Voir plus &rarr;</a -->              
+              <a href="<?php echo base_url()."datac?id=".$cc->id_Cpersos ?>" class="btn btn-outline-primary" data-toggle="" data-target="#myModal">Voir plus &rarr;</a>
+              <!-- a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Voir plus &rarr;</a -->
+              <?php //echo base_url()."C_recrutement/dataCandid?id=".$cc->id_Cpersos ?>           
             </div>
           </div>
         </div>

@@ -43,7 +43,8 @@ class C_recrutement extends MY_Controller
 
     public function dataCandid()
     {
-        $
-        $this->load->view('dataCandid');        
+        //$this->load->view('dataCandid');
+        $data = $_GET['id'];
+        echo $data;     
     }
 }

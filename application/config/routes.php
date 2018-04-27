@@ -62,7 +62,8 @@ $route['liste-agents-siment'] = 'C_test/liste_agents_simen';  */
 $route['sign-in'] 			    		= 'C_pages/Conn';
 $route['verif-connexion'] 			    = 'C_connexions/verif_connexion';
 $route['se_deconnecter'] 			    = 'C_connexion/log_out';
-//$route['MyAccount'] 			        = 'C_connexion/Account';
+$route['pages'] 			            = 'C_pages/About';
+$route['datac']                         = 'C_api/dataCandid';
 
 /**
 *************************************************************************
