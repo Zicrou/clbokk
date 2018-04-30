@@ -107,16 +107,16 @@ exit();*/
           <!-- Search Widget -->
           
           <div class="card mb-4">
-            <h5 class="card-header">Completer votre Inscription avec une photo de profil</h5>
+            <h5 class="card-header">Changez votre photo de profil</h5>
             <div class="card-body">
               <div class="input-group">
                 <form enctype="multipart/form-data" action="<?php echo base_url() ?>C_connexion/getImage" method="POST">
                   <input type="file" name="pic" id="pic" accept=".png,.jpg" onclick='getfile()'>
-                  <span id="outputfile"></span>
-                  <span id="extension"></span>
                   <span class="input-group-btn">
                     <button class="btn btn-primary" type="submit" >Go!</button>
                   </span>
+                  <br>
+                  <span>Uniquement les images.jpeg ou .png</span>
                 </form>
               </div>
             </div>

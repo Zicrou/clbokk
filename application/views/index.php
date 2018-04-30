@@ -176,33 +176,39 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
+
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header" style="text-align: center;">Client</h4>
+            <div class="card-body">
+              <p class="card-text">
+              Inscrivez-vous c'est gratuit par <a href="<?php echo base_url(); ?>C_pages/Inscrip">ici</a> et disposez d'un compte qui vous permettra de  faire des requetes de recherche selon vos besoins sur la liste de tous les ouvriers.
+              <br> Et ce n'est pas tout, vous pourrez egalement beneficier de tous les services de cette plateforme.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="<?php echo base_url(); ?>C_pages/Inscrip" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
             <h4 class="card-header" style="text-align: center;">RECRUTEMENT</h4>
             <div class="card-body">
-              <p class="card-text">Inscrivez-vous c'est gratuit par <a href="<?php echo base_url(); ?>C_pages/Inscrip">ici</a> et disposez d'un compte qui vous permettra de  faire des requetes de recherche selon vos besoins sur la liste de tous les ouvriers. <br> Et ce n'est pas tout, vous pourrez egalement beneficier de tous les services de cette plateforme.</p>
+              <p class="card-text">Connectez-vous, selectionnez un domaine puis lister selon vos besoins...</p>
             </div>
             <div class="card-footer">
               <a href="<?php echo base_url(); ?>C_pages/Inscrip" class="btn btn-primary">En savoir plus</a>
             </div>
           </div>
         </div>
+        
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header" style="text-align: center;">SERVICE</h4>
+            <h4 class="card-header" style="text-align: center;">Candidat</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-            </div>
-            <div class="card-footer">
-              <a href="<?php echo base_url(); ?>C_pages/Inscrip" class="btn btn-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header" style="text-align: center;">CONTACT</h4>
-            <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">Vous etes candidat, contactez nous au : ...</p>
             </div>
             <div class="card-footer">
               <a href="<?php echo base_url(); ?>C_pages/Inscrip" class="btn btn-primary">En savoir plus</a>

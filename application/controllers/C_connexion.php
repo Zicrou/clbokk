@@ -85,24 +85,32 @@ class C_connexion extends MY_Controller
     }*/
 	public function getImage()
 	{
-		$suite_req = site_url();
-		//$a = $this->usrs->get_connected();
-	    $p = $_FILES['pic']['name'];
-		$upload_extension =  explode(".", $p);
-		$upload_extension = end($upload_extension);
-		$up_ext = $upload_extension;
-		move_uploaded_file($_FILES['pic']['tmp_name'], './image/'.$_SESSION['id'].'.'.$upload_extension);
-		$data_photo = $_SESSION['id'].'.'.$up_ext;
-		$this->usrs->photo = $data_photo;
-        $data_photo = $this->usrs->update_photo($_SESSION['id']);
-		$photo['photo'] = $data_photo;
-		//$this->session->unset_userdata('photo');
-		$this->session->set_userdata($photo);
-	/*var_dump($_SESSION);
-		exit(); */
-
-		header("Location:".$suite_req."C_connexion/BlogUser");
-		//$this->BlogUser(); //load->view('V_blog-home-1');
+		/*$data = $this->input->post('pic');
+		var_dump($this->input->post('pic'));
+		echo '<br>';
+		var_dump($data);
+		exit();*/
+		//if ( $data != '') {
+			$suite_req = site_url();
+			//$a = $this->usrs->get_connected();
+			$p = $_FILES['pic']['name'];
+			$upload_extension =  explode(".", $p);
+			$upload_extension = end($upload_extension);
+			$up_ext = $upload_extension;
+			move_uploaded_file($_FILES['pic']['tmp_name'], './image/'.$_SESSION['id'].'.'.$upload_extension);
+			$data_photo = $_SESSION['id'].'.'.$up_ext;
+			$this->usrs->photo = $data_photo;
+			$data_photo = $this->usrs->update_photo($_SESSION['id']);
+			$photo['photo'] = $data_photo;
+			//$this->session->unset_userdata('photo');
+			$this->session->set_userdata($photo);
+			/*var_dump($_SESSION);
+			exit(); */
+			//header("Location:".$suite_req."C_connexion/BlogUser");
+			$this->BlogUser(); //load->view('V_blog-home-1');
+		/*}else{
+			$this->BlogUser();
+		} */
 	}
 
 	public function log_out()
@@ -117,7 +125,7 @@ class C_connexion extends MY_Controller
 
 	
 
-	public function index()
+	public function Index()
 	{
         /*$a = $this->usrs->get_tofProfil($_SESSION['id']);
 	    $data['photo'] = $a;*/

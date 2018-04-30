@@ -19,7 +19,7 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="<?php echo base_url() ?>C_pages/Index">Home</a>
+          <a href="Index">Home</a>
         </li>
         <li class="breadcrumb-item active">Contact</li>
       </ol>
@@ -66,7 +66,7 @@
         <div class="col-lg-4 mb-4">
           <h3>Contact Details</h3>
           <p>
-            3481 Melrose Place
+            127 Zac Mbao
             <br>DAKAR/SENEGAL,
             <br>
           </p>
@@ -75,11 +75,11 @@
           </p>
           <p>
             <abbr title="Email">E</abbr>:
-            <a href="mailto:name@example.com">name@example.com
+            <a href="mailto:name@example.com">CLBKK8@GMAIL.com
             </a>
           </p>
           <p>
-            <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+            <abbr title="Hours">H</abbr>: Monday - Friday: 8h:00 AM to 5:00 PM
           </p>
         </div>
       </div>
