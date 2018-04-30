@@ -1,24 +1,10 @@
 <?php
 $suite_req = base_url();
-//echo '<br><br><br><br><br><br><br><br>';
-//var_dump($this->session->userdata('photo'));
-//exit();
 if($_SESSION['mess']['statut_ok'] == null)
 {
   header("Location:".$suite_req."C_pages/Conn");
 }
-// verfifier la donnee de retour du tableau qui est dans cette session
-/*var_dump($_SESSION['mess']['statut_ok']);
-echo '<br><br>';
-var_dump($this->session->userdata('mess')['statut_ok'] == null);
-exit();
 
-if ($this->session->userdata('mess')['statut_ok'] == null) ;
-  {
-    //var_dump($_SESSION);
-    header("Location:".$suite_req."C_pages/Conn");
-  }
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +23,8 @@ if ($this->session->userdata('mess')['statut_ok'] == null) ;
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets/css/modern-business.css" rel="stylesheet">
-
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
   </head>
 
   <body>

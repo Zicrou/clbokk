@@ -51,7 +51,7 @@
             <div class="col-lg-8">
               <h2 class="card-title"><?php echo $cc->metier1." à ".$cc->region." departement ".$cc->departement; ?></h2>
               <p class="card-text"><?php echo $cc->nom."  ".$cc->prenom; ?></p>
-              <a href="<?php echo base_url()."datac?id=".$cc->id_Cpersos ?>" class="btn btn-outline-primary" data-toggle="" data-target="#myModal">Voir plus &rarr;</a>
+              <a href="<?php echo base_url()."datac?id=".$cc->id_Cpersos ?>" class="btn btn-outline-primary link" data-id="<?php $cc->id_Cpersos; ?>" data-toggle="modal" data-target="#myModal">Voir plus &rarr;</a>
               <!-- a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Voir plus &rarr;</a -->
               <?php //echo base_url()."C_recrutement/dataCandid?id=".$cc->id_Cpersos ?>           
             </div>
@@ -201,9 +201,40 @@
 
   <!-- Bootstrap core JavaScript -->
 <script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
+    $('body').on('click', '.link', function(){
+      //alert('bien');
+      $.ajax({
+            url: 'http://localhost/clbokk/datac?id='+$('data-id').val(),
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                result=JSON.parse(data) ;     
+                $('#').val(result.id);
+                $('#').val(result.nom);
+            },
+            error: function(jqXHR) {
+                $('#').val('');
+                $('#').val('');
+            }
+
+        })
+      return false;
     })
+    /*$.ajax({
+            url: 'http://localhost/clbokk/datac?id='+$('data-id').val(),
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                result=JSON.parse(data) ;     
+                $('#id_deposant').val(result.id);
+                $('#etablissement').val(result.nom);
+            },
+            error: function(jqXHR) {
+                $('#id_deposant').val('');
+                $('#etablissement').val('');
+            }
+
+        })*/
 </script>
 
 
