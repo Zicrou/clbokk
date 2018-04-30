@@ -15,8 +15,10 @@ class C_dataCandid extends MY_Controller
     
     public function index()
     {
-        # code...
-        $this->load->view('dataCandid');
+			$url = "http://localhost/clbokk/datac?id=1";
+			$data_json=file_get_contents($url);
+			$data_php = json_decode($data_json);
+			print_r($data_php);
     }
 }
 

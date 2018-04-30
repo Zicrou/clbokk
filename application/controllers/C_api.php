@@ -20,9 +20,9 @@ class C_api extends MY_Controller
     public function dataCandid()
     {
         $id = $_GET['id'];
-        //echo $id;
-        //var_dump($this->candid->get_db_table_pk());
-        var_dump($this->candid->get_id_record($id));
+       $dataCand= $this->candid->get_id_record($id);
+       $data_json = json_encode($dataCand);
+       echo $data_json;
     }
 
     /*public function demandeur_data(){
