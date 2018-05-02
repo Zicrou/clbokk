@@ -63,7 +63,8 @@ $route['sign-in'] 			    		= 'C_pages/Conn';
 $route['verif-connexion'] 			    = 'C_connexions/verif_connexion';
 $route['se_deconnecter'] 			    = 'C_connexion/log_out';
 $route['pages'] 			            = 'C_pages/About';
-$route['datac']                         = 'C_api/dataCandid';
+//$route['datacShow']                     = 'C_api/datacShow';
+//$route['datac']                         = 'C_api/datac';
 
 /**
 *************************************************************************

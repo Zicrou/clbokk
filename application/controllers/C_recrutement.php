@@ -21,9 +21,6 @@ class C_recrutement extends MY_Controller
     {
         $metier = $this->candid->get_metier();
         $region = $this->candid->get_region();
-       /* var_dump($metier);
-        var_dump($region);
-        exit();*/
         $data['select_metier'] = create_select_list($metier, 'metier1', 'metier1');
         $data['select_region'] = create_select_list($region, 'region', 'region');
         $this->load->view('V_blog-home-2', $data);
@@ -41,13 +38,18 @@ class C_recrutement extends MY_Controller
         $this->load->view('V_blog-home-2', $data);
     }
 
+    public function datacShow()
+    {
+        $id = func_get_args();
+        $dataCand= $this->candid->get_id_record($id[0]);
+        print_r($dataCand);
+    }
+    
     public function dataCandid()
     {
-        //$this->load->view('dataCandid');
-        //$data = $_GET['id'];
-        //$data2 = func_get_arg(0);
-        
-
-          
+        $id = func_get_args();
+       $dataCand= $this->candid->get_id_record($id[0]);
+       $data_json = json_encode($dataCand);
+       echo $data_json;
     }
 }

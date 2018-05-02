@@ -17,10 +17,19 @@ class C_api extends MY_Controller
         $this->load->model('M_Candidats', 'candid');
     }
 
+    public function datacShow()
+    {
+        
+        $id = func_get_args();
+       $dataCand= $this->candid->get_id_record($id[0]);
+       //$data_json = json_encode($dataCand);
+       print_r($dataCand);
+    }
+    
     public function dataCandid()
     {
-        $id = $_GET['id'];
-       $dataCand= $this->candid->get_id_record($id);
+        $id = func_get_args();
+       $dataCand= $this->candid->get_id_record($id[0]);
        $data_json = json_encode($dataCand);
        echo $data_json;
     }
