@@ -15,7 +15,7 @@ if($_SESSION['mess']['statut_ok'] == null)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>CI LA BOKK</title>
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
 
       <!-- Bootstrap core CSS -->
