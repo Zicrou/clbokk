@@ -208,7 +208,7 @@
           <div class="card h-100">
             <h4 class="card-header" style="text-align: center;">Candidat</h4>
             <div class="card-body">
-              <p class="card-text">Vous etes candidat, contactez nous au : ...</p>
+              <p class="card-text">Vous etes candidat, pour vous inscrire contactez nous au : ...</p>
             </div>
             <div class="card-footer">
               <a href="<?php echo base_url(); ?>C_pages/Inscrip" class="btn btn-primary">En savoir plus</a>
@@ -247,10 +247,10 @@
       <!-- Call to Action Section -->
       <div class="row mb-4">
         <div class="col-md-8">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+          <p>.</p>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-lg btn-secondary btn-block" href="<?php echo base_url(); ?>C_pages/Conn">Call to Action</a>
+          <a class="btn btn-lg btn-outline-primary btn-block" href="<?php echo base_url(); ?>C_pages/Conn">S'inscrire</a>
         </div>
       </div>
 
@@ -269,13 +269,13 @@
     <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function(){
+    /*  $(document).ready(function(){
     $("").hover(function(){
         $("").css("display", "block");
         }, function(){
         $("").css("display", "none");
     });
-});
+});*/
     </script>
 
   </body>
