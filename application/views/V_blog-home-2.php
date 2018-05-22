@@ -13,16 +13,16 @@
     <div class="col-md-12 form-inline" style="">
 
       <div class="col-md-3 form-group">
-        <label for="metier">Métier:</label>
-        <select id="metier" name="metier" class="form-control">
+        <label>Métier:</label>
+        <select name="metier" class="form-control">
           <?php echo $select_metier; ?>
         </select>
       </div>
 
 
       <div class="col-md-3 form-group" style="">
-        <label for="region">Région:</label>
-        <select id="region" name="region" class="form-control">
+        <label>Région:</label>
+        <select  name="region" class="form-control">
           <?php echo $select_region; ?>
         </select>
       </div>
@@ -77,8 +77,8 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="nom">
-              
+            <h4 class="modal-title" id="exampleModalLabel">
+            <span id="prenom"></span> <span id="nom"></span>
             </h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -87,41 +87,17 @@
           <div class="modal-body">
             <!--h5>Popover in a modal</h5>
             <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p-->
-            <p>
-              
-            </p>
-            <hr>
-            
-            <span>
-              
-            </span>
+            Region: <span id="region"></span> <******> Departement: <span id="departement"></span>
             <br>
-            <span class="alert-secondary">
-              
-            </span>
-            <br>
-            <span>
-              
-            </span>
-            <br>
-            <span class="alert-secondary">
-              
-            </span>
-            <br>
-            <span>
-              
-            </span>
-            <br>
-            <span class="alert-secondary">
-             
-            </span>
-            <span>
-              
-            </span>
-            <hr>
+            <span id="disponibilite"></span><br>
+            Metier principal: <span id="metier1"></span><br>
+            Metier secondaire: <span id="metier2"></span><br>
+            Autre metier: <span id="metier3"></span>
+            <p>This <a href="#" role="button" class="btn btn-secondary popover-test" id="element" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
             <!--h5>Tooltips in a modal</h5>
-                                    <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p-->
+            <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p-->
           </div>
+          
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <!--button type="button" class="btn btn-primary">Save changes</button-->
@@ -265,17 +241,23 @@
       type: 'GET',
       dataType: 'text',
       success: function (data) {
-      var result = JSON.parse(data);
-      $('#nom').val(result.nom);
-      $('#myModal').modal('show');
-      },
-      error: function (jqXHR) {
-
+        var result = JSON.parse(data);
+        $('#nom').text(result.nom);
+        $('#prenom').text(result.prenom);
+        $('#region').text(result.region);
+        $('#departement').text(result.departement);
+        $('#metier1').text(result.metier1);
+        $('#metier2').text(result.metier2);
+        $('#metier3').text(result.metier3);
+        $('#element').popover('toggle');
+        $('#myModal').modal('show');
+        
       }
-
     })
+    
     return false;
   });
+  
 </script>
 
 

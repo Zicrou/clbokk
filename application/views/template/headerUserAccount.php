@@ -24,7 +24,7 @@ if($_SESSION['mess']['statut_ok'] == null)
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets/css/modern-business.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+  <!--script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script-->
   </head>
 
   <body>
