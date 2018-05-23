@@ -249,9 +249,9 @@
         $('#metier1').text(result.metier1);
         $('#metier2').text(result.metier2);
         $('#metier3').text(result.metier3);
-        $('#element').popover('toggle');
-        $('#myModal').modal('show');
         
+        $('#myModal').modal('show');
+        $('#element').popover('toggle');
       }
     })
     
