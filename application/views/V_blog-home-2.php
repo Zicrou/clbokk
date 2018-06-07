@@ -93,7 +93,7 @@
             Metier principal: <span id="metier1"></span><br>
             Metier secondaire: <span id="metier2"></span><br>
             Autre metier: <span id="metier3"></span>
-            <p>This <a href="#" role="button" class="btn btn-secondary popover-test" id="element" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+            <!--p>This <a href="#" role="button" class="btn btn-secondary popover-test" id="element" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p-->
             <!--h5>Tooltips in a modal</h5>
             <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p-->
           </div>

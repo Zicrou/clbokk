@@ -35,11 +35,45 @@ class C_pages extends MY_Controller
 		$this->load->view('V_inscription');
 	}
 
-	/*public function BlogUser()
+	public function Portfolio2col()
 	{
-		$this->load->view('V_blog-home-1');
-	}*/
+		$this->load->view('V_portfolio-2-col');
+	}
 	
+	public function Portfolio3col()
+	{
+		$this->load->view('V_portfolio-3-col');
+	}
+
+	public function Portfolio4col()
+	{
+		$this->load->view('V_portfolio-4-col');
+	}
+	
+	public function Portfolioitem()
+	{
+		$this->load->view('V_portfolio-item');
+	}
+
+	public function Pricing()
+	{
+		$this->load->view('V_pricing');
+	}
+
+	public function Sidebar()
+	{
+		$this->load->view('V_sidebar');
+	}
+
+	public function Faq()
+	{
+		$this->load->view('V_faq');
+	}
+
+	public function Fullwidth()
+	{
+		$this->load->view('V_full-width');
+	}
 
 
 	/*public function page()

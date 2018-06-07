@@ -3,34 +3,31 @@
 /**
 * 
 */
-	class M_users extends MY_Model{
-		public $id_users;
+	class M_admins extends MY_Model{
+		public $id_admin;
 		public $nom;
 		public $prenom;
 		public $pseudo;
 		public $email;
-		public $password;
+		public $mdp;
 		public $adresse;
 		public $telephone;
-		public $date_creation;
-		public $confirmation_token;
-		public $confirmed_at;
-		public $etat;
-		public $photo;
-		//public $date_confirn_at;
+		public $date_connect;
+		public $rights;
+		
 		
 
 		public function get_db_table()
       {
-         return 'users';
+         return 'admins';
       }
   
       public function get_db_table_pk()
       {
-          return 'id_users';
+          return 'id_admin';
       }
 
-      public function save_users()
+     /* public function save_admins()
       {
       	try 
 	  	{
@@ -50,27 +47,27 @@
         	return $d;
       		return $e->getMessage();
       	}
-      }
+      }*/
 
-      public function get_all_users(){
+      public function get_all_admins(){
 			return $this->db->select('*')->from($this->get_db_table())->get()->result();
 		}
 
-		public function get_user_id($id)
+		public function get_admin_id($id)
 		{
 			return $this->db->select('*')->from($this->get_db_table())->where($this->get_db_table_pk(), $id)->get()->result();
 		}
 
 		public function get_phone()
 		{
-			$qur=("SELECT * FROM users WHERE telephone='".$this->telephone."'");
+			$qur=("SELECT * FROM admin WHERE telephone='".$this->telephone."'");
 			$req=$this->db->query($qur);
 			return $req->row_array();
 		}
 
 		public function get_email()
 		{
-			$qur="SELECT * FROM users WHERE email='".$this->email."'";//'seck@gmail.com'
+			$qur="SELECT * FROM admin WHERE email='".$this->email."'";//'seck@gmail.com'
 			$req=$this->db->query($qur);
 			return $req->row_array();
 		}

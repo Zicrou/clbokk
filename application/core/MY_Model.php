@@ -212,4 +212,17 @@ abstract class MY_Model extends CI_Model implements MY_Model_Interface{
             }
     }
 
+    public function get_connected()
+		{
+			/*$qur="SELECT *  FROM $this->get_db_table WHERE email = '".$this->email."' AND password = '".$this->password."' ";
+            $req=$this->db->query($qur);*/
+           return $req = $this->db->select('*')
+            ->from($this->get_db_table())
+            ->where('email', $this->email)
+            ->where('password', $this->password)
+            ->get()
+            ->result_array();
+			//return $req->row_array();
+		}
+
 }

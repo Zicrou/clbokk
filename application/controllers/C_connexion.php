@@ -14,13 +14,11 @@ class C_connexion extends MY_Controller
 		$this->load->library('session');
 	}
 
-
-
-
-	public function connexion()
+	public function connexion_client()
 	{
-        $suite_req = base_url();
-		$a = $this->usrs->get_connected();		
+		$suite_req = base_url();
+		
+		$a = $this->usrs->get_connected()[0];	
 		if ($a != null) {
 
             $allData = array(
@@ -32,24 +30,41 @@ class C_connexion extends MY_Controller
                 'ip_address' => $_SERVER['REMOTE_ADDR'],
                 'logged_in' => TRUE
 			);
-			/*var_dump($allData);
-			exit(); */
             $mess['statut_ok'] = 'ok';
-            //$data['mess'] = $mess;
 			$allData['mess'] = $mess;
 			$this->session->set_userdata($allData);
             $data['photo'] = $a['photo'];
 			$this->load->view('V_blog-home-1');
-			//header("Location:".$suite_req."C_connexion/BlogUser");
-			/*
-				//$this->load->view('V_blog-home-1', $data);
-				//var_dump($allData);
-				//exit();
-				//echo 'bien';
-				//$this->load->view('V_blog-home-1');
-				//"Location:".$suite_req."C_connexion/BlogUser";
-				header("Location:".$suite_req."C_connexion/BlogUser"); //""
-			*/
+			
+		}else{
+			$msgAlrt['msg_no_no'] = 'Vous devez d\'abord vous connecter!';
+			$this->load->view('V_connexion',$msgAlrt);
+		}
+		return $a;
+	}
+
+	public function connexion_admin()
+	{
+		$suite_req = base_url();
+		
+		$a = $this->usrs->get_connected()[0];	
+		if ($a != null) {
+
+            $allData = array(
+                'id' => $a['id_users'],
+                'email' => $a['email'],
+                'prenom' => $a['prenom'],
+                'nom' => $a['nom'],
+                'ip_address' => $_SERVER['REMOTE_ADDR'],
+                'logged_in' => TRUE
+			);
+            $mess['statut_ok'] = 'ok';
+			$allData['mess'] = $mess;
+			$this->session->set_userdata($allData);
+			$data['photo'] = $a['photo'];
+			var_dump($allData);
+			$this->load->view('V_admins');
+			
 		}else{
 			$msgAlrt['msg_no_no'] = 'Vous devez d\'abord vous connecter!';
 			$this->load->view('V_connexion',$msgAlrt);
@@ -60,14 +75,21 @@ class C_connexion extends MY_Controller
 	public function verifConn()
 	{
 		if ($this->input->post('save')) {
-			$this->usrs->email = $this->input->post('email');
-			$this->usrs->password = $this->input->post('pwd');
-			if($this->usrs->get_connected()!=null){
-                $this->connexion();
+			$admin = 'admin@clbokk.sn';
+			$email = $this->input->post('email');
+			if ($email == $admin) {
+				$this->admn->email = $email
 			}else{
+				$this->usrs->email = $email
+				$this->usrs->password = $this->input->post('pwd');
+			
+				if($this->usrs->get_connected()!=null){
+                $this->connexion_client();
+				}else{
 				$msgAlrt['statut_no'] = 'Non';
 				$this->load->view('V_connexion', $msgAlrt);
-			}
+			}}
+			
 		}
 		
 	}

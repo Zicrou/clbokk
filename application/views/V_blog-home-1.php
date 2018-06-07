@@ -26,7 +26,7 @@ exit();*/
                //   <strong><i class="ace-icon fa fa-check"></i>BIENVENUE dans votre compte !</strong>
               //  </div>";
            
-           echo '<div class="alert alert-success etat" data-dismiss="alert" style="margin-top:1%;"><li>BIENVENUE dans votre compte !<span class="close" style="float:right;">&times;</span></li></div>';
+           echo '<div class="alert alert-success etat" data-dismiss="alert" style="margin-top:1%;"><li>BIENVENUE dans votre compte !<span class="close" style="float:right;"></span></li></div>';
         endif; ?>
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Domaine Personnel :
