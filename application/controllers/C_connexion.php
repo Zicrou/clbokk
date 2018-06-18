@@ -14,7 +14,7 @@ class C_connexion extends MY_Controller
 		$this->load->library('session');
 	}
 
-	public function connexion_client()
+	public function connexion()
 	{
 		$suite_req = base_url();
 		
@@ -43,56 +43,21 @@ class C_connexion extends MY_Controller
 		return $a;
 	}
 
-	public function connexion_admin()
-	{
-		$suite_req = base_url();
-		
-		$a = $this->usrs->get_connected()[0];	
-		if ($a != null) {
-
-            $allData = array(
-                'id' => $a['id_users'],
-                'email' => $a['email'],
-                'prenom' => $a['prenom'],
-                'nom' => $a['nom'],
-                'ip_address' => $_SERVER['REMOTE_ADDR'],
-                'logged_in' => TRUE
-			);
-            $mess['statut_ok'] = 'ok';
-			$allData['mess'] = $mess;
-			$this->session->set_userdata($allData);
-			$data['photo'] = $a['photo'];
-			var_dump($allData);
-			$this->load->view('V_admins');
-			
-		}else{
-			$msgAlrt['msg_no_no'] = 'Vous devez d\'abord vous connecter!';
-			$this->load->view('V_connexion',$msgAlrt);
-		}
-		return $a;
-	}
 
 	public function verifConn()
 	{
 		if ($this->input->post('save')) {
-			$admin = 'admin@clbokk.sn';
-			$email = $this->input->post('email');
-			if ($email == $admin) {
-				$this->admn->email = $email
+			$this->usrs->email = $this->input->post('email');
+			$this->usrs->password = $this->input->post('pwd');
+			if($this->usrs->get_connected()!=null){
+            $this->connexion();
 			}else{
-				$this->usrs->email = $email
-				$this->usrs->password = $this->input->post('pwd');
-			
-				if($this->usrs->get_connected()!=null){
-                $this->connexion_client();
-				}else{
 				$msgAlrt['statut_no'] = 'Non';
 				$this->load->view('V_connexion', $msgAlrt);
-			}}
-			
+				}
 		}
-		
 	}
+		
 
 
     /*public function tofProfil()

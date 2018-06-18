@@ -31,7 +31,7 @@
       }
 
       public function save_users()
-      {
+      { 
       	try 
 	  	{
   			$req = $this->db->insert();
