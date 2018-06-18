@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 23 mai 2018 à 13:07
--- Version du serveur :  5.7.19
--- Version de PHP :  5.6.31
+-- Host: localhost
+-- Generation Time: Jun 18, 2018 at 12:09 PM
+-- Server version: 5.7.22-0ubuntu0.16.04.1
+-- PHP Version: 7.0.28-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,90 +17,79 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `clbokk`
+-- Database: `clbokk`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admins`
+-- Table structure for table `admins`
 --
 
-DROP TABLE IF EXISTS `admins`;
-CREATE TABLE IF NOT EXISTS `admins` (
-  `id_admin` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admins` (
+  `id_admin` int(11) NOT NULL,
   `mtr_gu` int(11) NOT NULL,
-  `rights` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_admin`)
+  `rights` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `candidats`
+-- Table structure for table `candidats`
 --
 
-DROP TABLE IF EXISTS `candidats`;
-CREATE TABLE IF NOT EXISTS `candidats` (
-  `id_candidat` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `candidats` (
+  `id_candidat` int(11) NOT NULL,
   `mtr_gu` int(11) NOT NULL,
   `mtr_metier` int(11) NOT NULL,
   `payed` tinyint(1) NOT NULL,
   `domaine` varchar(255) NOT NULL,
   `profession` varchar(255) NOT NULL,
-  `disponibilite` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id_candidat`)
+  `disponibilite` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `clients`
+-- Table structure for table `clients`
 --
 
-DROP TABLE IF EXISTS `clients`;
-CREATE TABLE IF NOT EXISTS `clients` (
-  `id_client` int(11) NOT NULL AUTO_INCREMENT,
-  `mtr_gu` int(11) NOT NULL,
-  PRIMARY KEY (`id_client`)
+CREATE TABLE `clients` (
+  `id_client` int(11) NOT NULL,
+  `mtr_gu` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `departements`
+-- Table structure for table `departements`
 --
 
-DROP TABLE IF EXISTS `departements`;
-CREATE TABLE IF NOT EXISTS `departements` (
-  `id_departement` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `departements` (
+  `id_departement` int(11) NOT NULL,
   `mtr_region` int(11) NOT NULL,
-  `liebelle` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_departement`)
+  `liebelle` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `domaine`
+-- Table structure for table `domaine`
 --
 
-DROP TABLE IF EXISTS `domaine`;
-CREATE TABLE IF NOT EXISTS `domaine` (
-  `id_domaine` int(11) NOT NULL AUTO_INCREMENT,
-  `libelle` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_domaine`)
+CREATE TABLE `domaine` (
+  `id_domaine` int(11) NOT NULL,
+  `libelle` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `experiences`
+-- Table structure for table `experiences`
 --
 
-DROP TABLE IF EXISTS `experiences`;
-CREATE TABLE IF NOT EXISTS `experiences` (
-  `id_experience` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `experiences` (
+  `id_experience` int(11) NOT NULL,
   `mtr_client` int(11) NOT NULL,
   `mtr_metier` int(11) NOT NULL,
   `entreprise_frequente` varchar(255) NOT NULL,
@@ -112,87 +99,86 @@ CREATE TABLE IF NOT EXISTS `experiences` (
   `date_debut` date NOT NULL,
   `date_fin` date NOT NULL,
   `diplome` varchar(255) NOT NULL,
-  `note` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_experience`)
+  `note` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `groupe_utilisateurs`
+-- Table structure for table `groupe_utilisateurs`
 --
 
-DROP TABLE IF EXISTS `groupe_utilisateurs`;
-CREATE TABLE IF NOT EXISTS `groupe_utilisateurs` (
-  `id_gu` int(11) NOT NULL AUTO_INCREMENT,
-  `libelle` varchar(45) NOT NULL,
-  PRIMARY KEY (`id_gu`)
+CREATE TABLE `groupe_utilisateurs` (
+  `id_gu` int(11) NOT NULL,
+  `libelle` varchar(45) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `metiers`
+-- Table structure for table `metiers`
 --
 
-DROP TABLE IF EXISTS `metiers`;
-CREATE TABLE IF NOT EXISTS `metiers` (
-  `id_metier` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `metiers` (
+  `id_metier` int(11) NOT NULL,
   `mtr_domaine` int(11) NOT NULL,
-  `libelle` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_metier`)
+  `libelle` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `pays`
+-- Table structure for table `pays`
 --
 
-DROP TABLE IF EXISTS `pays`;
-CREATE TABLE IF NOT EXISTS `pays` (
-  `id_pays` int(11) NOT NULL AUTO_INCREMENT,
-  `libelle` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_pays`)
+CREATE TABLE `pays` (
+  `id_pays` int(11) NOT NULL,
+  `libelle` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `realisation`
+-- Table structure for table `realisation`
 --
 
-DROP TABLE IF EXISTS `realisation`;
-CREATE TABLE IF NOT EXISTS `realisation` (
-  `id_realisation` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `realisation` (
+  `id_realisation` int(11) NOT NULL,
   `mtr_candidat` int(11) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_realisation`)
+  `image` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `regions`
+-- Table structure for table `regions`
 --
 
-DROP TABLE IF EXISTS `regions`;
-CREATE TABLE IF NOT EXISTS `regions` (
-  `id_region` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `regions` (
+  `id_region` int(11) NOT NULL,
   `mtr_pays` int(11) NOT NULL,
-  `libelle` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_region`)
+  `libelle` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateurs`
+-- Table structure for table `role`
 --
 
-DROP TABLE IF EXISTS `utilisateurs`;
-CREATE TABLE IF NOT EXISTS `utilisateurs` (
-  `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `role` (
+  `id_role` int(11) NOT NULL,
+  `libelle` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `utilisateurs`
+--
+
+CREATE TABLE `utilisateurs` (
+  `id_utilisateur` int(11) NOT NULL,
   `mtr_gu` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
@@ -200,11 +186,160 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `password` varchar(255) NOT NULL,
   `telephone1` varchar(255) NOT NULL,
   `telephone2` varchar(255) NOT NULL,
-  `date_inscription` date NOT NULL,
-  PRIMARY KEY (`id_utilisateur`)
+  `date_inscription` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-COMMIT;
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `candidats`
+--
+ALTER TABLE `candidats`
+  ADD PRIMARY KEY (`id_candidat`);
+
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id_client`);
+
+--
+-- Indexes for table `departements`
+--
+ALTER TABLE `departements`
+  ADD PRIMARY KEY (`id_departement`);
+
+--
+-- Indexes for table `domaine`
+--
+ALTER TABLE `domaine`
+  ADD PRIMARY KEY (`id_domaine`);
+
+--
+-- Indexes for table `experiences`
+--
+ALTER TABLE `experiences`
+  ADD PRIMARY KEY (`id_experience`);
+
+--
+-- Indexes for table `groupe_utilisateurs`
+--
+ALTER TABLE `groupe_utilisateurs`
+  ADD PRIMARY KEY (`id_gu`);
+
+--
+-- Indexes for table `metiers`
+--
+ALTER TABLE `metiers`
+  ADD PRIMARY KEY (`id_metier`);
+
+--
+-- Indexes for table `pays`
+--
+ALTER TABLE `pays`
+  ADD PRIMARY KEY (`id_pays`);
+
+--
+-- Indexes for table `realisation`
+--
+ALTER TABLE `realisation`
+  ADD PRIMARY KEY (`id_realisation`);
+
+--
+-- Indexes for table `regions`
+--
+ALTER TABLE `regions`
+  ADD PRIMARY KEY (`id_region`);
+
+--
+-- Indexes for table `role`
+--
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`id_role`);
+
+--
+-- Indexes for table `utilisateurs`
+--
+ALTER TABLE `utilisateurs`
+  ADD PRIMARY KEY (`id_utilisateur`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `candidats`
+--
+ALTER TABLE `candidats`
+  MODIFY `id_candidat` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `departements`
+--
+ALTER TABLE `departements`
+  MODIFY `id_departement` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `domaine`
+--
+ALTER TABLE `domaine`
+  MODIFY `id_domaine` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `experiences`
+--
+ALTER TABLE `experiences`
+  MODIFY `id_experience` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `groupe_utilisateurs`
+--
+ALTER TABLE `groupe_utilisateurs`
+  MODIFY `id_gu` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `metiers`
+--
+ALTER TABLE `metiers`
+  MODIFY `id_metier` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `pays`
+--
+ALTER TABLE `pays`
+  MODIFY `id_pays` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `realisation`
+--
+ALTER TABLE `realisation`
+  MODIFY `id_realisation` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `regions`
+--
+ALTER TABLE `regions`
+  MODIFY `id_region` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `role`
+--
+ALTER TABLE `role`
+  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `utilisateurs`
+--
+ALTER TABLE `utilisateurs`
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
